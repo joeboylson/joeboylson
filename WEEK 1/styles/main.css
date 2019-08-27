@@ -2,13 +2,15 @@
   --sm: 13px;
   --md: 34px;
   --lg: 98px;
-  --white: ghostwhite;
+  --light: ghostwhite;
+  --dark: #1f1f1f;
+  --accent: tomato;
 }
 
 body {
   padding: 0;
   margin: 0;
-  background-color: #1f1f1f;
+  background-color: var(--dark);
   overflow: hidden
 }
 
@@ -16,7 +18,7 @@ h1, h2, h3, p {
   padding: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--white);
+  color: var(--light);
 }
 
 h1 {
@@ -50,7 +52,7 @@ main {
   flex: 0 0 100%;
   padding-bottom: var(--md);
   margin-bottom: var(--md);
-  border-bottom: 1px solid tomato;
+  border-bottom: 1px solid var(--accent);
 }
 
 #about {
@@ -73,7 +75,7 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: black;
-  color: var(--white);
+  color: var(--light);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -85,8 +87,8 @@ footer code {
   padding: 0;
   line-height: var(--md);
   text-align: center;
-  color: tomato;
-  border-right: 1px solid tomato;
+  color: var(--accent);
+  border-right: 1px solid var(--accent);
   transition-duration: 0.25s
 }
 
@@ -95,8 +97,8 @@ border: none;
 }
 
 footer code:hover {
-  color: var(--white);
-  background-color: tomato;
+  color: var(--light);
+  background-color: var(--accent);
 }
 
 @media only screen and (max-width: 950px) {
