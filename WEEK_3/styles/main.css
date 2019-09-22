@@ -1,0 +1,147 @@
+:root {
+  --sm: 13px;
+  --md: 34px;
+  --lg: 98px;
+  --light: ghostwhite;
+  --dark: #1f1f1f;
+  --accent: tomato;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--dark);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1, h2, h3, p {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--light);
+}
+
+h1 {
+  font-size: var(--lg);
+  line-height: calc(var(--lg * 1.3));
+}
+
+h2 {
+  font-size: var(--md);
+  line-height: calc(var(--md * 1.3));
+}
+
+h3, p, code, li {
+  font-size: var(--sm);
+  line-height: calc(var(--sm) * 1.5);
+  padding-bottom: var(--sm);
+}
+
+/* ----- ----- */
+
+
+
+.module {
+  flex: 0 0 calc(50% - 72px);
+  margin: 36px;
+}
+
+#instructions {
+  flex: 0 0 calc(50% - 72px);
+  margin: 36px;
+}
+
+#instructions h2, #instructions h3 {
+  padding-bottom: 18px;
+}
+
+#instructions li {
+  color: white;
+}
+
+#form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: block;
+  flex: 0 0 calc(100% / 3);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.card {
+  margin: 18px;
+  padding: 18px;
+  transition-duration: 0.25s;
+  border-bottom: 1px solid var(--light)
+}
+
+.card:hover {
+  background-color: slateblue;
+}
+
+input:checked + .card {
+  background-color: mediumseagreen;
+}
+
+button {
+  width: 50%;
+  align-self: flex-end;
+  margin: 36px 18px;
+  padding: 18px;
+  border: none;
+  background-color: mediumseagreen;
+  color: white;
+}
+
+#result-message {
+  align-self: flex-end;
+}
+
+.history {
+  padding-top: 18px;
+}
+
+.history h2 {
+  padding: 18px 0;
+}
+
+.stat {
+  width: 100%;
+  display: flex;
+  color: white;
+}
+
+.stat p {
+  width: 144px;
+}
+
+#all-games {
+  padding-top: 18px;
+  height: 50vh;
+  overflow-y: scroll;
+}
+
+#all-games .game {
+  display: flex;
+  font-size: var(--sm);
+  line-height: calc(var(--sm) * 1.5);
+  color: #777777;
+  height: var(--md);
+}
+
+#all-games .game p {
+  padding-left: 18px;
+  padding-bottom: 0
+}
+
