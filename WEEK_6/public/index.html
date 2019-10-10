@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HANGMAN | Joe Boylson</title>
+
+  <!-- libraries -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <!-- scripts -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- styles -->
+  <script src="js/game.js"></script>
+  <script src="js/notification.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+
+  <div id="screen-difficulty">
+    <h1>CHOOSE A DIFFICULTY</h1>
+    <div class='button-group'>
+      <button class="difficulty-button" data-difficulty='easy'>EASY</button>
+      <button class="difficulty-button" data-difficulty='medium'>MEDIUM</button>
+      <button class="difficulty-button" data-difficulty='hard'>HARD</button>
+    </div>
+  </div>
+
+  <div id="screen-lose">
+    <h1>YOU LOSE . . .</h1>
+    <button data-reset>Play Again</button>
+  </div>
+
+  <div id="screen-win">
+    <h1>YOU WIN!</h1>
+    <button data-reset>Play Again</button>
+  </div>
+
+  <div id="board">
+    <div id='board-inputs'></div>
+
+    <canvas id="canvas" width="400" height="500"></canvas>
+  </div>
+
+  <div id="controls">
+    
+    <div id='guess-inputs'>
+      <input type="text" id='guess-input' maxlength=1>
+      <button id='guess-button'>GUESS</button>
+      <h1>TRIES: <span id='tries-span'>0</span>/7</h1>
+    </div>
+
+    <div id='used-letters'></div>
+
+    <div id='new-game-inputs'>
+      <button data-reset>NEW GAME</button>
+    </div>
+
+  </div>
+  
+</body>
+</html>
