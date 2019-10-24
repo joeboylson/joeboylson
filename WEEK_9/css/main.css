@@ -1,0 +1,456 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark: #23262e;
+  --gray: #5f6167;
+  --light-grey: #D5CED9;
+  --teal: #00e8c6;
+  --orange: #f39c12;
+  --yellow: #FFE66D;
+  --pink: #ff00aa;
+  --scarlet: #f92672;
+  --purple: #c74ded;
+  --grey-blue: #7cb7ff;
+  --tomato: #ee5d43;
+  --green: #96E072;
+  --blue: #6796e6;
+  --rust: #cd9731;
+  --red: #f44747;
+  --purple: #b267e6;
+  --border-radius: 5px;
+  --ttf: cubic-bezier(0.68, 0, 0.32, 1);
+}
+
+p, h1, h2, h3, input, label, a {
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+}
+
+p, label, a {
+  font-size: 13px;
+  line-height: 21px;
+}
+
+a {
+  color: var(--teal);
+  font-weight: 100;
+  text-decoration: none;
+}
+
+h3, input {
+  font-size: 21px;
+  line-height: 34px;
+}
+
+h2 {
+  font-size: 34px;
+  line-height: 55px;
+}
+
+h1 {
+  font-size: 55px;
+  line-height: 89px;
+}
+
+button {
+  padding: 8px 13px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+
+#setup-screen, #result-screen, #board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+#setup-screen {
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#setup-screen #player-setup {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#setup-screen #player-setup .player {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#setup-screen #player-setup .player input {
+  text-align: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+#setup-screen #player-setup .player .colors {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#setup-screen #player-setup .player .colors span {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+#setup-screen #player-setup .player .colors span label {
+  display: block;
+  height: 100%;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#setup-screen #player-setup .player .colors input[type="radio"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  color: white;
+}
+
+#setup-screen #player-setup .player .colors input[type="radio"] ~ .color-red {
+  color: var(--red);
+}
+
+#setup-screen #player-setup .player .colors input[type="radio"] ~ .color-yellow {
+  color: var(--yellow);
+}
+
+#setup-screen #player-setup .player .colors input[type="radio"] ~ .color-green {
+  color: var(--green);
+}
+
+#setup-screen #player-setup .player .colors input[type="radio"] ~ .color-blue {
+  color: var(--blue);
+}
+
+#setup-screen #player-setup .player .colors input[type="radio"]:checked ~ .color-red, #setup-screen #player-setup .player .colors input[type="radio"]:active ~ .color-red, #setup-screen #player-setup .player .colors input[type="radio"]:hover ~ .color-red {
+  background-color: var(--red);
+  color: black;
+}
+
+#setup-screen #player-setup .player .colors input[type="radio"]:checked ~ .color-yellow, #setup-screen #player-setup .player .colors input[type="radio"]:active ~ .color-yellow, #setup-screen #player-setup .player .colors input[type="radio"]:hover ~ .color-yellow {
+  background-color: var(--yellow);
+  color: black;
+}
+
+#setup-screen #player-setup .player .colors input[type="radio"]:checked ~ .color-green, #setup-screen #player-setup .player .colors input[type="radio"]:active ~ .color-green, #setup-screen #player-setup .player .colors input[type="radio"]:hover ~ .color-green {
+  background-color: var(--green);
+  color: black;
+}
+
+#setup-screen #player-setup .player .colors input[type="radio"]:checked ~ .color-blue, #setup-screen #player-setup .player .colors input[type="radio"]:active ~ .color-blue, #setup-screen #player-setup .player .colors input[type="radio"]:hover ~ .color-blue {
+  background-color: var(--blue);
+  color: black;
+}
+
+#setup-screen #controls {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#setup-screen #controls button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  width: 25%;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+#setup-screen #controls button:hover {
+  background-color: white;
+  color: black;
+}
+
+#result-screen {
+  z-index: 5;
+  opacity: 0;
+  -webkit-transform: translateY(-250px);
+          transform: translateY(-250px);
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#result-screen h1 {
+  padding-top: 200px;
+  text-align: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: block;
+}
+
+#result-screen #controls {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#result-screen #controls button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  width: 25%;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+#result-screen #controls button:hover {
+  background-color: white;
+  color: black;
+}
+
+#board {
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#board #scoreboard {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+#board #canvas-wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#board #canvas-wrapper canvas {
+  border: 1px solid white;
+  width: 300px;
+  height: 300px;
+}
+
+#aside {
+  position: absolute;
+  bottom: 0;
+  z-index: 15;
+  padding: 9px;
+}
+
+.notification {
+  position: fixed;
+  top: 36px;
+  left: 36px;
+  z-index: 1000;
+  width: 400px;
+  height: 50px;
+  background-color: white;
+  -webkit-animation: fadeOut 0.5s;
+          animation: fadeOut 0.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.68, 0, 0.32, 1);
+          animation-timing-function: cubic-bezier(0.68, 0, 0.32, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.notification p {
+  margin: 0 auto;
+  color: red;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  line-height: 50px;
+}
+
+.fade-away {
+  pointer-events: none;
+  -webkit-animation: fadeAway 0.5s 0s forwards var(--ttf);
+          animation: fadeAway 0.5s 0s forwards var(--ttf);
+}
+
+@-webkit-keyframes fadeAway {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-250px);
+            transform: translateY(-250px);
+  }
+}
+
+@keyframes fadeAway {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-250px);
+            transform: translateY(-250px);
+  }
+}
+
+.fade-in {
+  -webkit-animation: fadeIn 0.5s 0s forwards var(--ttf);
+          animation: fadeIn 0.5s 0s forwards var(--ttf);
+  pointer-events: all !important;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-250px);
+            transform: translateY(-250px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-250px);
+            transform: translateY(-250px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
