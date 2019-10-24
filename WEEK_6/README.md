@@ -15,6 +15,6 @@ TO RUN THE APP:
     - express is used to host thw site
     - axios is the package used for making http requests
 
-3. Run the application with `npm run start`.
+3. Run the application with `node index.js`.
 
 4. Navigate to `http://localhost:3000/` in your browser.
