@@ -6,7 +6,7 @@
   "scripts": {
     "heroku-postbuild": "cd client && yarn install && npm run-script build",
     "start_client": "node index.js",
-    "dev": "concurrently --kill-others-on-fail \"nodemon client.js\" \"yarn start\"",
+    "dev": "concurrently --kill-others-on-fail \"nodemon client.js\" \"cd client && yarn start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joe Boylson",
