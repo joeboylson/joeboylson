@@ -2,3 +2,5 @@
 ASSIGNMENT3_HANGMAN/_old
 ASSIGNMENT3_HANGMAN/node_modules
 ASSIGNMENT3_HANGMAN/package-lock.json
+client/build
+client/node_modules

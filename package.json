@@ -1,0 +1,17 @@
+{
+  "name": "express_wgd_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "heroku-postbuild": "cd client && yarn install && npm run-script build",
+    "start-express": "node index.js",
+    "dev": "concurrently --kill-others-on-fail \"nodemon client.js\" \"yarn start\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joe Boylson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
