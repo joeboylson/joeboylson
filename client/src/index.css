@@ -1,16 +1,49 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
+
+/* 
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace; 
+*/
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+}
 
 * {
   margin: 0;
   padding: 0;
 }
 
-p, h1, h2, h3, input, label, a {
-  font-family: 'Roboto Mono', monospace;
-  color: black;
+body {
+  background-color: black;
 }
 
-p, label, a {
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+p, input, label, a {
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+}
+
+p, label, input, a {
   font-size: 13px;
   line-height: 21px;
 }
@@ -21,10 +54,19 @@ a {
   text-decoration: none;
 }
 
-h3, input {
+h3 {
   font-size: 21px;
   line-height: 34px;
   font-weight: 100;
+}
+
+input {
+  background-color: white;
+  border: none;
+  box-shadow: none;
+  color: black;
+  margin: 13px 0;
+  padding: 13px;
 }
 
 h2 {
