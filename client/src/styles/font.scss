@@ -1,0 +1,106 @@
+
+
+
+// ----- ----- ----- ----- -----
+// GENERAL --- ----- ----- -----
+// ----- ----- ----- ----- -----
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
+
+h1,
+h2,
+h3,
+p,
+a,
+li,
+button {
+  margin: 0;
+  padding: 0px;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 55px;
+  font-weight: 900;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 34px;
+  font-weight: 300;
+}
+
+h3 {
+  font-family: 'Roboto Mono', monospace; 
+  font-size: 21px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+p, a, button {
+  font-family: 'Roboto Mono', monospace; 
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.underlined {
+  padding-bottom: 21px;
+  margin-bottom: 21px;
+  border-bottom: 1px solid black;
+}
+
+
+
+// ----- ----- ----- ----- -----
+// BUTTON ---- ----- ----- -----
+// ----- ----- ----- ----- -----
+
+button {
+  padding: 5px 13px;
+  margin-bottom: 13px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  transition-duration: 0.25s;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.primary {
+  background-color: tomato;
+  color: white;
+
+  &:hover {
+    background-color: rgb(209, 40, 10);
+  }
+}
+
+.ghost {
+  border: 1px solid tomato;
+  color: tomato;
+
+  &:hover {
+    border: 1px solid rgb(209, 40, 10);;
+    background-color: rgb(209, 40, 10);
+    color: white;
+  }
+}
+
+.link {
+  color: tomato;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0;
+
+  &:hover {
+    color: rgb(209, 40, 10);
+  }
+}
+
+.button-condensed {
+  margin-bottom: 0 !important;
+}

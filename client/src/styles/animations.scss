@@ -1,0 +1,25 @@
+// ----- ----- ----- ----- -----
+// FADE UP IN  ----- ----- -----
+// ----- ----- ----- ----- -----
+
+:root {
+  --ttf: cubic-bezier(0.68, 0, 0.32, 1);
+}
+
+@keyframes FadeUpIn {
+  from {
+    transform: translateY(89px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-up-in {
+  transform: translateY(89px);
+  opacity: 0;
+  
+  animation: FadeUpIn 0.5s forwards var(--ttf);
+}
