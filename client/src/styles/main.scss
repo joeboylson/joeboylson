@@ -1,12 +1,34 @@
 
+:root {
+  --dark: #1f1f1f;
+  --light: #FFFFFF;
+  --gray: #EEEEEE;
+  
+  --blue: #2C97DE;
+  --green: #2DBDA8;
+  --yellow: #EFC663;
+  --pink: #E16070;
+  --purple: #9677DF;
+}
 
 
 // ----- ----- ----- ----- -----
 // GENERAL --- ----- ----- -----
 // ----- ----- ----- ----- -----
 
+$unit: calc(100vw/13);
+
+$col3:  calc( #{$unit} * 3);
+$col7:  calc( #{$unit} * 7);
+$col11: calc( #{$unit} * 11);
+
+
 ::-webkit-scrollbar {
   display: none;
+}
+
+body {
+  background-color: var(--light);
 }
 
 html,
@@ -19,8 +41,8 @@ body,
 }
 
 #root {
-  margin: 89px calc(100%/13);
-  width: calc((100%/13)*11);
+  margin: calc( #{$unit} * 2) $unit $unit $unit;
+  width: $col11;
 }
 
 main, .grid {
@@ -42,53 +64,36 @@ img {
 .col {
   display: block;
   min-height: 89px;
-  margin-bottom: 9.09090909091%;
+  margin-bottom: 89px;
   padding: 0 !important;
-
-  // -webkit-box-shadow: inset 0px 0px 0px 0.5px rgba(0,0,0,0.75);
-  // -moz-box-shadow: inset 0px 0px 0px 0.5px rgba(0,0,0,0.75);
-  // box-shadow: inset 0px 0px 0px 0.5px rgba(0,0,0,0.75);
 }
 
 .col-1 {
-  flex: 0 0 27.2727272727%;
-  margin-right: 9.09090909091%;
+  width: $col3;
+  margin-right: $unit;
 }
 
 .col-2 {
-  flex: 0 0 63.6363636364%;
-  margin-right: 9.09090909091%;
-
-  .subgrid {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-
-    .subcol-1 {
-      flex: 0 0 42.8571428571%;
-      margin-right: 14.2857142857%;
-      margin-bottom: 14.2857142857%;
-    }
-
-    .subcol-nomarg-desktop {
-      margin-right: 0;
-    }
-  }
-
+  width: $col7;
+  margin-right: $unit;
 }
 
 .col-3 {
-  flex: 0 0 100%;
+  width: $col11;
   margin-right: 0;
+}
+
+.subgrid {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col {
+    margin-bottom: 0;
+  }
 }
 
 .nomarg-desktop {
   margin-right: 0;
-}
-
-.allow-overflow {
-  max-height: 89px;
-  overflow: visible;
 }
 
 
@@ -99,45 +104,36 @@ img {
 
 @media only screen and (max-width: 1000px) {
 
-  .col {
-    position: relative;
-    margin-bottom: 14.2857142857%;
+  $tablet-unit: calc(100vw/9);
+
+  $col3:  calc( #{$tablet-unit} * 3);
+  $col9:  calc( #{$tablet-unit} * 7);
+
+  #root {
+    margin: calc( #{$tablet-unit} * 2) $tablet-unit $tablet-unit $tablet-unit;
+    width: $col9;
   }
 
   .col-1 {
-    flex: 0 0 42.8571428571%;
-    margin-right: 14.2857142857%;
+    width: $col3;
+    margin-right: $tablet-unit;
   }
 
   .col-2 {
-    flex: 0 0 100%;
+    width: $col9;
     margin-right: 0;
   }
+
+  // overrides
 
   .col-1-tablet {
-    flex: 0 0 42.8571428571%;
-    margin-right: 14.2857142857%;
+    width: $col3;
+    margin-right: $tablet-unit;
   }
 
-  .col-2-tablet {
-    flex: 0 0 100%;
+  .col-2-tablet  {
+    width: $col9;
     margin-right: 0;
-
-    .subgrid {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-  
-      .subcol-1 {
-        flex: 0 0 42.8571428571%;
-        margin-right: 14.2857142857%;
-        margin-bottom: 14.2857142857%;
-      }
-  
-      .subcol-nomarg-desktop {
-        margin-right: 0;
-      }
-    }
   }
 
   .nomarg-tablet {
@@ -183,23 +179,47 @@ img {
 
 
 // ----- ----- ----- ----- -----
-// CARD  ----- ----- ----- -----
+// TAG - ----- ----- ----- -----
 // ----- ----- ----- ----- -----
 
-.card {
-  padding: 13px;
-  background-color: #e3e3e3;
-  margin-bottom: 34px;
+.tag {
+  font-size: 13px;
+  font-family: 'Roboto Mono', monospace; 
+  font-size: 13px;
+  font-weight: 500;
+  padding: 3px 5px;
+  margin: 3px;
+  display: inline-block;
+  background-color: var(--light);
 
-  h3, p {
-    margin-bottom: 13px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
+  &.blue { background-color: var(--blue); color: var(--light)}
+  &.green { background-color: var(--green); color: var(--light)}
+  &.yellow { background-color: var(--yellow); color: var(--light)}
+  &.pink { background-color: var(--pink); color: var(--light)}
+  &.purple { background-color: var(--purple); color: var(--light)}
 }
 
-.card-clickable {
-  cursor: pointer;
+
+
+// ----- ----- ----- ----- -----
+// ICON  ----- ----- ----- -----
+// ----- ----- ----- ----- -----
+
+.icon {
+  margin-left: 8px;
+  
+  i, p {
+    border-radius: 100px;
+    text-align: center;
+    width: 34px;
+    line-height: 34px !important;
+    color: var(--light);
+  }
+
+
+  &.blue { * {background-color: var(--blue); }}
+  &.green { * {background-color: var(--green); }}
+  &.yellow { * {background-color: var(--yellow); }}
+  &.pink { * {background-color: var(--pink); }}
+  &.purple { * {background-color: var(--purple); }}
 }

@@ -2,36 +2,36 @@
 // PROJECTS -- ----- ----- -----
 // ----- ----- ----- ----- -----
 
-#project-list {
-  position: fixed;
-  padding-left: calc(100%/13);
-  padding-top: 89px;
-  padding-bottom: 89px;
-  left: 0;
-  top: 0;
-  width: calc(100% - ((100%/13) * 10));
-  height: calc(100vh - 89px);
-  overflow-y: scroll;
+// #project-list {
+//   position: fixed;
+//   padding-left: calc(100%/13);
+//   padding-top: 89px;
+//   padding-bottom: 89px;
+//   left: 0;
+//   top: 0;
+//   width: calc(100% - ((100%/13) * 10));
+//   height: calc(100vh - 89px);
+//   overflow-y: scroll;
 
-  h2 {
-    margin-bottom: 89px;
-    color: red;
-  }
+//   h2 {
+//     margin-bottom: 89px;
+//     color: red;
+//   }
 
-  .project-technologies {
-    color: tomato;
-  }
+//   .project-technologies {
+//     color: tomato;
+//   }
 
-  &::after {
-    position: absolute;
-    top: -89px;
-    right: -50%;
-    content: '';
-    background-color: black;
-    height: 100vh;
-    z-index: -1;
-  }
-}
+//   &::after {
+//     position: absolute;
+//     top: -89px;
+//     right: -50%;
+//     content: '';
+//     background-color: black;
+//     height: 100vh;
+//     z-index: -1;
+//   }
+// }
 
 .tablet-show {
   display: none;

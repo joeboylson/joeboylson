@@ -12,9 +12,11 @@
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, autem animi? Iure illo dignissimos, similique necessitatibus accusantium amet culpa delectus? A reprehenderit eaque atque at modi quis laborum quod corporis neque voluptas?"
         ],
         "images": [
-          "https://via.placeholder.com/1500",
-          "https://via.placeholder.com/1500",
-          "https://via.placeholder.com/1500"
+          "/images/fpd_1/01.jpeg",
+          "/images/fpd_1/04.jpeg",
+          "/images/fpd_1/05.jpeg",
+          "/images/fpd_1/02.jpeg",
+          "/images/fpd_1/03.jpeg"
         ]
       }]
     },

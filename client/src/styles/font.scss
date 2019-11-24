@@ -22,12 +22,15 @@ h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 55px;
   font-weight: 900;
+  color: var(--dark);
 }
 
 h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 34px;
   font-weight: 300;
+  color: var(--dark);
+
 }
 
 h3 {
@@ -35,12 +38,22 @@ h3 {
   font-size: 21px;
   font-weight: 300;
   text-transform: uppercase;
+  color: var(--dark);
+
 }
 
 p, a, button {
   font-family: 'Roboto Mono', monospace; 
   font-size: 13px;
   font-weight: 300;
+}
+
+p {
+  color: var(--dark)
+}
+
+a {
+  color: var(--blue);
 }
 
 .underlined {
@@ -71,11 +84,11 @@ button {
 }
 
 .primary {
-  background-color: tomato;
+  background-color: var(--blue);
   color: white;
 
   &:hover {
-    background-color: rgb(209, 40, 10);
+    background-color: var(--dark)
   }
 }
 
