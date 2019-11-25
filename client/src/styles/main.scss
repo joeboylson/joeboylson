@@ -1,3 +1,4 @@
+@import '~antd/dist/antd.css';
 
 :root {
   --dark: #1f1f1f;
@@ -208,18 +209,42 @@ img {
 .icon {
   margin-left: 8px;
   
-  i, p {
+  i {
     border-radius: 100px;
     text-align: center;
     width: 34px;
     line-height: 34px !important;
     color: var(--light);
-  }
 
+    svg {
+      transform: translateY(1px);
+      position: relative;
+    }
+      
+  }
 
   &.blue { * {background-color: var(--blue); }}
   &.green { * {background-color: var(--green); }}
   &.yellow { * {background-color: var(--yellow); }}
   &.pink { * {background-color: var(--pink); }}
   &.purple { * {background-color: var(--purple); }}
+  &.transparent { * {background-color: transparent; }}
+  
+}
+
+
+
+
+
+
+#grid-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  // z-index: +2;
+  opacity: 0.5;
+  pointer-events: none;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Icon as AntdIcon } from 'antd';
 export interface CardProps {
   className?: string;
   id?: string;
@@ -11,7 +11,7 @@ const Icon: React.FC<CardProps> = (Props) => {
 
   return (
     <div className={`icon ${Props.className}`} id={Props.id || ''}>
-      <p>{Props.type}</p>
+      <AntdIcon type={Props.type} />
     </div>
   )
 

@@ -17,18 +17,20 @@ ReactDOM.render(
   <main>
 
     <Nav /> 
+    
+    <div className={'grid'}>
+      <Card string={'string'} className={'col col-1 col-2-tablet'}/>
+      <Card string={'string'} className={'col col-1 col-2-tablet'}/>
+      <Card string={'string'} className={'col col-1 col-2-tablet nomarg-desktop'}/>
 
-    <Card string={'string'} className={'col col-1 col-2-tablet'}/>
-    <Card string={'string'} className={'col col-1 col-2-tablet'}/>
-    <Card string={'string'} className={'col col-1 col-2-tablet nomarg-desktop'}/>
+      <Card string={'string'} className={'col col-1 col-2-tablet'}/>
+      <Card string={'string'} className={'col col-1 col-2-tablet'}/>
+      <Card string={'string'} className={'col col-1 col-2-tablet nomarg-desktop'}/>
 
-    <Card string={'string'} className={'col col-1 col-2-tablet'}/>
-    <Card string={'string'} className={'col col-1 col-2-tablet'}/>
-    <Card string={'string'} className={'col col-1 col-2-tablet nomarg-desktop'}/>
-
-    <Card string={'string'} className={'col col-1 col-2-tablet'}/>
-    <Card string={'string'} className={'col col-1 col-2-tablet'}/>
-    <Card string={'string'} className={'col col-1 col-2-tablet nomarg-desktop'}/>
+      <Card string={'string'} className={'col col-1 col-2-tablet'}/>
+      <Card string={'string'} className={'col col-1 col-2-tablet'}/>
+      <Card string={'string'} className={'col col-1 col-2-tablet nomarg-desktop'}/>
+    </div>
 
   </main>
   , document.getElementById('root'));

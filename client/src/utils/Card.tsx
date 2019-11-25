@@ -34,7 +34,7 @@ const Card: React.FC<CardProps> = (Props) => {
           <div className={'tag pink'}>photography</div> 
         </div>
         <div className={'card-links'}>
-          <Icon className={'blue'} type={'X'}/>
+          <Icon className={'blue'} type={'apple'}/>
           <Icon className={'blue'} type={'X'}/>
           <Icon className={'blue'} type={'X'}/>
         </div>

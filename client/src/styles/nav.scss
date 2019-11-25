@@ -2,6 +2,7 @@ $unit: calc(100vw/13);
 $minus-unit: calc(100vw/-13);
 
 $height2:  calc( #{$unit} * 2);
+$width3:  calc( #{$unit} * 3);
 $width5:  calc( #{$unit} * 5);
 
 
@@ -14,6 +15,7 @@ $width5:  calc( #{$unit} * 5);
 
   display: flex;
   justify-content: flex-end;
+  z-index: +1;
 
   .menu-icon {
 
@@ -32,7 +34,7 @@ $width5:  calc( #{$unit} * 5);
   .nav-links {
     position: absolute;
     width: $width5;
-    height: calc(100vh - (#{$unit} * 2));
+    height: 120vh;
     background-color: var(--dark);
     transition-duration: 0.5s;
     padding-top: $height2;
@@ -44,9 +46,10 @@ $width5:  calc( #{$unit} * 5);
     }
 
     h2 {
-      text-align: right;
+      text-align: left;
       line-height: 34px !important;
-      margin: 8px 34px 0 0;
+      margin-left: $unit;
+      margin-bottom: 21px;
       color: var(--light);
       transition-duration: 0.25s;
 
@@ -63,14 +66,13 @@ $width5:  calc( #{$unit} * 5);
     }
 
     .nav-icons {
-      position: absolute;
-      bottom: 0;
-      left: -34px;
-      width: 100%;
+      margin-left: $unit;
+      margin-top: $unit;
       height: $unit;
+      width: $width3;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      flex-wrap: wrap;
 
       @for $i from 1 to 10 {
         .icon:nth-child(#{$i}) {
@@ -80,6 +82,17 @@ $width5:  calc( #{$unit} * 5);
 
       .icon {
         transition-duration: 0.25s;
+        width: calc( #{$unit} - 21px);
+        height: calc( #{$unit} - 21px);
+        margin: 0 21px 21px 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          font-size: 34px;
+        }
 
         &.nav-is-open {
           transform: translateX(0);
@@ -92,6 +105,12 @@ $width5:  calc( #{$unit} * 5);
           transition-duration: 0;
           opacity: 0;
         }
+
+        &.blue { background-color: var(--blue); }
+        &.green { background-color: var(--green); }
+        &.yellow { background-color: var(--yellow); }
+        &.pink { background-color: var(--pink); }
+        &.purple { background-color: var(--purple); }
       }
 
     }
@@ -160,7 +179,7 @@ $width5:  calc( #{$unit} * 5);
 // MOBILE ---- ----- ----- -----
 // ----- ----- ----- ----- -----
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 750px) {
 
   .nav-links {
     width: 100vw !important;

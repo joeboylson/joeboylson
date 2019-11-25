@@ -11,23 +11,20 @@ const Nav: React.FC = (Props) => {
     >
 
       <div className={`nav-links ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>
-        <div className={'nav-icons'}>
-          <Icon className={`blue ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'x'} />
-          <Icon className={`green ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'x'} />
-          <Icon className={`yellow ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'x'} />
-        </div>
+        <h2 className={`${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>Index</h2>
+        <h2 className={`${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>Projects</h2>
+        <h2 className={`${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>About</h2>
 
-        <h2 className={`${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>LINK</h2>
-        <h2 className={`${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>LINK</h2>
-        <h2 className={`${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>LINK</h2>
-        <h2 className={`${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>LINK</h2>
-        <h2 className={`${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>LINK</h2>
-        <h2 className={`${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>LINK</h2>
+        <div className={'nav-icons'}>
+          <Icon className={`blue ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'github'} />
+          <Icon className={`green ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'linkedin'} />
+          <Icon className={`yellow ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'instagram'} />
+        </div>
 
       </div>
 
       <div className={`menu-icon ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>
-        <p>X</p>
+        <Icon className={`transparent ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'menu'} />
       </div>
 
     </div>
