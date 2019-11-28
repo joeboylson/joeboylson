@@ -10,12 +10,14 @@
   <body>
     <p id='screen-width'></p>
     <p id='screen-height'></p>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('screen-width').innerHTML = window.innerWidth;
+        document.getElementById('screen-height').innerHTML = window.innerHeight;
+      })
+    </script>
+    
   </body>
 
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('screen-width').innerHTML = window.innerWidth;
-      document.getElementById('screen-height').innerHTML = window.innerHeight;
-    })
-  </script>
 </html>

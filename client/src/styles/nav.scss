@@ -40,12 +40,12 @@ $width5:  calc( #{$unit} * 5);
     padding-top: $height2;
 
     @for $i from 1 to 10 {
-      h2:nth-child(#{$i}) {
+      .nav-link:nth-child(#{$i}) {
         transition-delay: $i * 0.05s + 0.125;
       }
     }
 
-    h2 {
+    .nav-link {
       text-align: left;
       line-height: 34px !important;
       margin-left: $unit;
@@ -137,6 +137,15 @@ $width5:  calc( #{$unit} * 5);
       pointer-events: none !important;
     }
   }
+
+  .nav-caption {
+    position: absolute;
+    top: calc(200vw / 13);
+    right: 0;
+    writing-mode: vertical-rl;
+    height: 500px;
+    line-height: calc(100vw / 13);
+  }
 }
 
 
@@ -171,6 +180,11 @@ $width5:  calc( #{$unit} * 5);
       }
     }
 
+    .nav-caption {
+      top: calc(200vw / 9);
+      line-height: calc(100vw / 9);
+    }
+
   }
 
 }
@@ -187,6 +201,10 @@ $width5:  calc( #{$unit} * 5);
 
   .menu-icon {
     width: 100vw !important;
+  }
+
+  .nav-caption {
+    display: none;
   }
 
 }

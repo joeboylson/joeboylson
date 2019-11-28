@@ -5,11 +5,17 @@
   --light: #FFFFFF;
   --gray: #EEEEEE;
   
-  --blue: #2C97DE;
-  --green: #2DBDA8;
-  --yellow: #EFC663;
-  --pink: #E16070;
-  --purple: #9677DF;
+  --blue: rgba(44, 151, 222, 1);
+  --green: rgba(45, 189, 168, 1);
+  --yellow: rgba(239, 198, 99, 1);
+  --pink: rgba(225, 96, 112, 1);
+  --purple: rgba(150, 119, 223, 1);
+
+  --blue-alt: rgba(24, 131, 202, 1);
+  --green-alt: rgba(25, 169, 148, 1);
+  --yellow-alt: rgba(219, 178, 79, 1);
+  --pink-alt: rgba(205, 76, 96, 1);
+  --purple-alt: rgba(150, 96, 203, 1);
 }
 
 
@@ -46,7 +52,7 @@ body,
   width: $col11;
 }
 
-main, .grid {
+.grid {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -54,6 +60,14 @@ main, .grid {
 
 img {
   width: 100%;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+.split-text {
+  word-spacing: 100vw; 
 }
 
 
@@ -67,6 +81,23 @@ img {
   min-height: 89px;
   margin-bottom: 89px;
   padding: 0 !important;
+
+  &.blue { background-color: var(--blue); color: var(--light)}
+  &.green { background-color: var(--green); color: var(--light)}
+  &.yellow { background-color: var(--yellow); color: var(--light)}
+  &.pink { background-color: var(--pink); color: var(--light)}
+  &.purple { background-color: var(--purple); color: var(--light)}
+
+  &.hoverable {
+    cursor: pointer;
+    transition-duration: 0.25s;
+
+    &.blue:hover { background-color: var(--blue-alt); }
+    &.green:hover { background-color: var(--green-alt); }
+    &.yellow:hover { background-color: var(--yellow-alt); }
+    &.pink:hover { background-color: var(--pink-alt); }
+    &.purple:hover { background-color: var(--purple-alt); }
+  }
 }
 
 .col-1 {
@@ -95,6 +126,13 @@ img {
 
 .nomarg-desktop {
   margin-right: 0;
+}
+
+.align-right {
+  text-align: right;
+  * {
+    text-align: right;
+  }
 }
 
 
@@ -245,6 +283,6 @@ img {
   height: 100vh;
   z-index: -1;
   // z-index: +2;
-  opacity: 0.5;
+  opacity: 1;
   pointer-events: none;
 }

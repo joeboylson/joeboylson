@@ -5,12 +5,16 @@ export interface CardProps {
   id?: string;
   link?: string;
   type: string;
+  onClick?: any;
 }
 
 const Icon: React.FC<CardProps> = (Props) => {
 
   return (
-    <div className={`icon ${Props.className}`} id={Props.id || ''}>
+    <div 
+      className={`icon ${Props.className}`} id={Props.id || ''}
+      onClick={Props.onClick}  
+    >
       <AntdIcon type={Props.type} />
     </div>
   )

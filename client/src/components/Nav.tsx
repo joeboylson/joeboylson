@@ -1,9 +1,21 @@
 import React from 'react';
 import Icon from '../utils/Icon'
+import { openNewTab } from '../utils/Controls'
 
-const Nav: React.FC = (Props) => {
+export interface NavProps {
+  setRoute: any
+}
+
+const Nav: React.FC<NavProps> = (Props) => {
 
   const [navIsOpen, setNavIsOpen] = React.useState(false)
+
+  const navLinks = [
+    {name: "Index", route: 'index'},
+    {name: "Projects", route: 'projects'},
+    {name: "About", route: 'about'},
+    {name: "Contact", route: 'contact'}
+  ]
 
   return (
     <div id={'nav'}
@@ -11,20 +23,42 @@ const Nav: React.FC = (Props) => {
     >
 
       <div className={`nav-links ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>
-        <h2 className={`${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>Index</h2>
-        <h2 className={`${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>Projects</h2>
-        <h2 className={`${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>About</h2>
+
+        { navLinks.map((link: any, index: number) => {
+          return <h3 
+            className={`nav-link ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}
+            onClick={() => Props.setRoute(link.route)}  
+          >
+            { link.name }
+          </h3>
+        })}
 
         <div className={'nav-icons'}>
-          <Icon className={`blue ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'github'} />
-          <Icon className={`green ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'linkedin'} />
-          <Icon className={`yellow ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'instagram'} />
+          <Icon 
+            className={`blue ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'github'} 
+            onClick={() => openNewTab('https://github.com/')}
+          />
+
+          <Icon 
+            className={`green ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'linkedin'} 
+            onClick={() => openNewTab('https://www.linkedin.com/in/joe-boylson-34603b139/')}
+          />
+
+          <Icon 
+            className={`yellow ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'instagram'} 
+            onClick={() => openNewTab('https://www.instagram.com/jobo.jpg/')}
+          />
+
         </div>
 
       </div>
 
       <div className={`menu-icon ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>
         <Icon className={`transparent ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'menu'} />
+      </div>
+
+      <div className={'nav-caption'}>
+        <p>Portfolio 2020 &nbsp; // &nbsp; joeboylson.us</p>
       </div>
 
     </div>
