@@ -18,10 +18,14 @@
       max-width: 650px;
       margin-bottom: 21px;
     }
+  }
 
-    .link-like-button {
-      margin-right: 21px;
-    }
+
+  .link-like-button {
+    display: block;
+    text-align: center;
+    margin-right: 0;
+    max-width: 650px;
   }
 }
 
@@ -34,22 +38,5 @@
 .preset {
   p, h3, img, .preview {
     margin-bottom: 21px;
-  }
-}
-
-
-
-// ----- ----- ----- ----- -----
-// TABLET ---- ----- ----- -----
-// ----- ----- ----- ----- -----
-
-@media only screen and (max-width: 1000px) {
-  #preset-list {
-    .header {
-      .link-like-button {
-        display: block;
-        text-align: center;
-      }
-    }
   }
 }

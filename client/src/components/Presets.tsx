@@ -13,7 +13,8 @@ export interface PresetProps {
   name: string;
   description: Array<string>;
   notes: Array<string>;
-  downloadRoute: string;
+  presetRoute: string;
+  dngRoute: string;
   image_before: string;
   image_after: string;
 
@@ -29,11 +30,15 @@ const Preset: React.FC<PresetProps> = (Props) => {
       </div>
 
       <div className={'col col-3'}>
-        <a 
-          href={`${downloadUrl}${Props.downloadRoute}`} 
-          target={'__blank'}
-          className={'link-like-button blue'}  
+        <a
+          href={`${downloadUrl}${Props.presetRoute}`}
+          className={'link-like-button blue'}
         >Download {Props.name}.xmp</a>
+
+        <a
+          href={`${downloadUrl}${Props.dngRoute}`}
+          className={'link-like-button blue'}
+        >Download {Props.name}.dng</a>
       </div>
 
       <div className={'col col-1'}>
@@ -51,8 +56,6 @@ const Preset: React.FC<PresetProps> = (Props) => {
           })}
         </ul>
       </div>
-
-      {/* <div className={'col col-1'}></div> */}
 
       <div className={'preview col col-1 col-2-tablet'}>
         <h3>Before:</h3>
@@ -78,7 +81,8 @@ const Preset: React.FC<PresetProps> = (Props) => {
 const presets = [
   { 
     name: 'Pendleton', 
-    downloadRoute: '/lrpresets/Pendleton.xmp', 
+    presetRoute: '/lrpresets/Pendleton.xmp',
+    dngRoute: '/lrpresets/Pendleton.dng',
     image_before: '/images/preset_Pendleton/before.jpg',
     image_after: '/images/preset_Pendleton/after.jpg',
     description: [
@@ -123,15 +127,21 @@ const PresetList: React.FC = (Props) => {
         <h3>Installation Instructions:</h3>
 
         <a
-            href={'https://www.lookslikefilm.com/2019/02/03/how-to-install-lightroom-presets/'}
-            target={'__blank'}
-            className={'link-like-button blue'}
-            >Lightroom Classic (desktop)</a>
+          href={'https://www.lookslikefilm.com/2019/02/03/how-to-install-lightroom-presets/'}
+          target={'__blank'}
+          className={'link-like-button blue'}
+        >Lightroom Classic (desktop)</a>
         <a
           href={'https://seandalt.com/how-to-install-lightroom-mobile-dng-presets-creative-cloud/'}
           target={'__blank'}
           className={'link-like-button blue'}
-          >Lightroom CC (mobile & web)</a>
+        >Lightroom CC (with subscription - method 1)</a>
+        <a
+          href={'https://seandalt.com/how-to-install-lightroom-mobile-dng-presets-creative-cloud/'}
+          target={'__blank'}
+          className={'link-like-button blue'}
+        >Lightroom CC (without subscription - method 2)</a>
+
       </div>
 
 
