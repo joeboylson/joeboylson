@@ -1,0 +1,38 @@
+// ----- ----- ----- -----
+// PRESET LIST ----- -----
+// ----- ----- ----- -----
+
+#preset-list {
+  .header {
+    padding-bottom: 89px !important;
+
+    h1 {
+      margin-bottom: 21px;
+    }
+
+    h3 {
+      margin: 42px 0 !important;
+    }
+
+    .header-text {
+      max-width: 650px;
+      margin-bottom: 21px;
+    }
+
+    .link-like-button {
+      margin-right: 21px;
+    }
+  }
+}
+
+// ----- ----- ----- -----
+// PRESET ---- ----- -----
+// ----- ----- ----- -----
+
+.preset {
+
+  p, h3, img, .preview {
+    margin-bottom: 21px;
+  }
+
+}

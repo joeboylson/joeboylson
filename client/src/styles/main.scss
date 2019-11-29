@@ -64,6 +64,7 @@ img {
 
 ul {
   padding-left: 18px;
+  // width: calc(100% - 30px);
 }
 
 .split-text {
@@ -116,12 +117,9 @@ ul {
 }
 
 .subgrid {
+  margin-top: $unit;
   display: flex;
   flex-wrap: wrap;
-
-  .col {
-    margin-bottom: 0;
-  }
 }
 
 .nomarg-desktop {
@@ -192,15 +190,18 @@ ul {
 
 @media only screen and (max-width: 500px) {
 
+  $tablet-unit: calc(100vw/9);
+  $col9:  calc( #{$tablet-unit} * 7);
+
   .col {
     margin-bottom: 7.69230769231;
+    margin-right: 0;
   }
 
   .col-1,
   .col-2,
   .col-3 {
-    flex: 0 0 100%;
-    margin-right: 0;
+    width: $col9;
   }
 
   .col-2 {

@@ -1,0 +1,153 @@
+import React from 'react';
+
+import '../styles/presets.scss'
+
+import { downloadUrl } from './Main';
+
+// ----- ----- ----- -----
+// PRESET ---- ----- -----
+// ----- ----- ----- -----
+
+export interface PresetProps {
+  key?: number;
+  name: string;
+  description: Array<string>;
+  notes: Array<string>;
+  downloadRoute: string;
+  image_before: string;
+  image_after: string;
+
+}
+
+const Preset: React.FC<PresetProps> = (Props) => {
+  return (
+    <div className={'preset col col-3 subgrid'}>
+
+      <div className={'col col-3'}>
+        <h1>{Props.name}.xmp</h1>
+        <p>A Lightroom Preset by Joe Boylson</p>
+      </div>
+
+      <div className={'col col-3'}>
+        <a 
+          href={`${downloadUrl}${Props.downloadRoute}`} 
+          target={'__blank'}
+          className={'link-like-button blue'}  
+        >Download {Props.name}.xmp</a>
+      </div>
+
+      <div className={'col col-1'}>
+        <h3>Description:</h3>
+        { Props.description.map((line:string, index:number) => {
+          return <p key={index}>{line}</p>
+        })}
+      </div>
+
+      <div className={'col col-2 nomarg-desktop'}>
+        <h3>PHOTOGRAPHER NOTES:</h3>
+        <ul>
+          { Props.notes.map((line:string, index:number) => {
+            return <li key={index}>{line}</li>
+          })}
+        </ul>
+      </div>
+
+      {/* <div className={'col col-1'}></div> */}
+
+      <div className={'preview col col-1 col-2-tablet'}>
+        <h3>Before:</h3>
+        <img src={Props.image_before} alt=""/>
+        <p>* Photo has been corrected for white balance and exposure.</p>
+      </div>
+
+      <div className={'preview col col-1 nomarg-desktop col-2-tablet'}>
+        <h3>After:</h3>
+        <img src={Props.image_after} alt=""/>
+      </div>
+
+    </div>
+  )
+}
+
+
+
+// ----- ----- ----- -----
+// PRESET LIST ----- -----
+// ----- ----- ----- -----
+
+const presets = [
+  { 
+    name: 'Pendleton', 
+    downloadRoute: '/lrpresets/Pendleton.xmp', 
+    image_before: '/images/preset_Pendleton/before.jpg',
+    image_after: '/images/preset_Pendleton/after.jpg',
+    description: [
+      `This preset was created to accentuate the warm colors of Over the Rhine, Cincinnati during Autumn.`,
+      `Yellows, Oranges, and Reds are pushed toward a soft orange, while Blues, Greens, and Purples are muted.`,
+      `The Contrast is also reduced, which adds a softness over the entire photo.`
+    ],
+    notes: [
+      `The Saturation in the Blues may need to be increased`,
+      `Yellows and Oranges may need to be tweaked for skin tones (portraits)`,
+      `The contrast may need to be increased if there are no hard shadows`
+    ]
+  }
+]
+
+const PresetList: React.FC = (Props) => {
+
+  return (    
+    <div id={'preset-list'} className={'grid'}>
+
+      <div className={'col col-3 header underlined'}>
+        <h1>Presets</h1>
+
+        <p className={'header-text'}>
+          Editing a photo can take it from bad or "just ok" to great. Here is a collection of presets
+          I have developed that I will take your edits to the next level or inspire you to 
+          make your own presets.
+        </p>
+
+        <p className={'header-text'}>
+          All presets are free to use for commercial or private purposes.
+        </p>
+
+        <p className={'header-text'}>
+          Get out there and shoot!
+        </p>
+
+        <p className={'header-text'}>
+          P.S. Always shoot in RAW.
+        </p>
+
+        <h3>Installation Instructions:</h3>
+
+        <a
+            href={'https://www.lookslikefilm.com/2019/02/03/how-to-install-lightroom-presets/'}
+            target={'__blank'}
+            className={'link-like-button blue'}
+            >Lightroom Classic (desktop)</a>
+        <a
+          href={'https://seandalt.com/how-to-install-lightroom-mobile-dng-presets-creative-cloud/'}
+          target={'__blank'}
+          className={'link-like-button blue'}
+          >Lightroom CC (mobile & web)</a>
+      </div>
+
+
+      { presets.map((preset:any, index: number) => {
+        return (
+          <Preset 
+            key={index}
+            {...preset}
+          />
+        )
+      })}
+
+    </div>
+  )
+
+}
+
+export default PresetList;
+export { Preset }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '../utils/Icon'
 import { openNewTab } from '../utils/Controls'
+import { routes } from './Main'
 
 export interface NavProps {
   setRoute: any
@@ -10,12 +11,12 @@ const Nav: React.FC<NavProps> = (Props) => {
 
   const [navIsOpen, setNavIsOpen] = React.useState(false)
 
-  const navLinks = [
-    {name: "Index", route: 'index'},
-    {name: "Projects", route: 'projects'},
-    {name: "About", route: 'about'},
-    {name: "Contact", route: 'contact'}
-  ]
+  const navLinks = Object.keys(routes).map( (routeName:any) => {
+    return { 
+      name: routeName.charAt(0).toUpperCase() + routeName.slice(1), 
+      route: routeName
+    }
+  })
 
   return (
     <div id={'nav'}
@@ -26,6 +27,7 @@ const Nav: React.FC<NavProps> = (Props) => {
 
         { navLinks.map((link: any, index: number) => {
           return <h3 
+            key={index}
             className={`nav-link ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}
             onClick={() => Props.setRoute(link.route)}  
           >

@@ -42,13 +42,13 @@ h3 {
 
 }
 
-p, a, button {
+p, a, button, li {
   font-family: 'Roboto Mono', monospace; 
   font-size: 13px;
   font-weight: 300;
 }
 
-p {
+p, li {
   color: var(--dark)
 }
 
@@ -60,6 +60,25 @@ a {
   padding-bottom: 21px;
   margin-bottom: 21px;
   border-bottom: 1px solid black;
+}
+
+.link-like-button {
+  cursor: pointer;
+  transition-duration: 0.25s;
+  padding: 21px;
+  margin-top: 21px;
+
+  &.blue { background-color: var(--blue); color: var(--light)}
+  &.green { background-color: var(--green); color: var(--light)}
+  &.yellow { background-color: var(--yellow); color: var(--light)}
+  &.pink { background-color: var(--pink); color: var(--light)}
+  &.purple { background-color: var(--purple); color: var(--light)}
+
+  &.blue:hover { background-color: var(--blue-alt); }
+  &.green:hover { background-color: var(--green-alt); }
+  &.yellow:hover { background-color: var(--yellow-alt); }
+  &.pink:hover { background-color: var(--pink-alt); }
+  &.purple:hover { background-color: var(--purple-alt); }
 }
 
 
