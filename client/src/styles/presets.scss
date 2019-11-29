@@ -25,14 +25,31 @@
   }
 }
 
+
+
 // ----- ----- ----- -----
 // PRESET ---- ----- -----
 // ----- ----- ----- -----
 
 .preset {
-
   p, h3, img, .preview {
     margin-bottom: 21px;
   }
+}
 
+
+
+// ----- ----- ----- ----- -----
+// TABLET ---- ----- ----- -----
+// ----- ----- ----- ----- -----
+
+@media only screen and (max-width: 1000px) {
+  #preset-list {
+    .header {
+      .link-like-button {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
 }

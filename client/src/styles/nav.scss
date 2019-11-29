@@ -16,6 +16,7 @@ $width5:  calc( #{$unit} * 5);
   display: flex;
   justify-content: flex-end;
   z-index: +1;
+  pointer-events: none;
 
   .menu-icon {
 
@@ -23,6 +24,8 @@ $width5:  calc( #{$unit} * 5);
     height: $unit;
     background-color: var(--dark);
     z-index: +1;
+    pointer-events: all;
+    cursor: pointer;
 
     * { 
       color: var(--light); 
@@ -52,6 +55,7 @@ $width5:  calc( #{$unit} * 5);
       margin-bottom: 21px;
       color: var(--light);
       transition-duration: 0.25s;
+      cursor: pointer;
 
       &.nav-is-open {
         transform: translateY(0);
@@ -69,7 +73,9 @@ $width5:  calc( #{$unit} * 5);
       margin-left: $unit;
       margin-top: $unit;
       height: $unit;
-      width: $width3;
+      width: 100%;
+      min-height: $unit;
+      min-width: $width3;
       display: flex;
       align-items: center;
       flex-wrap: wrap;
@@ -84,7 +90,10 @@ $width5:  calc( #{$unit} * 5);
         transition-duration: 0.25s;
         width: calc( #{$unit} - 21px);
         height: calc( #{$unit} - 21px);
+        min-height: 54px;
+        min-width: 54px;
         margin: 0 21px 21px 0;
+        cursor: pointer;
 
         display: flex;
         align-items: center;
