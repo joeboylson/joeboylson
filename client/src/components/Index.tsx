@@ -1,4 +1,5 @@
 import React from 'react';
+import Animate from '../utils/Animate'
 
 export interface IndexProps {
   setRoute: any
@@ -9,51 +10,76 @@ const Index: React.FC<IndexProps> = (Props) => {
   return (    
     <div id={'index'} className={'grid'}>
 
-      <div className={'col col-3 border-bottom'}>
+      <Animate 
+        className={'col col-3 border-bottom'} 
+        effect={'fade-up-in'}
+      >
         <h1>Hi, I'm Joe</h1>
         <h3>Creative Technologist</h3>
-      </div>
+      </Animate>
 
-      <div className={'col col-1'}>
+      <Animate 
+        className={'col col-1'}
+        effect={'fade-up-in'}  
+        delay={0.1}
+      >
+        <p>I'm a student at the University of Cincinnati working towards a Bachelor of Science in Software Development</p>
+        <p>Between school and work, I like to shoot photos and create websites (like this one).</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id magni adipisci tempore nulla ex nisi, asperiores optio aliquid? Fuga voluptas atque possimus, quidem nemo in fugit, modi neque perspiciatis sit praesentium esse.
+          I'm very interested in Web Design, UI/UX, Graphic Design, and Branding and hope to one day use all my skills
+          to help clients cultivate their online identity.
         </p>
-      </div>
+      </Animate>
 
-      <div className={'col col-2 nomarg-desktop col-1-tablet nomarg-tablet'}>
+      <Animate 
+        className={'col col-2 nomarg-desktop col-1-tablet nomarg-tablet skills'}
+        effect={'fade-up-in'}
+        delay={0.2}
+      >
+        <h3>What I do:</h3>
         <ul>
-          <li><h3>Full Stack Development</h3></li>
-          <li><h3>Web Design</h3></li>
-          <li><h3>Photography</h3></li>
+          <li>Full Stack Development</li>
+          <li>Web Design</li>
+          <li>Photography</li>
         </ul>
-      </div>
+      </Animate>
 
-      <div className={'col col-3 subgrid border-bottom'}>
+      <Animate 
+        className={'col col-3 subgrid border-bottom'}
+        effect={'fade-up-in'}
+      >
         <div className={'col col-1'}>
-          <img src="https://via.placeholder.com/500" alt=""/>
+          <p>From Joshua tree last December:</p>
+          <img src={'/images/profile_photo.jpg'} alt=""/>
         </div>
-      </div>
+      </Animate>
 
-      <div 
+      <Animate 
         className={'col col-1 col-2-tablet pink split-text action-box hoverable'}
         onClick={() => Props.setRoute('projects')}
+        effect={'fade-up-in'}
+        delay={0.1}
       >
         <h3>View my projects</h3>
-      </div>
+      </Animate>
 
-      <div 
+      <Animate 
         className={'col col-1 blue green split-text action-box hoverable'}
         onClick={() => Props.setRoute('contact')}
+        effect={'fade-up-in'}
+        delay={0.2}
       >
         <h3>Get in touch</h3>
-      </div>
+      </Animate>
 
-      <div 
+      <Animate 
         className={'col col-1 nomarg-desktop nomarg-tablet blue split-text action-box hoverable'}
         onClick={() => Props.setRoute('about')}
+        effect={'fade-up-in'}
+        delay={0.3}
       >
         <h3>More about me</h3>
-      </div>
+      </Animate>
 
     </div>
   )

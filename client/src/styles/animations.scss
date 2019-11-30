@@ -1,10 +1,17 @@
-// ----- ----- ----- ----- -----
-// FADE UP IN  ----- ----- -----
-// ----- ----- ----- ----- -----
-
 :root {
   --ttf: cubic-bezier(0.68, 0, 0.32, 1);
 }
+
+.animate-hidden {
+  opacity: 0;
+  transition-duration: 0.5s !important;
+}
+
+
+
+// ----- ----- ----- ----- -----
+// FADE UP IN  ----- ----- -----
+// ----- ----- ----- ----- -----
 
 @keyframes FadeUpIn {
   from {
@@ -20,6 +27,28 @@
 .fade-up-in {
   transform: translateY(89px);
   opacity: 0;
-  
   animation: FadeUpIn 0.5s forwards var(--ttf);
+}
+
+
+
+// ----- ----- ----- ----- -----
+// FADE LEFT IN ---- ----- -----
+// ----- ----- ----- ----- -----
+
+@keyframes FadeLeftIn {
+  from {
+    transform: translateX(89px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-left-in {
+  transform: translateX(89px);
+  opacity: 0;
+  animation: FadeLeftIn 0.5s forwards var(--ttf);
 }
