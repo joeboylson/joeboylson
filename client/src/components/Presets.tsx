@@ -32,12 +32,12 @@ const Preset: React.FC<PresetProps> = (Props) => {
 
       <Animate className={'col col-3'} effect={'fade-up-in'}>
         <a
-          href={`${downloadUrl}/download${Props.presetRoute}`}
+          href={`${downloadUrl}/download?file=${Props.presetRoute}`}
           className={'link-like-button blue'}
         >Download {Props.name}.xmp</a>
 
         <a
-          href={`${downloadUrl}/download${Props.dngRoute}`}
+          href={`${downloadUrl}/download?file=${Props.dngRoute}`}
           className={'link-like-button blue'}
         >Download {Props.name}.dng</a>
       </Animate>
@@ -82,8 +82,8 @@ const Preset: React.FC<PresetProps> = (Props) => {
 const presets = [
   { 
     name: 'Pendleton', 
-    presetRoute: '/Pendleton.xmp',
-    dngRoute: '/Pendleton.dng',
+    presetRoute: 'Pendleton.xmp',
+    dngRoute: 'Pendleton.dng',
     image_before: '/images/preset_Pendleton/before.jpg',
     image_after: '/images/preset_Pendleton/after.jpg',
     description: [
