@@ -1,4 +1,5 @@
 import React from 'react';
+import Animate from '../utils/Animate';
 
 import '../styles/presets.scss'
 
@@ -24,12 +25,12 @@ const Preset: React.FC<PresetProps> = (Props) => {
   return (
     <div className={'preset col col-3 subgrid'}>
 
-      <div className={'col col-3'}>
+      <Animate className={'col col-3'} effect={'fade-up-in'}>
         <h1>{Props.name}.xmp</h1>
         <p>A Lightroom Preset by Joe Boylson</p>
-      </div>
+      </Animate>
 
-      <div className={'col col-3'}>
+      <Animate className={'col col-3'} effect={'fade-up-in'}>
         <a
           href={`${downloadUrl}${Props.presetRoute}`}
           className={'link-like-button blue'}
@@ -39,34 +40,34 @@ const Preset: React.FC<PresetProps> = (Props) => {
           href={`${downloadUrl}${Props.dngRoute}`}
           className={'link-like-button blue'}
         >Download {Props.name}.dng</a>
-      </div>
+      </Animate>
 
-      <div className={'col col-1'}>
+      <Animate className={'col col-1'} effect={'fade-up-in'}>
         <h3>Description:</h3>
         { Props.description.map((line:string, index:number) => {
           return <p key={index}>{line}</p>
         })}
-      </div>
+      </Animate>
 
-      <div className={'col col-2 nomarg-desktop'}>
+      <Animate className={'col col-2 nomarg-desktop'} effect={'fade-up-in'}>
         <h3>PHOTOGRAPHER NOTES:</h3>
         <ul>
           { Props.notes.map((line:string, index:number) => {
             return <li key={index}>{line}</li>
           })}
         </ul>
-      </div>
+      </Animate>
 
-      <div className={'preview col col-1 col-2-tablet'}>
+      <Animate className={'preview col col-1 col-2-tablet'} effect={'fade-up-in'}>
         <h3>Before:</h3>
         <img src={Props.image_before} alt=""/>
         <p>* Photo has been corrected for white balance and exposure.</p>
-      </div>
+      </Animate>
 
-      <div className={'preview col col-1 nomarg-desktop col-2-tablet'}>
+      <Animate className={'preview col col-1 nomarg-desktop col-2-tablet'} effect={'fade-up-in'}>
         <h3>After:</h3>
         <img src={Props.image_after} alt=""/>
-      </div>
+      </Animate>
 
     </div>
   )
@@ -103,7 +104,7 @@ const PresetList: React.FC = (Props) => {
   return (    
     <div id={'preset-list'} className={'grid'}>
 
-      <div className={'col col-3 header underlined'}>
+      <Animate className={'col col-3 header underlined'} effect={'fade-up-in'} animateOnLoad>
         <h1>Presets</h1>
 
         <p className={'header-text'}>
@@ -142,7 +143,7 @@ const PresetList: React.FC = (Props) => {
           className={'link-like-button blue'}
         >Lightroom CC (without subscription - method 2)</a>
 
-      </div>
+      </Animate>
 
 
       { presets.map((preset:any, index: number) => {

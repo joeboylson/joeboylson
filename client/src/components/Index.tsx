@@ -1,5 +1,5 @@
 import React from 'react';
-import Animate from '../utils/Animate'
+import Animate from '../utils/Animate';
 
 export interface IndexProps {
   setRoute: any

@@ -5,6 +5,7 @@ export interface AnimateProps extends React.DetailedHTMLProps<React.HTMLAttribut
   hide?: string;
   animateOut?: Boolean;
   delay?: number;
+  animateOnLoad?: Boolean;
 }
 
 const Animate: React.FC<AnimateProps> = (Props) => {
@@ -24,6 +25,9 @@ const Animate: React.FC<AnimateProps> = (Props) => {
   }
 
   const elementClasses = () => {
+    if (Props.animateOnLoad) {
+      return `${Props.className} ${Props.effect}`;
+    }
     if (elementRef.current) {
       if (inViewport) { elementRef.current.classList.add(Props.effect) }
       else if (!inViewport && Props.animateOut) { elementRef.current.classList.remove(Props.effect) } 
