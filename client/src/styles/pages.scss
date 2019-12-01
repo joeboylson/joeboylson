@@ -1,3 +1,7 @@
+// ----- ----- ----- -----
+// INDEX ----- ----- -----
+// ----- ----- ----- -----
+
 #index {
 
   p { margin-bottom: 21px; }
@@ -16,4 +20,103 @@
 
   }
 
+}
+
+
+
+
+// ----- ----- ----- -----
+// ABOUT ----- ----- -----
+// ----- ----- ----- -----
+
+#about {
+
+  #about-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+
+  #cv-icon {
+    position: absolute;
+    right: calc(100vw/13);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .section {
+    margin-bottom: 89px;
+    padding-bottom: 89px;
+    border-bottom: 1px solid black;
+  }
+
+  .action-box {
+    padding: 21px !important;
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    margin-bottom: 89px;
+  }
+
+  h3, p {
+    margin-bottom: 21px;
+  }
+
+}
+
+
+
+// ----- ----- ----- -----
+// PRESET LIST ----- -----
+// ----- ----- ----- -----
+
+#preset-list {
+  .header {
+    padding-bottom: 89px !important;
+
+    h1 {
+      margin-bottom: 21px;
+    }
+
+    h3 {
+      margin: 42px 0 !important;
+    }
+
+    .header-text {
+      max-width: 650px;
+      margin-bottom: 21px;
+    }
+  }
+
+
+  .link-like-button {
+    display: block;
+    text-align: center;
+    margin-right: 0;
+    max-width: 650px;
+  }
+}
+
+
+
+// ----- ----- ----- -----
+// PRESET ---- ----- -----
+// ----- ----- ----- -----
+
+.preset {
+  p, h3, img, .preview {
+    margin-bottom: 21px;
+  }
 }

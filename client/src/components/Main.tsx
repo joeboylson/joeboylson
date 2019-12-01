@@ -5,12 +5,13 @@ import '../styles/pages.scss'
 
 // pages
 import Index from './Index'
+import About from './About'
 import PresetList from './Presets'
 
 const routes:any = {
   index: Index,
   projects: () => <h3>Page Coming Soon!</h3>,
-  about: () => <h3>Page Coming Soon!</h3>,
+  about: About,
   contact: () => <h3>Page Coming Soon!</h3>,
   presets: PresetList
 }

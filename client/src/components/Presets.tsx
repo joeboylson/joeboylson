@@ -1,7 +1,7 @@
 import React from 'react';
 import Animate from '../utils/Animate';
 
-import '../styles/presets.scss'
+import '../styles/pages.scss'
 
 import { downloadUrl } from './Main';
 
@@ -40,6 +40,11 @@ const Preset: React.FC<PresetProps> = (Props) => {
           href={`${downloadUrl}/download?file=${Props.dngRoute}`}
           className={'link-like-button blue'}
         >Download {Props.name}.dng</a>
+
+        <a
+          href={`https://www.dropbox.com/sh/35srru1ua3vdywn/AACuLnPKWB5oxdupvo3UFB0oa?dl=0`}
+          className={'link-like-button blue'}
+        >Download from Dropbox</a>
       </Animate>
 
       <Animate className={'col col-1'} effect={'fade-up-in'}>

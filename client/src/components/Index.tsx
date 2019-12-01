@@ -23,7 +23,7 @@ const Index: React.FC<IndexProps> = (Props) => {
         effect={'fade-up-in'}  
         delay={0.1}
       >
-        <p>I'm a student at the University of Cincinnati working towards a Bachelor of Science in Software Development</p>
+        <p>I'm a student at the University of Cincinnati working towards a Bachelor of Science in Software Development.</p>
         <p>Between school and work, I like to shoot photos and create websites (like this one).</p>
         <p>
           I'm very interested in Web Design, UI/UX, Graphic Design, and Branding and hope to one day use all my skills
