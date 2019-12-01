@@ -25,10 +25,16 @@ const downloadUrl = process.env.NODE_ENV !== 'production' ? 'http://localhost:50
 
 const Main: React.FC = (Props) => {
 
-  const defaultRoute = Object.keys(routes).includes( window.location.pathname.slice(1) ) ? window.location.pathname.slice(1) : 'index' 
+  const getDefaultRoute = () => {
+    return Object.keys(routes).includes( window.location.pathname.slice(1) ) ? window.location.pathname.slice(1) : 'index'
+  }
   
-  const [route, setRoute] = React.useState(defaultRoute)
+  const [route, setRoute] = React.useState( getDefaultRoute() )
   const Component = routes[route]
+
+  // handling route forwards and backwards
+  window.history.pushState(null, '', route)
+  window.onpopstate = () => { setRoute( getDefaultRoute() ) }
 
   return (    
     <main>
@@ -38,7 +44,6 @@ const Main: React.FC = (Props) => {
       }
     </main>
   )
-
 }
 
 export default Main;
