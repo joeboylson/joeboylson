@@ -60,7 +60,7 @@ const Main: React.FC = (Props) => {
       loadImages(imagesToPreload, () => setImagesAreLoaded(true), loadingContainerRef.current)
     }
   }, [imagesAreLoaded])
-
+  
   return (    
     <main>
 

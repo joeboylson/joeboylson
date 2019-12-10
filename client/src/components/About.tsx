@@ -29,11 +29,6 @@ const About: React.FC<AboutProps> = (Props) => {
 
       <Animate effect={'fade-up-in'} delay={0.1} animateOnLoad className={'col col-1'}>
         <img src={'/images/about_photo.jpg'} alt=""/>
-
-        <p>
-          If you would like to hire me for a web development or photography project,
-          get together and shoot some photos, or just ask me a question, you can reach me below.
-        </p>
         
         <div 
           className={'col col-1 blue green split-text action-box hoverable'}

@@ -1,29 +1,39 @@
-{
+ {
   "projects": [
     {
-      "name": "Project Headspace",
-      "description": "This",
-      "date": "05.18 ─ 09.18",
+      "name": "joeboylson.us",
+      "description": "This website: A self-defining project that has evolved as I have.",
+      "date": "03.18 ─ present",
       "sections": [
         {
-          "header": "Header One",
+          "header": "Let's go back to the beginning",
           "items": [
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos veniam adipisci, non omnis, eos nemo totam similique fugiat ex at quae recusandae deserunt, quis dignissimos sunt vero debitis eaque assumenda expedita facere? Inventore minus ipsa architecto qui placeat tempore officiis culpa assumenda animi dolor temporibus sapiente perspiciatis recusandae provident maiores eveniet officia sed pariatur earum, quaerat autem porro. Quaerat quas dicta exercitationem assumenda saepe obcaecati quod eum quasi inventore facilis optio excepturi recusandae animi quibusdam ab sint beatae cum, maiores aut voluptatibus ipsum ut! Voluptates ex ducimus corrupti, illo neque illum qui ut quis accusamus voluptatum doloribus numquam officia vero.",
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos veniam adipisci, non omnis, eos nemo totam similique fugiat ex at quae recusandae deserunt, quis dignissimos sunt vero debitis eaque assumenda expedita facere? Inventore minus ipsa architecto qui placeat tempore officiis culpa assumenda animi dolor temporibus sapiente perspiciatis recusandae provident maiores eveniet officia sed pariatur earum, quaerat autem porro. Quaerat quas dicta exercitationem assumenda saepe obcaecati quod eum quasi inventore facilis optio excepturi recusandae animi quibusdam ab sint beatae cum, maiores aut voluptatibus ipsum ut! Voluptates ex ducimus corrupti, illo neque illum qui ut quis accusamus voluptatum doloribus numquam officia vero." 
+            "Prior to 2018, I had been shooting photos for about 5 years and I had always wanted a portfolio website to display those photos ─ something that was more than just Instagram. I had no programming skills - besides the few hours I had spent tinkering with HTML and CSS. I searched around for a solution that would allow me to have a website without knowing how to code. I used Wix and Adobe Portfolio -  but neither really suited my needs and I wasn't satisfied.",
+            "I restarted multiple times, trying different layouts and designs - but still I was dissatisfied. Little did I know that this dissatisfaction and seemingly endless attemts to make something that felt 'right' was only the beginning."
           ]
         },
         {
-          "header": "Header One",
+          "header": "My first dive into Web Development",
           "items": [
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos veniam adipisci, non omnis, eos nemo totam similique fugiat ex at quae recusandae deserunt, quis dignissimos sunt vero debitis eaque assumenda expedita facere? Inventore minus ipsa architecto qui placeat tempore officiis culpa assumenda animi dolor temporibus sapiente perspiciatis recusandae provident maiores eveniet officia sed pariatur earum, quaerat autem porro. Quaerat quas dicta exercitationem assumenda saepe obcaecati quod eum quasi inventore facilis optio excepturi recusandae animi quibusdam ab sint beatae cum, maiores aut voluptatibus ipsum ut! Voluptates ex ducimus corrupti, illo neque illum qui ut quis accusamus voluptatum doloribus numquam officia vero.",
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos veniam adipisci, non omnis, eos nemo totam similique fugiat ex at quae recusandae deserunt, quis dignissimos sunt vero debitis eaque assumenda expedita facere? Inventore minus ipsa architecto qui placeat tempore officiis culpa assumenda animi dolor temporibus sapiente perspiciatis recusandae provident maiores eveniet officia sed pariatur earum, quaerat autem porro. Quaerat quas dicta exercitationem assumenda saepe obcaecati quod eum quasi inventore facilis optio excepturi recusandae animi quibusdam ab sint beatae cum, maiores aut voluptatibus ipsum ut! Voluptates ex ducimus corrupti, illo neque illum qui ut quis accusamus voluptatum doloribus numquam officia vero." 
+            "In January of 2018, I started my first co-op (like an internship) through the University of Cincinnati: I had gotten a position as a web developer even though I knew nothing about web development. The first months were hard - but it was one of the best things that has happened to me. I learned at such a rapid pace - 8 hours a day for four months gets you experience real quick.",
+            "About 2 months into this co-op, I realized I had all the tools to host a website - by myself. I could build whatever I wanted. I found Heroku (which I still use today) which is a service that allows you to host a website easily - AND they have a free tier. And so I used Heroku. And through messing around, making mistakes, writing terrible code, and just seeing if I could make an idea a reality, I learned a lot."
           ]
         },
         {
-          "header": "Header One",
+          "header": "Current Day",
           "items": [
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos veniam adipisci, non omnis, eos nemo totam similique fugiat ex at quae recusandae deserunt, quis dignissimos sunt vero debitis eaque assumenda expedita facere? Inventore minus ipsa architecto qui placeat tempore officiis culpa assumenda animi dolor temporibus sapiente perspiciatis recusandae provident maiores eveniet officia sed pariatur earum, quaerat autem porro. Quaerat quas dicta exercitationem assumenda saepe obcaecati quod eum quasi inventore facilis optio excepturi recusandae animi quibusdam ab sint beatae cum, maiores aut voluptatibus ipsum ut! Voluptates ex ducimus corrupti, illo neque illum qui ut quis accusamus voluptatum doloribus numquam officia vero.",
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos veniam adipisci, non omnis, eos nemo totam similique fugiat ex at quae recusandae deserunt, quis dignissimos sunt vero debitis eaque assumenda expedita facere? Inventore minus ipsa architecto qui placeat tempore officiis culpa assumenda animi dolor temporibus sapiente perspiciatis recusandae provident maiores eveniet officia sed pariatur earum, quaerat autem porro. Quaerat quas dicta exercitationem assumenda saepe obcaecati quod eum quasi inventore facilis optio excepturi recusandae animi quibusdam ab sint beatae cum, maiores aut voluptatibus ipsum ut! Voluptates ex ducimus corrupti, illo neque illum qui ut quis accusamus voluptatum doloribus numquam officia vero." 
+            "I have completed 2 additional co-ops after my first one; in all three I have had a web developer role. And on my own time, I spend a solid amount of time working on, and sometimes obsessing over, web development.",
+            "It has taken a few years, but I have finally built something that feel 'right' - or rather 'more right than everything else I have built'. There's still always room for improvement, room to add new features or make old features better.",
+            "As my passion for web development grows and changes, this website also changes.",
+            "I find it interesting that I set out to build a website for my photography - and now I have build one that contains primarily my Web Development work"
+          ]
+        },
+        {
+          "header": "Objective for the site",
+          "items": [
+            "I want this website to be the one place that a person can go to if they want to see who I am and what I am about. I wanted it to reflect a certain part of me: the grid, the clean lines, and the smooth animations are all things that I wanted to show. I also wanted the navigation between pages to be easy and quick; the browser doesn't pause for even a second when you switch to a different page.",
+            "A professor once talked about the design of a site in a class: he talked about how the goal of design was for it to actually disappear and that interaction would simple by fluid and intuitive. As much as I want you to admire the design, I realize that if I can make the design disappear, I have done my job better.",
+            "I try to make each item on the page significant and deliberate. Everything is where it is for a reason. If you come to this site, I want you to find exactly what you are loking for."
           ]
         }
       ]
