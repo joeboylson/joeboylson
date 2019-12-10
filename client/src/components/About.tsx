@@ -1,13 +1,11 @@
 import React from 'react';
 import Animate from '../utils/Animate';
-import Icon from '../utils/Icon'
 
 import '../styles/pages.scss'
 
 export interface AboutProps {
   setRoute: any
 }
-
 
 const About: React.FC<AboutProps> = (Props) => {
   return (
@@ -88,8 +86,9 @@ const About: React.FC<AboutProps> = (Props) => {
             of lighting, geometry, contrast, and shape.
           </p>
           <p>
-            For now, my photography portfolio lives on Instagram: check it out and let me know
-            what you think.
+            For now, my photography portfolio lives on Instagram
+            : <a href="https://www.instagram.com/jobo.jpg/">check it out and let me know what you think</a>
+            .
           </p>
         </Animate>
 

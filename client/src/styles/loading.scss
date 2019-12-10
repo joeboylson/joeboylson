@@ -1,0 +1,46 @@
+$unit: calc(100vw/13);
+
+#loading-images-container {
+
+  .images-statusbar {
+    height: 20px;
+    transform-origin: left center;
+    background-color: black;
+    transform: scaleX(0);
+    margin-bottom: 21px;
+  }
+  
+  .status-item-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .status-item {
+      max-width: 500px;
+      overflow: hidden;
+    }
+
+    .status-result {
+      width: calc( #{$unit} - 1px);
+      text-align: right;
+      background-color: white;
+    }
+
+    .status-item::after {
+      position: absolute;
+      white-space: nowrap;
+      z-index: -1;
+      content: ' . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .'
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+  $tablet-unit: calc(100vw/9);
+
+  .status-result {
+    width: calc( #{$tablet-unit} - 1px) !important;
+  }
+
+}
