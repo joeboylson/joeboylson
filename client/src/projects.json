@@ -1,89 +1,32 @@
 {
-  "projects": [{
-      "name": "one",
-      "description": "This is a simple one-sentence description of the project",
-      "technologies": "Nodejs, React, Slavery",
-      "sections": [{
-        "subtitle": "Section 1",
-        "text": [
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, autem animi? Iure illo dignissimos, similique necessitatibus accusantium amet culpa delectus? A reprehenderit eaque atque at modi quis laborum quod corporis neque voluptas?",
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, autem animi? Iure illo dignissimos, similique necessitatibus accusantium amet culpa delectus? A reprehenderit eaque atque at modi quis laborum quod corporis neque voluptas?",
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, autem animi? Iure illo dignissimos, similique necessitatibus accusantium amet culpa delectus? A reprehenderit eaque atque at modi quis laborum quod corporis neque voluptas?",
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, autem animi? Iure illo dignissimos, similique necessitatibus accusantium amet culpa delectus? A reprehenderit eaque atque at modi quis laborum quod corporis neque voluptas?"
-        ],
-        "images": [
-          "/images/fpd_1/01.jpeg",
-          "/images/fpd_1/04.jpeg",
-          "/images/fpd_1/05.jpeg",
-          "/images/fpd_1/02.jpeg",
-          "/images/fpd_1/03.jpeg"
-        ]
-      }]
-    },
+  "projects": [
     {
-      "name": "two",
-      "description": "This is a simple one-sentence description of the project",
-      "technologies": "Nodejs, React, Slavery",
-      "sections": [{
-        "subtitle": "Section 1",
-        "images": [
-          "https://via.placeholder.com/1500",
-          "https://via.placeholder.com/1500",
-          "https://via.placeholder.com/1500"
-        ]
-      }]
-    },
-    {
-      "name": "A Very Long Title",
-      "description": "This is a simple one-sentence description of the project",
-      "technologies": "Nodejs, React, Slavery"
-    },
-    {
-      "name": "four",
-      "description": "This is a simple one-sentence description of the project",
-      "technologies": "Nodejs, React, Slavery"
-    },
-    {
-      "name": "one",
-      "description": "This is a simple one-sentence description of the project",
-      "technologies": "Nodejs, React, Slavery",
-      "sections": [{
-        "subtitle": "Section 1",
-        "text": [
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, autem animi? Iure illo dignissimos, similique necessitatibus accusantium amet culpa delectus? A reprehenderit eaque atque at modi quis laborum quod corporis neque voluptas?",
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, autem animi? Iure illo dignissimos, similique necessitatibus accusantium amet culpa delectus? A reprehenderit eaque atque at modi quis laborum quod corporis neque voluptas?",
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, autem animi? Iure illo dignissimos, similique necessitatibus accusantium amet culpa delectus? A reprehenderit eaque atque at modi quis laborum quod corporis neque voluptas?",
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, autem animi? Iure illo dignissimos, similique necessitatibus accusantium amet culpa delectus? A reprehenderit eaque atque at modi quis laborum quod corporis neque voluptas?"
-        ],
-        "images": [
-          "https://via.placeholder.com/1500",
-          "https://via.placeholder.com/1500",
-          "https://via.placeholder.com/1500"
-        ]
-      }]
-    },
-    {
-      "name": "two",
-      "description": "This is a simple one-sentence description of the project",
-      "technologies": "Nodejs, React, Slavery",
-      "sections": [{
-        "subtitle": "Section 1",
-        "images": [
-          "https://via.placeholder.com/1500",
-          "https://via.placeholder.com/1500",
-          "https://via.placeholder.com/1500"
-        ]
-      }]
-    },
-    {
-      "name": "A Very Long Title",
-      "description": "This is a simple one-sentence description of the project",
-      "technologies": "Nodejs, React, Slavery"
-    },
-    {
-      "name": "four",
-      "description": "This is a simple one-sentence description of the project",
-      "technologies": "Nodejs, React, Slavery"
+      "name": "Project Headspace",
+      "description": "This",
+      "date": "05.18 ─ 09.18",
+      "sections": [
+        {
+          "header": "Header One",
+          "items": [
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos veniam adipisci, non omnis, eos nemo totam similique fugiat ex at quae recusandae deserunt, quis dignissimos sunt vero debitis eaque assumenda expedita facere? Inventore minus ipsa architecto qui placeat tempore officiis culpa assumenda animi dolor temporibus sapiente perspiciatis recusandae provident maiores eveniet officia sed pariatur earum, quaerat autem porro. Quaerat quas dicta exercitationem assumenda saepe obcaecati quod eum quasi inventore facilis optio excepturi recusandae animi quibusdam ab sint beatae cum, maiores aut voluptatibus ipsum ut! Voluptates ex ducimus corrupti, illo neque illum qui ut quis accusamus voluptatum doloribus numquam officia vero.",
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos veniam adipisci, non omnis, eos nemo totam similique fugiat ex at quae recusandae deserunt, quis dignissimos sunt vero debitis eaque assumenda expedita facere? Inventore minus ipsa architecto qui placeat tempore officiis culpa assumenda animi dolor temporibus sapiente perspiciatis recusandae provident maiores eveniet officia sed pariatur earum, quaerat autem porro. Quaerat quas dicta exercitationem assumenda saepe obcaecati quod eum quasi inventore facilis optio excepturi recusandae animi quibusdam ab sint beatae cum, maiores aut voluptatibus ipsum ut! Voluptates ex ducimus corrupti, illo neque illum qui ut quis accusamus voluptatum doloribus numquam officia vero." 
+          ]
+        },
+        {
+          "header": "Header One",
+          "items": [
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos veniam adipisci, non omnis, eos nemo totam similique fugiat ex at quae recusandae deserunt, quis dignissimos sunt vero debitis eaque assumenda expedita facere? Inventore minus ipsa architecto qui placeat tempore officiis culpa assumenda animi dolor temporibus sapiente perspiciatis recusandae provident maiores eveniet officia sed pariatur earum, quaerat autem porro. Quaerat quas dicta exercitationem assumenda saepe obcaecati quod eum quasi inventore facilis optio excepturi recusandae animi quibusdam ab sint beatae cum, maiores aut voluptatibus ipsum ut! Voluptates ex ducimus corrupti, illo neque illum qui ut quis accusamus voluptatum doloribus numquam officia vero.",
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos veniam adipisci, non omnis, eos nemo totam similique fugiat ex at quae recusandae deserunt, quis dignissimos sunt vero debitis eaque assumenda expedita facere? Inventore minus ipsa architecto qui placeat tempore officiis culpa assumenda animi dolor temporibus sapiente perspiciatis recusandae provident maiores eveniet officia sed pariatur earum, quaerat autem porro. Quaerat quas dicta exercitationem assumenda saepe obcaecati quod eum quasi inventore facilis optio excepturi recusandae animi quibusdam ab sint beatae cum, maiores aut voluptatibus ipsum ut! Voluptates ex ducimus corrupti, illo neque illum qui ut quis accusamus voluptatum doloribus numquam officia vero." 
+          ]
+        },
+        {
+          "header": "Header One",
+          "items": [
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos veniam adipisci, non omnis, eos nemo totam similique fugiat ex at quae recusandae deserunt, quis dignissimos sunt vero debitis eaque assumenda expedita facere? Inventore minus ipsa architecto qui placeat tempore officiis culpa assumenda animi dolor temporibus sapiente perspiciatis recusandae provident maiores eveniet officia sed pariatur earum, quaerat autem porro. Quaerat quas dicta exercitationem assumenda saepe obcaecati quod eum quasi inventore facilis optio excepturi recusandae animi quibusdam ab sint beatae cum, maiores aut voluptatibus ipsum ut! Voluptates ex ducimus corrupti, illo neque illum qui ut quis accusamus voluptatum doloribus numquam officia vero.",
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos veniam adipisci, non omnis, eos nemo totam similique fugiat ex at quae recusandae deserunt, quis dignissimos sunt vero debitis eaque assumenda expedita facere? Inventore minus ipsa architecto qui placeat tempore officiis culpa assumenda animi dolor temporibus sapiente perspiciatis recusandae provident maiores eveniet officia sed pariatur earum, quaerat autem porro. Quaerat quas dicta exercitationem assumenda saepe obcaecati quod eum quasi inventore facilis optio excepturi recusandae animi quibusdam ab sint beatae cum, maiores aut voluptatibus ipsum ut! Voluptates ex ducimus corrupti, illo neque illum qui ut quis accusamus voluptatum doloribus numquam officia vero." 
+          ]
+        }
+      ]
     }
   ]
 }

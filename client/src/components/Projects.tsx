@@ -1,64 +1,104 @@
 import React from 'react';
+import Animate from '../utils/Animate';
+import Icon from '../utils/Icon'
 
-import * as projectList from '../projects.json';
-import GenerateProject from '../utils/GenerateProject';
+import '../styles/pages.scss'
+import { projects } from '../projects.json'
 
 const Projects: React.FC = () => {
 
-  let [selectedProject, setSelectedProject] = React.useState(undefined)
-
-  const selectProject = (project: any) => {
-    setSelectedProject(undefined);
-    let timeout = setTimeout(() => {
-      setSelectedProject(project)
-      clearTimeout(timeout)
-    }, 1)
-  }
+  const [selectedProject, setSelectedProject] = React.useState()
 
   return (
-    <div className={'grid'}>
 
+    <div id={'projects'} className={'grid'}>
 
+    { selectedProject ? (
+      <div className={'project grid'}>
 
+        <Icon 
+          onClick={() => setSelectedProject(null) } 
+          type={'close'}
+          className={'project-close-icon pink large'}
+        />
 
-      {/* selected project */}
-        {selectedProject ? (
-          <div>
+        <Animate 
+          className={'col col-3'}
+          effect={'fade-up-in'}  
+        >
+          <h1>{selectedProject.name}</h1>
+        </Animate>
 
-            <button 
-              className={'primary'}
-              onClick={() => setSelectedProject(undefined)}
-            >
-              back
-            </button>
+        { selectedProject.sections.map((section:any, sectionIndex:any) => {
+          return <Animate
+            className={'col col-2 section'} 
+            effect={'fade-up-in'} 
+            key={`section-${sectionIndex}`}>
+            <h3>{ section.header }</h3>
 
-            <GenerateProject
-              project={selectedProject}
-            />
-          </div>
-        ) : (
-          <div className={'col col-3'}>
-            <div className={'subgrid'}>
-              {projectList.projects.map((project: any, index: number) => {
-                return (
-                  <div
-                    key={index}
-                    className={`subcol-1 ${ (index+1) % 3 > 0 ? '' : 'subcol-nomarg-desktop'}`}
-                    data-fadeupin={index + 1}
-                    onClick={() => selectProject(project)}
-                  >
-                    <div className={'card card-clickable'}>
-                      <h3>{project.name}</h3>
-                      <p>{project.description}</p>
-                      <p className={'project-technologies'}>{project.technologies}</p>
-                    </div>
-                  </div>)
-              })}
-            </div>
-          </div>
-          )
+            { section.items.map((item:string, itemIndex:number) => {
+              return <p key={`item-${itemIndex}`}>{ item }</p>
+            })
+
+            }
+          </Animate>
+        })
+
         }
       </div>
+    ) : (
+
+      <div className={'grid'}>
+
+
+
+    <Animate className={'col col-3 header'} effect={'fade-up-in'} animateOnLoad>
+      <h1>Projects</h1>
+
+      <p className={'header-text'}></p>
+
+    </Animate>
+
+      { projects.map((project:any, index:number) => {
+
+        let itemClassName = `
+          col 
+          col-1 
+          ${ (index+1) % 3 === 0 ? 'nomarg-desktop' : ''} 
+          project-li
+        `;
+
+        return (
+          <Animate
+            key={index}
+            className={itemClassName}
+            effect={'fade-up-in'}
+            animateOnLoad={index<3}
+            delay={ ( (index) % 3 ) / 10 }
+            onClick={ () => setSelectedProject(project) }
+          >
+            <div className={'project-li-inner'}>
+              <div className={'project-li-header'}>
+                <h3>{index}.</h3>
+                <h3 className={'split-text'}>{ project.name }</h3>
+              </div>
+              { project.description &&
+                <p>{ project.description }</p>
+              }
+              <p>{ project.date }</p>
+            </div>
+          </Animate>
+
+        )})
+
+        
+        
+      }
+    </div>
+
+    )}
+  </div>
+
   );
 }
 
