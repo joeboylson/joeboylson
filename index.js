@@ -3,6 +3,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 const fs = require('fs');
 const path = require('path');
+const request = require('request')
 
 let downloadableFiles = {};
 
@@ -38,6 +39,13 @@ app.get('/download', (req, res) => {
   return res.redirect('/')
 })
 
-app.get('/*', (req, res) => res.sendFile( `${__dirname}/client/build/index.html`));
+app.get('/*', (req, res) => {
+  
+  if (process.env.NODE_ENV == 'production') {
+    request(`https://maker.ifttt.com/trigger/website_trigger/with/key/${process.env.IFTTT_WEBHOOK_KEY}`)
+  }
+  
+  res.sendFile( `${__dirname}/client/build/index.html`)
+});
 
 app.listen(port, () => console.log(`::: ${port}`))
