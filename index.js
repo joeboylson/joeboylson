@@ -40,6 +40,9 @@ app.get('/download', (req, res) => {
 })
 
 app.get('/*', (req, res) => {
+
+  console.log(process.env.NODE_ENV)
+  console.log(process.env.IFTTT_WEBHOOK_KEY)
   
   if (process.env.NODE_ENV == 'production') {
     request(`https://maker.ifttt.com/trigger/website_trigger/with/key/${process.env.IFTTT_WEBHOOK_KEY}`)
