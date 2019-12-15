@@ -39,7 +39,7 @@ const imagesToPreload = [
 // MAIN  ----- ----- -----
 // ----- ----- ----- -----
 
-const Main: React.FC = (Props) => {
+const Main: React.FC = () => {
 
   const getDefaultRoute = () => {
     return Object.keys(routes).includes( window.location.pathname.slice(1) ) ? window.location.pathname.slice(1) : 'index'
@@ -49,35 +49,22 @@ const Main: React.FC = (Props) => {
   const [imagesAreLoaded, setImagesAreLoaded] = React.useState(false)
   const Component = routes[route]
 
-  const loadingContainerRef = React.useRef(null)
-
   // handling route forwards and backwards
   window.history.pushState(null, '', route)
   window.onpopstate = () => { setRoute( getDefaultRoute() ) }
 
   React.useEffect(() => {
     if (!imagesAreLoaded) {
-      loadImages(imagesToPreload, () => setImagesAreLoaded(true), loadingContainerRef.current)
+      loadImages(imagesToPreload, () => setImagesAreLoaded(true))
     }
   }, [imagesAreLoaded])
   
   return (    
     <main>
-
-      { imagesAreLoaded ? (
-        <div>
-          <Nav setRoute={setRoute}/> 
-          { Component &&
-            <Component setRoute={setRoute}/>
-          }
-        </div>
-      ) : (
-        <div id={'loading-images-container'} ref={loadingContainerRef}>
-          <div className={'images-statusbar'}></div>
-          <p className={'underlined'}>Loading Images</p>
-        </div>
-      ) }
-
+      <Nav setRoute={setRoute}/> 
+      { Component &&
+        <Component setRoute={setRoute}/>
+      }
     </main>
   )
 }
