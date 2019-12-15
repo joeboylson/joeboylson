@@ -21,7 +21,7 @@ const routes:any = {
   presets: PresetList
 }
 
-const downloadUrl = process.env.NODE_ENV !== 'production' ? 'http://localhost:5000' : ''
+const apiUrl = process.env.NODE_ENV !== 'production' ? 'http://localhost:5000' : ''
 
 const imagesToPreload = [
   '/images/fpd_1/01.jpg',
@@ -83,4 +83,4 @@ const Main: React.FC = (Props) => {
 }
 
 export default Main;
-export { routes, downloadUrl };
+export { routes, apiUrl };
