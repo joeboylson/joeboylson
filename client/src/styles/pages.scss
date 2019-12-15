@@ -187,6 +187,11 @@ $col11: calc( #{$unit} * 11);
       color: var(--light);
       padding: 34px;
     }
+    h3 {
+      color: var(--light);
+      margin: 0;
+      padding-left: 34px;
+    }
     &:hover {
       background-color: var(--blue-alt);
     }
@@ -234,7 +239,6 @@ $col11: calc( #{$unit} * 11);
   .icon {
     font-size: 34px;
     margin-left: 0;
-    margin-right: $unit;
     i {
       border-radius: 0 !important;
     }

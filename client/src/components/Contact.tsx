@@ -301,24 +301,39 @@ const Contact: React.FC = () => {
         </Animate>
 
         <Animate
-          className={'col col-3 icons'}
+          className={'col col-1 col-2-tablet action-button'}
           effect={'fade-up-in'}
         >
+          <h3>Github</h3>
           <Icon 
-            className={`blue large`} type={'github'} 
+            className={`large`} type={'github'} 
             onClick={() => openNewTab('https://github.com/')}
           />
+        </Animate>
 
+        <Animate
+          className={'col col-1 col-2-tablet action-button'}
+          effect={'fade-up-in'}
+        >
+          <h3>LinkedIn</h3>
           <Icon 
-            className={`green large`} type={'linkedin'} 
+            className={`large`} type={'linkedin'} 
             onClick={() => openNewTab('https://www.linkedin.com/in/joe-boylson-34603b139/')}
           />
+        </Animate>
 
+        <Animate
+          className={'col col-1 nomarg-desktop col-2-tablet action-button'}
+          effect={'fade-up-in'}
+        >
+          <h3>Instagram</h3>
           <Icon 
-            className={`yellow large`} type={'instagram'} 
+            className={`large`} type={'instagram'} 
             onClick={() => openNewTab('https://www.instagram.com/jobo.jpg/')}
           />
         </Animate>
+
+
       </div>
     </div>
   )
