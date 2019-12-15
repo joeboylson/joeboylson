@@ -161,16 +161,34 @@ $col11: calc( #{$unit} * 11);
     margin-bottom: 21px;
   } 
 
-  #loading-view, #success-view, #error-view {
-    flex-direction: column;
-    text-align: center;
-    padding: 89px;
+  .contact-response {
+    padding-top: 89px;
     margin-bottom: 54px;
-    h3, p {
+    h3, p, strong {
       color: var(--light);
     }
     .lds-roller {
       margin: auto;
+    }
+    .col {
+      margin-left: $unit;
+      margin-right: 0;
+    }
+    
+  }
+  .action-button {
+    background-color: var(--blue);
+    transition-duration: 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    p {
+      color: var(--light);
+      padding: 34px;
+    }
+    &:hover {
+      background-color: var(--blue-alt);
     }
   }
 

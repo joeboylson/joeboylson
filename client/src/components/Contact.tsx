@@ -108,10 +108,6 @@ const Contact: React.FC = () => {
     setLoading(false)
   }
 
-  const tryAgain = () => {
-    setHasSubmit(false);
-  }
-
   React.useEffect(() => {
     if (name && name.length > 0 && nameInputRef.current) {
       nameInputRef.current.value = name;
@@ -153,10 +149,12 @@ const Contact: React.FC = () => {
         >
           <div
             id={'loading-view'} 
-            className={'grid'}
+            className={'grid contact-response'}
           >
-            <h3>Sending your message . . .</h3>
-            <div className={'lds-roller'}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <div className={'col col-3'}>
+              <h3>Sending your message . . .</h3>
+              <div className={'lds-roller'}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
           </div>
         </Animate>
       ) : (
@@ -172,10 +170,15 @@ const Contact: React.FC = () => {
                 >
                 <div
                   id={'success-view'} 
-                  className={'grid'}
+                  className={'grid contact-response'}
                 >
-                  <h3>Success!</h3>
-                  <p>Thank you for your message. I'll get back to you as soon as I can.</p>
+                  <div className={'col col-3'}>
+                    <h3>Success!</h3>
+                  </div>
+                  <div className={'col col-3'}>
+                    <p>Thank you for your message.</p>
+                    <p>I'll get back to you as soon as I can.</p>
+                  </div>
                 </div>
               </Animate>
             ) : (
@@ -186,14 +189,33 @@ const Contact: React.FC = () => {
                 >
                 <div
                   id={'error-view'} 
-                  className={'grid'}
+                  className={'grid contact-response'}
                 >
-                  <h3>Oops!</h3>
-                  <p>It looks like something went wrong.</p>
-                  <p>{name}</p>
-                  <p>{email}</p>
-                  <p>{message}</p>
-                  <button onClick={() => tryAgain()}>Click here to try again.</button>
+                  <div className={'col col-3'}>
+                    <h3>Oops!</h3>
+                    <h3>It looks like something went wrong.</h3>
+                  </div>
+
+                  <div className={'col col-3'}>
+                    <h3>You said:</h3>
+                    <p>{message || '[ message was empty ]'}</p>
+                  </div>
+                </div>
+
+                <div className={'grid'}>
+                  <div 
+                    className={'col col-1 action-button'}
+                    onClick={() => setHasSubmit(false)}  
+                  >
+                    <p>Click here to try again</p>
+                  </div>
+
+                  <div 
+                    className={'col col-1 action-button'}
+                    onClick={() => window.location.href = `mailto:joeboylson@gmail.com?&body=${message || '[ message was empty ]'}`}  
+                  >
+                    <p>Or click here to open the message in your email</p>
+                  </div>
                 </div>
               </Animate>
             )}

@@ -4,10 +4,6 @@ const port = process.env.PORT || 5000;
 const fs = require('fs');
 const path = require('path');
 
-// SENDGRID
-const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
 
 // DOWNLOADABLE FILES
 let downloadableFiles = {};
@@ -31,6 +27,20 @@ const setDownloadableFiles = (folder) => {
 }
 
 setDownloadableFiles('public')
+
+// SENDGRID
+const getSendgridApiKey = () => {
+  if (process.env.NODE_ENV !== 'production') {
+    let config = require('./config')
+    return config.SENDGRID_API_KEY;
+  }
+  else {
+    return process.env.SENDGRID_API_KEY;
+  }
+}
+
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey( getSendgridApiKey() );
 
 // CLIENT
 app.use(express.static(`${__dirname}/client/build`));
