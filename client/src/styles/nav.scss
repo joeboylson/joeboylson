@@ -1,9 +1,9 @@
 $unit: calc(100vw/13);
 $minus-unit: calc(100vw/-13);
 
-$height2:  calc( #{$unit} * 2);
-$width3:  calc( #{$unit} * 3);
-$width5:  calc( #{$unit} * 5);
+$height2: calc(#{$unit} * 2);
+$width3: calc(#{$unit} * 3);
+$width5: calc(#{$unit} * 5);
 
 
 #nav {
@@ -12,39 +12,48 @@ $width5:  calc( #{$unit} * 5);
   left: 0;
   width: 100vw;
   height: $unit;
-
   display: flex;
   justify-content: flex-end;
   z-index: +1;
   pointer-events: none;
 
   .menu-icon {
-
     width: $unit;
     height: $unit;
     background-color: var(--dark);
     z-index: +1;
     pointer-events: all;
     cursor: pointer;
+    transition-duration: 0.25s;
 
-    * { 
-      color: var(--light); 
+    * {
+      color: var(--light);
       line-height: $unit;
       text-align: center;
-    } 
+    }
+
+    &.nav-is-open {
+      width: $width5;
+      height: 100vh;
+    }
+
+    &.nav-is-closed {
+      width: $unit;
+      height: $unit;
+    }
   }
 
   .nav-links {
     position: absolute;
     width: $width5;
     height: 120vh;
-    background-color: var(--dark);
     transition-duration: 0.5s;
     padding-top: $height2;
+    z-index: +1;
 
     @for $i from 1 to 10 {
       .nav-link:nth-child(#{$i}) {
-        transition-delay: $i * 0.05s + 0.125;
+        transition-delay: $i * 0.025s;
       }
     }
 
@@ -58,13 +67,12 @@ $width5:  calc( #{$unit} * 5);
       cursor: pointer;
 
       &.nav-is-open {
-        transform: translateY(0);
+        transform: translateX(0);
         opacity: 1;
       }
 
       &.nav-is-closed {
-        transform: translateY($unit);
-        transition-delay: 0.5s;
+        transform: translateX($unit);
         opacity: 0;
       }
     }
@@ -82,14 +90,14 @@ $width5:  calc( #{$unit} * 5);
 
       @for $i from 1 to 10 {
         .icon:nth-child(#{$i}) {
-          transition-delay: $i * 0.05s + 0.25;
+          transition-delay: $i * 0.05s;
         }
       }
 
       .icon {
         transition-duration: 0.25s;
-        width: calc( #{$unit} - 21px);
-        height: calc( #{$unit} - 21px);
+        width: calc(#{$unit} - 21px);
+        height: calc(#{$unit} - 21px);
         min-height: 54px;
         min-width: 54px;
         margin: 0 21px 21px 0;
@@ -107,19 +115,33 @@ $width5:  calc( #{$unit} * 5);
           transform: translateX(0);
           opacity: 1;
         }
-  
+
         &.nav-is-closed {
           transform: translateX($unit);
-          transition-delay: 0.25s;
-          transition-duration: 0;
+          transition-duration: 0 !important;
+          transition-delay: 0 !important;
           opacity: 0;
         }
 
-        &.blue { background-color: var(--blue); }
-        &.green { background-color: var(--green); }
-        &.yellow { background-color: var(--yellow); }
-        &.pink { background-color: var(--pink); }
-        &.purple { background-color: var(--purple); }
+        &.blue {
+          background-color: var(--blue);
+        }
+
+        &.green {
+          background-color: var(--green);
+        }
+
+        &.yellow {
+          background-color: var(--yellow);
+        }
+
+        &.pink {
+          background-color: var(--pink);
+        }
+
+        &.purple {
+          background-color: var(--purple);
+        }
       }
 
     }
@@ -130,23 +152,37 @@ $width5:  calc( #{$unit} * 5);
       pointer-events: all;
     }
 
-    &::after {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: -100vw;
-      width: 100vw;
-      height: calc(100vh + #{$unit});
-      background-color: rgba(0, 0, 0, 0.5)
-    }
 
     &.nav-is-closed {
-      transform: translateY($minus-unit);
+      transform: translateY(0);
       opacity: 0;
       pointer-events: none !important;
     }
   }
 
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh + #{$unit});
+    background-color: rgba(0, 0, 0, 0.75);
+    transition-duration: 0.25s;
+  }
+
+  &.nav-is-open {  
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &.nav-is-closed {  
+    &::before {
+      opacity: 0;
+    }
+  }
+    
   .nav-caption {
     position: absolute;
     top: calc(200vw / 13);
@@ -168,16 +204,27 @@ $width5:  calc( #{$unit} * 5);
 
 @media only screen and (max-width: 1000px) {
   $tablet-unit: calc(100vw/9);
-  $tablet-width5:  calc( #{$tablet-unit} * 5);
+  $tablet-width5: calc(#{$tablet-unit} * 5);
 
   #nav {
     height: $tablet-unit;
-  
-    .menu-icon {  
+
+    .menu-icon {
       width: $tablet-unit;
       height: $tablet-unit;
-      * { 
+
+      * {
         line-height: $tablet-unit !important;
+      }
+
+      &.nav-is-open {
+        width: $tablet-width5;
+        height: 100vh;
+      }
+  
+      &.nav-is-closed {
+        width: $tablet-unit;
+        height: $tablet-unit;
       }
     }
 
@@ -217,6 +264,3 @@ $width5:  calc( #{$unit} * 5);
   }
 
 }
-
-
-
