@@ -110,6 +110,10 @@ $width5: calc(#{$unit} * 5);
         i {
           font-size: 34px;
         }
+        
+        i, svg {
+          background-color: transparent !important;
+        }
 
         &.nav-is-open {
           transform: translateX(0);
@@ -125,22 +129,37 @@ $width5: calc(#{$unit} * 5);
 
         &.blue {
           background-color: var(--blue);
+          &:hover {
+            background-color: var(--blue-alt);
+          }
         }
 
         &.green {
           background-color: var(--green);
+          &:hover {
+            background-color: var(--green-alt);
+          }
         }
 
         &.yellow {
           background-color: var(--yellow);
+          &:hover {
+            background-color: var(--yellow-alt);
+          }
         }
 
         &.pink {
           background-color: var(--pink);
+          &:hover {
+            background-color: var(--pink-alt);
+          }
         }
 
         &.purple {
           background-color: var(--purple);
+          &:hover {
+            background-color: var(--purple-alt);
+          }
         }
       }
 

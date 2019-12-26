@@ -96,7 +96,7 @@ $col11: calc( #{$unit} * 11);
   transition-duration: 0.5s;
 
   .project-li-inner {
-    padding-left: calc( #{$unit} / 2 );
+    padding: calc( #{$unit} / 2 ); 
     height: 100%;
 
     display: flex;

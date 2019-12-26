@@ -13,9 +13,11 @@
 // FADE UP IN  ----- ----- -----
 // ----- ----- ----- ----- -----
 
+$fadeupin-start: 34px;
+
 @keyframes FadeUpIn {
   from {
-    transform: translateY(89px);
+    transform: translateY($fadeupin-start);
     opacity: 0;
   }
   to {
@@ -25,7 +27,7 @@
 }
 
 .fade-up-in {
-  transform: translateY(89px);
+  transform: translateY($fadeupin-start);
   opacity: 0;
   animation: FadeUpIn 0.5s forwards var(--ttf);
 }
