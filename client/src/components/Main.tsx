@@ -58,9 +58,19 @@ const Main: React.FC = () => {
       loadImages(imagesToPreload, () => setImagesAreLoaded(true))
     }
   }, [imagesAreLoaded])
+
+  const scroll = () => {
+    console.log('SCROLL')
+    let root:any = document.getElementById('root')
+    if (root) { root.scrollIntoView(true, 'smooth') }
+  }
+
+  // reset scroll every page render
+  scroll()
   
   return (    
     <main>
+      <div id="top-spacer"></div>
       <Nav setRoute={setRoute}/> 
       { Component &&
         <Component setRoute={setRoute}/>

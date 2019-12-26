@@ -19,6 +19,7 @@
 }
 
 
+
 // ----- ----- ----- ----- -----
 // GENERAL --- ----- ----- -----
 // ----- ----- ----- ----- -----
@@ -48,8 +49,13 @@ body,
 }
 
 #root {
-  margin: calc( #{$unit} * 2) $unit $unit $unit;
+  margin: 0 $unit $unit $unit;
   width: $col11;
+
+  #top-spacer {
+    height: calc( #{$unit} * 2);
+  }
+
 }
 
 .grid {
@@ -147,8 +153,12 @@ ul {
   $col9:  calc( #{$tablet-unit} * 7);
 
   #root {
-    margin: calc( #{$tablet-unit} * 2) $tablet-unit $tablet-unit $tablet-unit;
+    margin: 0 $tablet-unit $tablet-unit $tablet-unit;
     width: $col9;
+
+    #top-spacer {
+      height: calc( #{$tablet-unit} * 2);
+    }
   }
 
   .col-1 {
@@ -280,8 +290,9 @@ ul {
 
 
 
-
-
+// ----- ----- ----- ----- -----
+// GRID CANVAS ----- ----- -----
+// ----- ----- ----- ----- -----
 
 #grid-canvas {
   position: fixed;
