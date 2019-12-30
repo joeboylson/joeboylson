@@ -52,14 +52,20 @@
           "items": [
             "In this assignment, we were tasked to create just a simple web page about ourselves. This was a way that we could all get to know eachother and get our web development skills warmed up.",
             "I chose to keep this page as simple as I could - but I also wanted it to look good.",
-            "https://web-game-development.herokuapp.com/ASSIGNMENT1_INTRODUCTION/"
+            {
+              "type": "link",
+              "text": "https://web-game-development.herokuapp.com/ASSIGNMENT1_INTRODUCTION/"
+            }
           ]
         },
         {
           "header": "Rock, Paper, Scissors",
           "items": [
             "In this assigment, we were tasked to make a Rock, Paper, Scissors game. We were required to use a HTML Form and to create a user-friendly interface. Each subsequent game had to be tracked, such that the number of wins, losses, and ties formed a tally. We also had to give the user basic instructions on how to play the game display the result of each game.",
-            "https://web-game-development.herokuapp.com/ASSIGNMENT2_ROCK_PAPER_SCISSORS/"
+            {
+              "type": "link",
+              "text": "https://web-game-development.herokuapp.com/ASSIGNMENT2_ROCK_PAPER_SCISSORS/"
+            }
           ]
         },
         {
@@ -69,7 +75,10 @@
             "During this project, the level of difficulty increased. There were now many more variables and outcomes that I had to think about. We were given a url from which we could request a word with a specified difficulty; then we had to start the game based around that word. This meant that any word we recieved would have to work",
             "We also had to draw each part of the hangman with the HTML Canvas element.",
             "Unlike the previous game, this game depends on a class which holds the state of the game. The class-based system worked very well and I used this method for the remaining games.",
-            "https://web-game-development.herokuapp.com/ASSIGNMENT3_HANGMAN/"
+            {
+              "type": "link",
+              "text": "https://web-game-development.herokuapp.com/ASSIGNMENT3_HANGMAN/"
+            }
           ]
         },
         {
@@ -78,7 +87,10 @@
             "I felt that this assignment was as difficult as the previous assignment. In this game, there is the added complexity of having two seperate players - but by using classes, this was relatively easy to solve.",
             "On the first screen, the two users have to option to choose a color and enter a name. I had to make sure that the users could not pick the same color or have the same name. From there I had to manage the moves of the players. I captured the coordinates of each click on the 3x3 board and filled in the corresponding value in a two-dimensional array. For example, if you clicked the center block, this would fill in the second value of the second array. Before I filled in the value, I had to make sure the box was no already filled; afterward, I had to check if the active player had won. If they had won, the game ended.",
             "I had a lot of fun with this project, especially with the styling and aesthetics of the game. I'm very proud with how this one turned out.",
-            "https://web-game-development.herokuapp.com/ASSIGNMENT4_TIC_TAC_TOE/"
+            {
+              "type": "link",
+              "text": "https://web-game-development.herokuapp.com/ASSIGNMENT4_TIC_TAC_TOE/"
+            }
           ]
         },
         {
@@ -93,7 +105,10 @@
             "After this, I finished up by adding powerups in the game. One was a coin which simply added 500 points to the users' score; the second was an invisibility powerup which would basically turn off the collision effects for all objects. Because of this, I changed how the result of a collision worked. If it was an obstacle, the game would end, but if it was a powerup, if would change the player properties or the score.",
             "This was a blast to create, especially since there were not many requirements. It had to be a game, it had to work, and it had to be relatively complex. Dealing with the coordinate systems of the HTML Canvas, multiple classes all linking and working together, the Javascript 'requestAnimationFrame(...) method, and collision detection was really interesting. I feel like I got a little bit of everything into this project.",
             "(Try and beat my score of 21,323)",
-            "https://web-game-development.herokuapp.com/ASSIGNMENT_FINAL_PROJECT/"
+            {
+              "type": "link",
+              "text": "https://web-game-development.herokuapp.com/ASSIGNMENT_FINAL_PROJECT/"
+            }
           ]
         }
       ]

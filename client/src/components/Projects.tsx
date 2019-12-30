@@ -31,12 +31,19 @@ const Projects: React.FC = () => {
 
         { selectedProject.sections.map((section:any, sectionIndex:any) => {
           return <Animate
+            animateOnLoad
+            delay={sectionIndex/10}
             className={'col col-2 section'} 
             effect={'fade-up-in'} 
             key={`section-${sectionIndex}`}>
             <h3>{ section.header }</h3>
 
-            { section.items.map((item:string, itemIndex:number) => {
+            { section.items.map((item:any, itemIndex:number) => {
+
+              if (item.type === 'link') {
+                return <a href={item.text}>{item.text}</a>
+              }
+
               return <p key={`item-${itemIndex}`}>{ item }</p>
             })
 
