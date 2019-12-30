@@ -1,11 +1,13 @@
- {
+{
   "projects": [
+
+
+
     {
       "name": "joeboylson.us",
       "description": "This website: A self-defining project that has evolved as I have.",
       "date": "03.18 ─ present",
-      "sections": [
-        {
+      "sections": [{
           "header": "Let's go back to the beginning",
           "items": [
             "Prior to 2018, I had been shooting photos for about 5 years and I had always wanted a portfolio website to display those photos ─ something that was more than just Instagram. I had no programming skills - besides the few hours I had spent tinkering with HTML and CSS. I searched around for a solution that would allow me to have a website without knowing how to code. I used Wix and Adobe Portfolio -  but neither really suited my needs and I wasn't satisfied.",
@@ -37,6 +39,67 @@
           ]
         }
       ]
+    },
+
+
+
+    {
+      "name": "Web Game Development",
+      "description": "A few web games I created in school",
+      "date": "08.19 ─ 12.19",
+      "sections": [{
+          "header": "Introduction",
+          "items": [
+            "In this assignment, we were tasked to create just a simple web page about ourselves. This was a way that we could all get to know eachother and get our web development skills warmed up.",
+            "I chose to keep this page as simple as I could - but I also wanted it to look good.",
+            "https://web-game-development.herokuapp.com/ASSIGNMENT1_INTRODUCTION/"
+          ]
+        },
+        {
+          "header": "Rock, Paper, Scissors",
+          "items": [
+            "In this assigment, we were tasked to make a Rock, Paper, Scissors game. We were required to use a HTML Form and to create a user-friendly interface. Each subsequent game had to be tracked, such that the number of wins, losses, and ties formed a tally. We also had to give the user basic instructions on how to play the game display the result of each game.",
+            "https://web-game-development.herokuapp.com/ASSIGNMENT2_ROCK_PAPER_SCISSORS/"
+          ]
+        },
+        {
+          "header": "Hangman",
+          "items": [
+            "NOTE: This project no longer works: the url from which we could request a random word is no longer in service.",
+            "During this project, the level of difficulty increased. There were now many more variables and outcomes that I had to think about. We were given a url from which we could request a word with a specified difficulty; then we had to start the game based around that word. This meant that any word we recieved would have to work",
+            "We also had to draw each part of the hangman with the HTML Canvas element.",
+            "Unlike the previous game, this game depends on a class which holds the state of the game. The class-based system worked very well and I used this method for the remaining games.",
+            "https://web-game-development.herokuapp.com/ASSIGNMENT3_HANGMAN/"
+          ]
+        },
+        {
+          "header": "Tic, Tac, Toe",
+          "items": [
+            "I felt that this assignment was as difficult as the previous assignment. In this game, there is the added complexity of having two seperate players - but by using classes, this was relatively easy to solve.",
+            "On the first screen, the two users have to option to choose a color and enter a name. I had to make sure that the users could not pick the same color or have the same name. From there I had to manage the moves of the players. I captured the coordinates of each click on the 3x3 board and filled in the corresponding value in a two-dimensional array. For example, if you clicked the center block, this would fill in the second value of the second array. Before I filled in the value, I had to make sure the box was no already filled; afterward, I had to check if the active player had won. If they had won, the game ended.",
+            "I had a lot of fun with this project, especially with the styling and aesthetics of the game. I'm very proud with how this one turned out.",
+            "https://web-game-development.herokuapp.com/ASSIGNMENT4_TIC_TAC_TOE/"
+          ]
+        },
+        {
+          "header": "Gravity (Final Project)",
+          "items": [
+            "As the final project, we were given almost a whole month to come up with the idea of the game and execute our vision.",
+            "I wanted to make a infinite-runner type of game where the player would simply avoid obstacles for as long as they could (Flappy Bird was my inspiration).",
+            "The first task was to create the basic environment of the game - i.e. obstacles moving past the player. The obstacles had to randomly generate within the bounds of the viewport and I wanted each obstacle to also have a slightly different speed. The global speed of the obstacles increase over time, as does the frequency at which these obstacles generate.",
+            "The next step was to add the player. I did not want the player to 'jump' to avoid obstacles, but rather I wanted the player to be able to affect their own gravity (thus the name of the game). When you start, the player 'falls' up, and when the spacebar is hit, the player stops and begins to fall down. In this way, you avoid obstacles.",
+            "The next big challenge was the collision detection. To solve this, I had to rework how my obstacles and player were drawn. Before I had used a 'rect(...)' method into which you could easily pass an x-coordinate, a y-coordinate, a width, and a height. I had to change this because the collision algorith I was using required a set of points. I could no longer use this easy 'rect(...) function, so I had to tell the page to start at point one, and draw to point two, then to point three, then to point four. And for each frame, I had to update these points to make the obstacle appear to move through space.", 
+            "This added a bit of complexity, but it was worth it to add collision detection. I used the Greiner-Hormann clipping algorithm which was available as a javascript package (very, very helpful. Now I had to ability to pass in two set of points and ask the algorith 'Do these points collide?'. The algorith could return the lines that were in collision. If there were no results, then there was no collision.",
+            "After this, I finished up by adding powerups in the game. One was a coin which simply added 500 points to the users' score; the second was an invisibility powerup which would basically turn off the collision effects for all objects. Because of this, I changed how the result of a collision worked. If it was an obstacle, the game would end, but if it was a powerup, if would change the player properties or the score.",
+            "This was a blast to create, especially since there were not many requirements. It had to be a game, it had to work, and it had to be relatively complex. Dealing with the coordinate systems of the HTML Canvas, multiple classes all linking and working together, the Javascript 'requestAnimationFrame(...) method, and collision detection was really interesting. I feel like I got a little bit of everything into this project.",
+            "(Try and beat my score of 21,323)",
+            "https://web-game-development.herokuapp.com/ASSIGNMENT_FINAL_PROJECT/"
+          ]
+        }
+      ]
     }
+
+
+
   ]
 }
