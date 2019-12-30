@@ -147,3 +147,105 @@ $fadeupin-start: 34px;
     transform: rotate(360deg);
   }
 }
+
+
+
+// ----- ----- ----- ----- -----
+// MENU ICON WRAPPER ----- -----
+// ----- ----- ----- ----- -----
+
+$unit: calc(100vw/13);
+
+.menu-icon-wrapper {
+  width: 34px;
+  height: 34px;
+}
+
+.menu-icon {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  background-color: blue;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc( (#{$unit}/2) - 8px);
+    left: 50%;
+    width: 55px;
+    height: 2px;
+    background-color: white;
+    transition-duration: 0.5s;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc( (#{$unit}/2) + 8px);
+    left: 50%;
+    width: 55px;
+    height: 2px;
+    background-color: white;
+    transition-duration: 0.5s;
+    transform: translateX(-50%);
+  }
+
+  &:hover::before {
+    top: calc( (#{$unit}/2) - 21px);
+  }
+
+  &:hover::after {
+    top: calc( (#{$unit}/2) + 21px);
+  }
+
+  &.nav-is-open::before {
+    top: calc( (#{$unit}/2));
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  &.nav-is-open::after {
+    transform: translateX(-50%) rotate(-45deg);
+    top: calc( (#{$unit}/2));
+  }
+
+}
+
+
+
+// ----- ----- ----- ----- -----
+// TABLET ---- ----- ----- -----
+// ----- ----- ----- ----- -----
+
+@media only screen and (max-width: 1000px) {
+  $tablet-unit: calc(100vw/9);
+  
+  .menu-icon {  
+    &::before {
+      width: 34px;
+      top: calc( (#{$tablet-unit}/2) - 4px);
+    }
+  
+    &::after {
+      width: 34px;
+      top: calc( (#{$tablet-unit}/2) + 4px);
+    }
+  
+    &:hover::before {
+      top: calc( (#{$tablet-unit}/2) - 13px);
+    }
+  
+    &:hover::after {
+      top: calc( (#{$tablet-unit}/2) + 13px);
+    }
+  
+    &.nav-is-open::before {
+      top: calc( (#{$tablet-unit}/2));
+    }
+  
+    &.nav-is-open::after {
+      top: calc( (#{$tablet-unit}/2));
+    }
+  
+  }
+}

@@ -25,7 +25,6 @@ const Nav: React.FC<NavProps> = (Props) => {
     >
 
       <div className={`menu-icon ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>
-        <Icon className={`transparent ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'menu'} />
       </div>
 
       <div className={`nav-links ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}>
