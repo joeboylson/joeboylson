@@ -138,8 +138,9 @@ $col11: calc( #{$unit} * 11);
 
   .project-close-icon {
     position: fixed;
-    bottom: $unit;
-    right: $unit;
+    bottom: 34px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: +1
   }
 
@@ -282,6 +283,17 @@ $col11: calc( #{$unit} * 11);
   }
 }
 
+
+@media only screen and (max-width: 1200px) {
+
+  $col5: calc( #{$unit} * 5);
+
+  .project-li {
+    height: $col5;
+  }
+}
+
+
 @media only screen and (max-width: 1000px) {
 
   $tablet-unit: calc(100vw/9);
@@ -290,6 +302,23 @@ $col11: calc( #{$unit} * 11);
   #preset-list {  
     .link-like-button {
       width: $col9;
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+
+  $col7: calc( #{$unit} * 7);
+
+  .project-li {
+    height: $col7;
+  }
+
+  .project-li-header {
+    flex-direction: column;
+
+    h3 {
+      margin-bottom: 21px;
     }
   }
 }

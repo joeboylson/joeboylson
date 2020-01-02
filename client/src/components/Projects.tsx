@@ -72,6 +72,7 @@ const Projects: React.FC = () => {
           col 
           col-1 
           ${ (index+1) % 3 === 0 ? 'nomarg-desktop' : ''} 
+          ${ (index+1) % 2 === 0 ? 'nomarg-tablet' : ''} 
           project-li
         `;
 
