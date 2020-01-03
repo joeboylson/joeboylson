@@ -32,7 +32,17 @@ const Index: React.FC<IndexProps> = (Props) => {
       </Animate>
 
       <Animate 
-        className={'col col-2 nomarg-desktop col-1-tablet nomarg-tablet skills'}
+        className={'col col-1'}
+        effect={'fade-up-in'}
+      >
+        <div className={'col col-1'}>
+          <p>From Joshua tree last December:</p>
+          <img src={'/images/profile_photo.jpg'} alt=""/>
+        </div>
+      </Animate>
+
+      <Animate 
+        className={'col col-1 nomarg-desktop col-1-tablet nomarg-tablet skills'}
         effect={'fade-up-in'}
         delay={0.2}
       >
@@ -44,15 +54,7 @@ const Index: React.FC<IndexProps> = (Props) => {
         </ul>
       </Animate>
 
-      <Animate 
-        className={'col col-3 subgrid border-bottom'}
-        effect={'fade-up-in'}
-      >
-        <div className={'col col-1'}>
-          <p>From Joshua tree last December:</p>
-          <img src={'/images/profile_photo.jpg'} alt=""/>
-        </div>
-      </Animate>
+
 
       <Animate 
         className={'col col-1 col-2-tablet pink split-text action-box hoverable'}

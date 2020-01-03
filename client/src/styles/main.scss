@@ -198,7 +198,7 @@ ul {
 // MOBILE ---- ----- ----- -----
 // ----- ----- ----- ----- -----
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 750px) {
 
   $tablet-unit: calc(100vw/9);
   $col9:  calc( #{$tablet-unit} * 7);

@@ -81,15 +81,13 @@ const Projects: React.FC = () => {
             key={index}
             className={itemClassName}
             effect={'fade-up-in'}
-            animateOnLoad={index<3}
-            delay={ ( (index) % 3 ) / 10 }
+            animateOnLoad
+            delay={ index/10 }
             onClick={ () => setSelectedProject(project) }
           >
             <div className={'project-li-inner'}>
-              <div className={'project-li-header'}>
-                <h3>{index}.</h3>
-                <h3 className={'split-text'}>{ project.name }</h3>
-              </div>
+              <h3>{index}.</h3>
+              <h3>{ project.name }</h3>
               { project.description &&
                 <p>{ project.description }</p>
               }
