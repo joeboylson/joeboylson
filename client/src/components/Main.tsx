@@ -1,6 +1,12 @@
 import React from 'react';
-import Nav from './Nav'
+import ReactDOM from 'react-dom';
 
+
+// components
+import Nav from './Nav';
+import Footer from './Footer';
+
+// styles
 import '../styles/pages.scss'
 
 // js
@@ -72,9 +78,15 @@ const Main: React.FC = () => {
     <main>
       <div id="top-spacer"></div>
       <Nav setRoute={setRoute}/> 
+
       { Component &&
         <Component setRoute={setRoute}/>
       }
+
+      { ReactDOM.createPortal(         
+          <Footer />,
+          document.body
+      ) }
     </main>
   )
 }

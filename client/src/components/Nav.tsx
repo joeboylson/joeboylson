@@ -1,6 +1,4 @@
 import React from 'react';
-import Icon from '../utils/Icon'
-import { openNewTab } from '../utils/Controls'
 import { routes } from './Main'
 
 export interface NavProps {
@@ -38,25 +36,6 @@ const Nav: React.FC<NavProps> = (Props) => {
             {link.name}
           </h3>
         })}
-
-        <div className={'nav-icons'}>
-          <Icon
-            className={`blue ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'github'}
-            onClick={() => openNewTab('https://github.com/')}
-          />
-
-          <Icon
-            className={`green ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'linkedin'}
-            onClick={() => openNewTab('https://www.linkedin.com/in/joe-boylson-34603b139/')}
-          />
-
-          <Icon
-            className={`yellow ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`} type={'instagram'}
-            onClick={() => openNewTab('https://www.instagram.com/jobo.jpg/')}
-          />
-
-        </div>
-
       </div>
 
       <div className={'nav-caption'}>
