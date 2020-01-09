@@ -19,9 +19,11 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className={'col col-1 nomarg-desktop'}>
-          <p>Joe Boylson</p>
-          <a href={'mailto:joeboylson@gmail.com'}>joeboylson@gmail.com</a>
-          <p>+1 513.667.2371</p>
+          <div id={'contact-details'}>
+            <p>Joe Boylson</p>
+            <a href={'mailto:joeboylson@gmail.com'}>joeboylson@gmail.com</a>
+            <p>+1 513.667.2371</p>
+          </div>
         </div>
       </div>
     </div>

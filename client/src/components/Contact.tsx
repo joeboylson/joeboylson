@@ -129,7 +129,7 @@ const Contact: React.FC = () => {
           <h1>CONTACT ME</h1>
         </div>
         <div className={'col col-3'}>
-          <h3>Let me know if you'd like to . . .</h3>
+          <h3>Let me know if you'd like to -</h3>
           <ul>
             <li>Hire me</li>
             <li>Collaborate on a web or photography project</li>

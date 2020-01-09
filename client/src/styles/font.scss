@@ -20,7 +20,7 @@ button {
 
 h1 {
   font-family: 'Roboto', sans-serif;
-  font-size: 55px;
+  font-size: 89px;
   font-weight: 900;
   color: var(--dark);
 }
@@ -34,18 +34,19 @@ h2 {
 }
 
 h3 {
-  font-family: 'Roboto Mono', monospace; 
+  font-family: 'Roboto', monospace; 
   font-size: 21px;
   font-weight: 300;
   text-transform: uppercase;
   color: var(--dark);
-
+  letter-spacing: 1px;
 }
 
 p, a, button, li {
-  font-family: 'Roboto Mono', monospace; 
+  font-family: 'Roboto', monospace; 
   font-size: 13px;
   font-weight: 300;
+  letter-spacing: 1px;
 }
 
 p, li {
