@@ -1,6 +1,5 @@
 import React from 'react';
 import Animate from '../utils/Animate';
-import Icon from '../utils/Icon';
 
 import { doPost } from '../js/doPost';
 

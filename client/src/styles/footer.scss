@@ -55,7 +55,7 @@
 
   #footer-root {
     padding: 89px $tablet-unit 0 $tablet-unit;
-    width: calc( $tablet-unit * 9);
+    width: calc( #{$tablet-unit} * 9);
     background-color: var(--dark);
     margin: 0;
 
