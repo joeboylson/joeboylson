@@ -31,10 +31,10 @@ const About: React.FC<AboutProps> = (Props) => {
         <img src={'/images/about_photo.jpg'} alt=""/>
         
         <div 
-          className={'col col-1 blue green split-text action-box hoverable'}
+          className={'col col-1 split-text action-box hoverable'}
           onClick={() => Props.setRoute('contact')}
         >
-          <h3>Get in touch</h3>
+          <h3>Get In Touch</h3>
         </div>
       </Animate>
 
@@ -50,7 +50,7 @@ const About: React.FC<AboutProps> = (Props) => {
           <p>
             I'm fascinated by the idea of creating a website that is not only easy for the user,
             but also easy for the developer to build, maintain, and upgrade. I'm driven to code less,
-            but better, and use practices that that encourage speed and modularity.
+            but better, and use practices that encourage speed and modularity.
           </p>
         </Animate>
 

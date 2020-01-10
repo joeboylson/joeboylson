@@ -33,17 +33,17 @@ const Preset: React.FC<PresetProps> = (Props) => {
       <Animate className={'col col-3'} effect={'fade-up-in'}>
         <a
           href={`${apiUrl}/download?file=${Props.presetRoute}`}
-          className={'link-like-button blue'}
+          className={'link-like-button'}
         >Download {Props.name}.xmp</a>
 
         <a
           href={`${apiUrl}/download?file=${Props.dngRoute}`}
-          className={'link-like-button blue'}
+          className={'link-like-button'}
         >Download {Props.name}.dng</a>
 
         <a
           href={`https://www.dropbox.com/sh/35srru1ua3vdywn/AACuLnPKWB5oxdupvo3UFB0oa?dl=0`}
-          className={'link-like-button blue'}
+          className={'link-like-button'}
         >Download from Dropbox</a>
       </Animate>
 
@@ -135,7 +135,7 @@ const PresetList: React.FC = (Props) => {
         <a
           href={'https://www.lookslikefilm.com/2019/02/03/how-to-install-lightroom-presets/'}
           target={'__blank'}
-          className={'link-like-button blue'}
+          className={'link-like-button'}
         >Lightroom Classic (desktop)</a>
         <a
           href={'https://seandalt.com/how-to-install-lightroom-mobile-dng-presets-creative-cloud/'}
@@ -145,7 +145,7 @@ const PresetList: React.FC = (Props) => {
         <a
           href={'https://seandalt.com/how-to-install-lightroom-mobile-dng-presets-creative-cloud/'}
           target={'__blank'}
-          className={'link-like-button blue'}
+          className={'link-like-button'}
         >Lightroom CC (without subscription - method 2)</a>
 
       </Animate>

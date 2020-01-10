@@ -56,22 +56,22 @@ const Contact: React.FC = () => {
   }
 
   const handleNameChange = (name:string) => {
+    setName(name);
     if (!name || name.length < 1) {
       setNameInputClass('invalid')
       return false;
     }
-    setName(name);
     setNameInputClass('valid');
     return true;
   }
 
   const handleEmailChange = (email:string) => {
+    setEmail(email);
     let emailPattern = RegExp('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}')
     if (!email || email.length < 1 || !emailPattern.test(email)) {
       setEmailInputClass('invalid')
       return false;
     }
-    setEmail(email);
     setEmailInputClass('valid')
     return true;
   }

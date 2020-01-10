@@ -25,7 +25,7 @@
     }
   }
 
-  * {
+  p, h3, svg {
     color: var(--light);
   }
 
@@ -36,17 +36,32 @@
     color: var(--dark);
     border: 1px solid var(--light);
     border-radius: 100px;
+    transition-duration: 0.25s;
+
+    svg {
+      transition-duration: 0.125s;
+    }
+
+    &:hover {
+      border: 1px solid var(--accent-darker);
+      svg {
+        color: var(--accent-darker);
+      }
+    }
   }
 
   a {
-    color: var(--blue);
+    color: var(--accent-lighter);
     transition-duration: 0.25s;
     display: block;
 
     &:hover {
-      color: var(--blue-alt);
+      color: var(--accent-darker);
     }
   }
+
+
+
 }
 
 @media only screen and (max-width: 1000px) {

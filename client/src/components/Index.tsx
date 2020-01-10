@@ -36,8 +36,8 @@ const Index: React.FC<IndexProps> = (Props) => {
         effect={'fade-up-in'}
       >
         <div className={'col col-1'}>
-          <p>From Joshua tree last December:</p>
           <img src={'/images/profile_photo.jpg'} alt=""/>
+          <p className={'mono'}>From Joshua tree last December:</p>
         </div>
       </Animate>
 
@@ -46,7 +46,7 @@ const Index: React.FC<IndexProps> = (Props) => {
         effect={'fade-up-in'}
         delay={0.2}
       >
-        <h3>What I do:</h3>
+        <h3>What I Do:</h3>
         <ul>
           <li>Full Stack Development</li>
           <li>Web Design</li>
@@ -57,30 +57,30 @@ const Index: React.FC<IndexProps> = (Props) => {
 
 
       <Animate 
-        className={'col col-1 col-2-tablet pink split-text action-box hoverable'}
+        className={'col col-1 col-2-tablet split-text action-box hoverable'}
         onClick={() => Props.setRoute('projects')}
         effect={'fade-up-in'}
         delay={0.1}
       >
-        <h3>View my projects</h3>
+        <h3>View My Projects</h3>
       </Animate>
 
       <Animate 
-        className={'col col-1 blue green split-text action-box hoverable'}
+        className={'col col-1 split-text action-box hoverable'}
         onClick={() => Props.setRoute('contact')}
         effect={'fade-up-in'}
         delay={0.2}
       >
-        <h3>Get in touch</h3>
+        <h3>Get In Touch</h3>
       </Animate>
 
       <Animate 
-        className={'col col-1 nomarg-desktop nomarg-tablet blue split-text action-box hoverable'}
+        className={'col col-1 nomarg-desktop nomarg-tablet split-text action-box hoverable'}
         onClick={() => Props.setRoute('about')}
         effect={'fade-up-in'}
         delay={0.3}
       >
-        <h3>More about me</h3>
+        <h3>More About Me</h3>
       </Animate>
 
     </div>

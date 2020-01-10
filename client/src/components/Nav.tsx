@@ -39,7 +39,7 @@ const Nav: React.FC<NavProps> = (Props) => {
       </div>
 
       <div className={'nav-caption'}>
-        <p>Portfolio 2020 &nbsp; // &nbsp; joeboylson.us</p>
+        <p className={'mono'}>Portfolio 2020 &nbsp; // &nbsp; joeboylson.us</p>
       </div>
 
     </div>

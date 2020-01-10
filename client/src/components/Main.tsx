@@ -66,7 +66,6 @@ const Main: React.FC = () => {
   }, [imagesAreLoaded])
 
   const scroll = () => {
-    console.log('SCROLL')
     let root:any = document.getElementById('root')
     if (root) { root.scrollIntoView(true, 'smooth') }
   }

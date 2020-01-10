@@ -1,11 +1,9 @@
-
-
-
 // ----- ----- ----- ----- -----
 // GENERAL --- ----- ----- -----
 // ----- ----- ----- ----- -----
 
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
+@import url('https://use.typekit.net/fbl0sil.css');
 
 h1,
 h2,
@@ -19,9 +17,10 @@ button {
 }
 
 h1 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 89px;
+  font-family: aktiv-grotesk-condensed, sans-serif;
   font-weight: 900;
+  font-style: normal;
+  font-size: 89px;
   color: var(--dark);
 }
 
@@ -30,31 +29,42 @@ h2 {
   font-size: 34px;
   font-weight: 300;
   color: var(--dark);
-
 }
 
 h3 {
-  font-family: 'Roboto', monospace; 
-  font-size: 21px;
-  font-weight: 300;
-  text-transform: uppercase;
+  font-family: aktiv-grotesk-condensed, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+  font-size: 34px;
+  line-height: 40px;
   color: var(--dark);
-  letter-spacing: 1px;
 }
 
-p, a, button, li {
-  font-family: 'Roboto', monospace; 
-  font-size: 13px;
+p,
+a,
+button,
+li,
+input,
+textarea,
+label {
+  font-family: 'Roboto', monospace;
+  font-size: 16px;
   font-weight: 300;
-  letter-spacing: 1px;
 }
 
-p, li {
+p,
+li {
   color: var(--dark)
 }
 
 a {
-  color: var(--blue);
+  color: var(--pink);
+}
+
+.mono {
+  font-family: 'Roboto-Mono', monospace;
+  color: var(--pink);
 }
 
 .underlined {
@@ -68,18 +78,13 @@ a {
   transition-duration: 0.25s;
   padding: 21px;
   margin-top: 21px;
+  background-color: var(--pink);
+  color: var(--light);
 
-  &.blue { background-color: var(--blue); color: var(--light)}
-  &.green { background-color: var(--green); color: var(--light)}
-  &.yellow { background-color: var(--yellow); color: var(--light)}
-  &.pink { background-color: var(--pink); color: var(--light)}
-  &.purple { background-color: var(--purple); color: var(--light)}
-
-  &.blue:hover { background-color: var(--blue-alt); }
-  &.green:hover { background-color: var(--green-alt); }
-  &.yellow:hover { background-color: var(--yellow-alt); }
-  &.pink:hover { background-color: var(--pink-alt); }
-  &.purple:hover { background-color: var(--purple-alt); }
+  &:hover {
+    background-color: var(--pink-alt);
+    color: white;
+  }
 }
 
 
@@ -117,7 +122,8 @@ button {
   color: tomato;
 
   &:hover {
-    border: 1px solid rgb(209, 40, 10);;
+    border: 1px solid rgb(209, 40, 10);
+    ;
     background-color: rgb(209, 40, 10);
     color: white;
   }
@@ -136,4 +142,15 @@ button {
 
 .button-condensed {
   margin-bottom: 0 !important;
+}
+
+@media only screen and (max-width: 750px) {
+  h1 {
+    font-size: 55px;
+  }
+
+  h3 {  
+    font-size: 26px;
+  }
+
 }

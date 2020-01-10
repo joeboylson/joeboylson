@@ -10,6 +10,9 @@ export interface AnimateProps extends React.DetailedHTMLProps<React.HTMLAttribut
 
 const Animate: React.FC<AnimateProps> = (Props) => {
 
+  // fix this
+  const overrideAnimation = true;
+
   // element ref for DOM
   const elementRef:any = React.useRef(null)
   
@@ -25,7 +28,7 @@ const Animate: React.FC<AnimateProps> = (Props) => {
   }
 
   const elementClasses = () => {
-    if (Props.animateOnLoad) {
+    if (overrideAnimation) {
       return `${Props.className} ${Props.effect}`;
     }
     if (elementRef.current) {

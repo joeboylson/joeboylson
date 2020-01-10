@@ -40,11 +40,18 @@ const Projects: React.FC = () => {
 
             { section.items.map((item:any, itemIndex:number) => {
 
+              let itemKey = `item-${itemIndex}`;
+
               if (item.type === 'link') {
-                return <a href={item.text}>{item.text}</a>
+                return <a 
+                  key={itemKey} 
+                  href={item.text}
+                  className={'link-like-button'}  
+                >{item.title || item.text}</a>
               }
 
-              return <p key={`item-${itemIndex}`}>{ item }</p>
+              return <p
+                key={itemKey}>{ item }</p>
             })
 
             }
@@ -86,12 +93,12 @@ const Projects: React.FC = () => {
             onClick={ () => setSelectedProject(project) }
           >
             <div className={'project-li-inner'}>
-              <h3>{index}.</h3>
+              <p className={'mono'}>{index}</p>
               <h3>{ project.name }</h3>
               { project.description &&
                 <p>{ project.description }</p>
               }
-              <p>{ project.date }</p>
+              <p className={'mono'}>{ project.date }</p>
             </div>
           </Animate>
 
