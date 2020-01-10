@@ -40,11 +40,18 @@ const Projects: React.FC = () => {
 
             { section.items.map((item:any, itemIndex:number) => {
 
+              let itemKey = `item-${itemIndex}`;
+
               if (item.type === 'link') {
-                return <a href={item.text}>{item.text}</a>
+                return <a 
+                  key={itemKey} 
+                  href={item.text}
+                  className={'link-like-button'}  
+                >{item.title || item.text}</a>
               }
 
-              return <p key={`item-${itemIndex}`}>{ item }</p>
+              return <p
+                key={itemKey}>{ item }</p>
             })
 
             }
@@ -72,6 +79,7 @@ const Projects: React.FC = () => {
           col 
           col-1 
           ${ (index+1) % 3 === 0 ? 'nomarg-desktop' : ''} 
+          ${ (index+1) % 2 === 0 ? 'nomarg-tablet' : ''} 
           project-li
         `;
 
@@ -80,19 +88,17 @@ const Projects: React.FC = () => {
             key={index}
             className={itemClassName}
             effect={'fade-up-in'}
-            animateOnLoad={index<3}
-            delay={ ( (index) % 3 ) / 10 }
+            animateOnLoad
+            delay={ index/10 }
             onClick={ () => setSelectedProject(project) }
           >
             <div className={'project-li-inner'}>
-              <div className={'project-li-header'}>
-                <h3>{index}.</h3>
-                <h3 className={'split-text'}>{ project.name }</h3>
-              </div>
+              <p className={'mono'}>{index}</p>
+              <h3>{ project.name }</h3>
               { project.description &&
                 <p>{ project.description }</p>
               }
-              <p>{ project.date }</p>
+              <p className={'mono'}>{ project.date }</p>
             </div>
           </Animate>
 

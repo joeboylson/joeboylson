@@ -16,6 +16,12 @@
   --yellow-alt: rgba(219, 178, 79, 1);
   --pink-alt: rgba(205, 76, 96, 1);
   --purple-alt: rgba(150, 96, 203, 1);
+
+  --accent: var(--pink);
+  --accent-lighter: rgba(245, 116, 132, 1);
+  --accent-darker: rgba(205, 76, 96, 1);
+
+
 }
 
 
@@ -57,6 +63,10 @@ body,
   }
 
 }
+
+// main {
+//   min-height: 100vh;
+// }
 
 .grid {
   width: 100%;
@@ -198,7 +208,7 @@ ul {
 // MOBILE ---- ----- ----- -----
 // ----- ----- ----- ----- -----
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 750px) {
 
   $tablet-unit: calc(100vw/9);
   $col9:  calc( #{$tablet-unit} * 7);

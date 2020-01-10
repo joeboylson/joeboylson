@@ -8,14 +8,14 @@
       "description": "This website: A self-defining project that has evolved as I have.",
       "date": "03.18 ─ present",
       "sections": [{
-          "header": "Let's go back to the beginning",
+          "header": "Let's Go Back to the Beginning",
           "items": [
             "Prior to 2018, I had been shooting photos for about 5 years and I had always wanted a portfolio website to display those photos ─ something that was more than just Instagram. I had no programming skills - besides the few hours I had spent tinkering with HTML and CSS. I searched around for a solution that would allow me to have a website without knowing how to code. I used Wix and Adobe Portfolio -  but neither really suited my needs and I wasn't satisfied.",
             "I restarted multiple times, trying different layouts and designs - but still I was dissatisfied. Little did I know that this dissatisfaction and seemingly endless attemts to make something that felt 'right' was only the beginning."
           ]
         },
         {
-          "header": "My first dive into Web Development",
+          "header": "My First Dive into Web Development",
           "items": [
             "In January of 2018, I started my first co-op (like an internship) through the University of Cincinnati: I had gotten a position as a web developer even though I knew nothing about web development. The first months were hard - but it was one of the best things that has happened to me. I learned at such a rapid pace - 8 hours a day for four months gets you experience real quick.",
             "About 2 months into this co-op, I realized I had all the tools to host a website - by myself. I could build whatever I wanted. I found Heroku (which I still use today) which is a service that allows you to host a website easily - AND they have a free tier. And so I used Heroku. And through messing around, making mistakes, writing terrible code, and just seeing if I could make an idea a reality, I learned a lot."
@@ -31,7 +31,7 @@
           ]
         },
         {
-          "header": "Objective for the site",
+          "header": "Objective for the Site",
           "items": [
             "I want this website to be the one place that a person can go to if they want to see who I am and what I am about. I wanted it to reflect a certain part of me: the grid, the clean lines, and the smooth animations are all things that I wanted to show. I also wanted the navigation between pages to be easy and quick; the browser doesn't pause for even a second when you switch to a different page.",
             "A professor once talked about the design of a site in a class: he talked about how the goal of design was for it to actually disappear and that interaction would simple by fluid and intuitive. As much as I want you to admire the design, I realize that if I can make the design disappear, I have done my job better.",
@@ -45,7 +45,7 @@
 
     {
       "name": "Web Game Development",
-      "description": "A few web games I created in school",
+      "description": "A Few Web Games I Created in School",
       "date": "08.19 ─ 12.19",
       "sections": [{
           "header": "Introduction",
@@ -54,6 +54,7 @@
             "I chose to keep this page as simple as I could - but I also wanted it to look good.",
             {
               "type": "link",
+              "title": "Open Introduction Page",
               "text": "https://web-game-development.herokuapp.com/ASSIGNMENT1_INTRODUCTION/"
             }
           ]
@@ -64,6 +65,7 @@
             "In this assigment, we were tasked to make a Rock, Paper, Scissors game. We were required to use a HTML Form and to create a user-friendly interface. Each subsequent game had to be tracked, such that the number of wins, losses, and ties formed a tally. We also had to give the user basic instructions on how to play the game display the result of each game.",
             {
               "type": "link",
+              "title": "Open Rock, Paper, Scissors",
               "text": "https://web-game-development.herokuapp.com/ASSIGNMENT2_ROCK_PAPER_SCISSORS/"
             }
           ]
@@ -77,6 +79,7 @@
             "Unlike the previous game, this game depends on a class which holds the state of the game. The class-based system worked very well and I used this method for the remaining games.",
             {
               "type": "link",
+              "title": "Open Hangman",
               "text": "https://web-game-development.herokuapp.com/ASSIGNMENT3_HANGMAN/"
             }
           ]
@@ -89,12 +92,13 @@
             "I had a lot of fun with this project, especially with the styling and aesthetics of the game. I'm very proud with how this one turned out.",
             {
               "type": "link",
+              "title": "Open Tic, Tac, Toe",
               "text": "https://web-game-development.herokuapp.com/ASSIGNMENT4_TIC_TAC_TOE/"
             }
           ]
         },
         {
-          "header": "Gravity (Final Project)",
+          "header": "Gravity (final project)",
           "items": [
             "As the final project, we were given almost a whole month to come up with the idea of the game and execute our vision.",
             "I wanted to make a infinite-runner type of game where the player would simply avoid obstacles for as long as they could (Flappy Bird was my inspiration).",
@@ -107,6 +111,7 @@
             "(Try and beat my score of 21,323)",
             {
               "type": "link",
+              "title": "Open Gravity",
               "text": "https://web-game-development.herokuapp.com/ASSIGNMENT_FINAL_PROJECT/"
             }
           ]

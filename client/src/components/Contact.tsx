@@ -1,8 +1,6 @@
 import React from 'react';
 import Animate from '../utils/Animate';
-import Icon from '../utils/Icon';
 
-import { openNewTab } from '../utils/Controls';
 import { doPost } from '../js/doPost';
 
 import '../styles/pages.scss';
@@ -58,22 +56,22 @@ const Contact: React.FC = () => {
   }
 
   const handleNameChange = (name:string) => {
+    setName(name);
     if (!name || name.length < 1) {
       setNameInputClass('invalid')
       return false;
     }
-    setName(name);
     setNameInputClass('valid');
     return true;
   }
 
   const handleEmailChange = (email:string) => {
+    setEmail(email);
     let emailPattern = RegExp('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}')
     if (!email || email.length < 1 || !emailPattern.test(email)) {
       setEmailInputClass('invalid')
       return false;
     }
-    setEmail(email);
     setEmailInputClass('valid')
     return true;
   }
@@ -130,7 +128,7 @@ const Contact: React.FC = () => {
           <h1>CONTACT ME</h1>
         </div>
         <div className={'col col-3'}>
-          <h3>Let me know if you'd like to . . .</h3>
+          <h3>Let me know if you'd like to -</h3>
           <ul>
             <li>Hire me</li>
             <li>Collaborate on a web or photography project</li>
@@ -223,7 +221,7 @@ const Contact: React.FC = () => {
         ) : (
           <form
             id={'contact-form'}
-            className={'grid underlined'}
+            className={'grid'}
             action=""
             onSubmit={handleSubmit}  
             >
@@ -290,51 +288,6 @@ const Contact: React.FC = () => {
         )}
         </div>
       )}
-
-      <div className={'grid'}>
-
-        <Animate
-          className={'col col-3 form-control'}
-          effect={'fade-up-in'}
-        >
-          <h3>Or follow/like/connect with me on:</h3>
-        </Animate>
-
-        <Animate
-          className={'col col-1 col-2-tablet action-button'}
-          effect={'fade-up-in'}
-        >
-          <h3>Github</h3>
-          <Icon 
-            className={`large`} type={'github'} 
-            onClick={() => openNewTab('https://github.com/')}
-          />
-        </Animate>
-
-        <Animate
-          className={'col col-1 col-2-tablet action-button'}
-          effect={'fade-up-in'}
-        >
-          <h3>LinkedIn</h3>
-          <Icon 
-            className={`large`} type={'linkedin'} 
-            onClick={() => openNewTab('https://www.linkedin.com/in/joe-boylson-34603b139/')}
-          />
-        </Animate>
-
-        <Animate
-          className={'col col-1 nomarg-desktop col-2-tablet action-button'}
-          effect={'fade-up-in'}
-        >
-          <h3>Instagram</h3>
-          <Icon 
-            className={`large`} type={'instagram'} 
-            onClick={() => openNewTab('https://www.instagram.com/jobo.jpg/')}
-          />
-        </Animate>
-
-
-      </div>
     </div>
   )
 } 
