@@ -151,6 +151,17 @@ $col11: calc( #{$unit} * 11);
   .section {
     margin-bottom: calc(89px * 3);
     h3, p { margin-bottom: 34px; }
+
+    p, h3 {
+      flex: 0 0 100%;
+    }
+
+    &.subgrid {
+      .col:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
   }
 
   .link-like-button {
@@ -158,6 +169,7 @@ $col11: calc( #{$unit} * 11);
     text-align: center;
     width: 100%;
   }
+
 
 }
 

@@ -33,7 +33,7 @@ const Projects: React.FC = () => {
           return <Animate
             animateOnLoad
             delay={sectionIndex/10}
-            className={'col col-2 section'} 
+            className={'col col-2 section subgrid'} 
             effect={'fade-up-in'} 
             key={`section-${sectionIndex}`}>
             <h3>{ section.header }</h3>
@@ -48,6 +48,12 @@ const Projects: React.FC = () => {
                   href={item.text}
                   className={'link-like-button'}  
                 >{item.title || item.text}</a>
+              }
+
+              if (item.type === 'image') {
+                return <div className={'col col-1'}>
+                  <img src={item.src} alt=""/>
+                </div> 
               }
 
               return <p
