@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
 // components
 import Nav from './Nav';
 import Footer from './Footer';
@@ -14,17 +13,27 @@ import { loadImages } from '../js/loadImages';
 
 // pages
 import Index from './Index';
-import Projects from './Projects';
+import ProjectList from './ProjectList';
+import Project from './Project';
 import About from './About';
 import Contact from './Contact';
 import PresetList from './Presets';
 
+// project data list
+import { projects } from '../projects.json';
+
+const projectRoutes = projects.reduce((_projectRoutes:any, project:any, index:number) => (
+  // eslint-disable-next-line
+  _projectRoutes[`projects/${index}`] = (Props:any) => <Project project={project} setRoute={Props.setRoute}/>, _projectRoutes
+), {});
+
 const routes:any = {
   index: Index,
-  projects: Projects,
+  projects: ProjectList,
   about: About,
   contact: Contact,
-  presets: PresetList
+  presets: PresetList,
+  ...projectRoutes
 }
 
 const apiUrl = process.env.NODE_ENV !== 'production' ? 'http://localhost:5000' : ''
@@ -56,7 +65,7 @@ const Main: React.FC = () => {
   const Component = routes[route]
 
   // handling route forwards and backwards
-  window.history.pushState(null, '', route)
+  window.history.pushState(null, '', `/${route}`)
   window.onpopstate = () => { setRoute( getDefaultRoute() ) }
 
   React.useEffect(() => {

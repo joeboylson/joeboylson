@@ -9,7 +9,11 @@ const Nav: React.FC<NavProps> = (Props) => {
 
   const [navIsOpen, setNavIsOpen] = React.useState(false)
 
-  const navLinks = Object.keys(routes).map( (routeName:any) => {
+  const filteredRoutes = Object.keys(routes).filter( (_route:string) => {
+    if (!_route.includes('/')) return _route;
+  })
+
+  const navLinks = filteredRoutes.map( (routeName:any) => {
     return { 
       name: routeName.charAt(0).toUpperCase() + routeName.slice(1), 
       route: routeName

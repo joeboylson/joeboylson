@@ -15,7 +15,7 @@ $width5: calc(#{$unit} * 5);
   height: $unit;
   display: flex;
   justify-content: flex-end;
-  z-index: +1;
+  z-index: +2;
   pointer-events: none;
 
   .menu-icon {
