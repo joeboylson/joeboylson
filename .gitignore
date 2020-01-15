@@ -7,3 +7,5 @@ client/node_modules
 node_modules
 ref
 config.json
+public/*.pdf
+.DS_Store
