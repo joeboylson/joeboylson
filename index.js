@@ -105,7 +105,7 @@ app.get('/cv', async (req, res) => {
     res.sendFile(filename)
   }
   catch (error) {
-    res.send(error)
+    res.send('error')
   }
 })
 
