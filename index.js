@@ -90,17 +90,18 @@ app.post('/contact', async (req, res) => {
 
 app.get('/cv', async (req, res) => {
 
-  const filename = path.join(__dirname, `public/export-${(new Date()).valueOf()}.pdf`)
+  // const filename = path.join(__dirname, `public/export-${(new Date()).valueOf()}.pdf`);
+  const filename = path.join(__dirname, `public/resume.pdf`);
 
-  const html5ToPDF = new HTML5ToPDF({
-    inputPath: path.join(__dirname, "public/resume.html"),
-    outputPath: path.join(filename)
-  })
+  // const html5ToPDF = new HTML5ToPDF({
+  //   inputPath: path.join(__dirname, "public/resume.html"),
+  //   outputPath: path.join(filename)
+  // })
 
-  await html5ToPDF.start()
-  await html5ToPDF.build()
-  await html5ToPDF.close()
-  console.log(`::: created ${filename}`)
+  // await html5ToPDF.start()
+  // await html5ToPDF.build()
+  // await html5ToPDF.close()
+  // console.log(`::: created ${filename}`)
   res.sendFile(filename)
 
 })
