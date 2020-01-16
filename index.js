@@ -97,16 +97,12 @@ app.get('/cv', async (req, res) => {
     outputPath: path.join(filename)
   })
 
-  try {
-    await html5ToPDF.start()
-    await html5ToPDF.build()
-    await html5ToPDF.close()
-    console.log(`::: created ${filename}`)
-    res.sendFile(filename)
-  }
-  catch (error) {
-    res.send('error')
-  }
+  await html5ToPDF.start()
+  await html5ToPDF.build()
+  await html5ToPDF.close()
+  console.log(`::: created ${filename}`)
+  res.sendFile(filename)
+
 })
 
 app.get('/*', (req, res) => res.sendFile(`${__dirname}/client/build/index.html`));
