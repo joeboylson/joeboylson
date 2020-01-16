@@ -1,44 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>Document</title>
 </head>
 
 <body>
 
-    <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, voluptatum repellat voluptates animi iure
-            beatae veritatis perferendis quibusdam eveniet mollitia quam perspiciatis consequatur reiciendis aliquam
-            sunt ipsum cupiditate? Amet iste autem eligendi inventore tenetur consectetur laboriosam officia expedita
-            aliquam ea, accusantium nulla laudantium itaque! Voluptate, dignissimos nam a dicta distinctio, iure
-            voluptates obcaecati quod non dolor hic delectus mollitia labore excepturi, illo qui nemo beatae pariatur
-            in. Voluptates incidunt adipisci, alias consequuntur dolorem fugiat repellendus tempore sit, quia magni
-            eaque doloribus voluptatum fuga deserunt provident quas ad inventore similique quisquam commodi consectetur
-            quidem necessitatibus! Odio laborum at praesentium omnis aspernatur laudantium nesciunt aliquam placeat
-            exercitationem tempora vel nostrum dicta atque, corporis optio voluptas dolorum quod rerum eligendi impedit!
-            Nam rem repellendus amet quia ducimus possimus dolores illo consequuntur eos beatae assumenda nostrum
-            necessitatibus, velit dignissimos voluptatibus hic quam, itaque illum, laboriosam molestiae corporis eaque
-            ab iure. Laborum delectus doloribus veniam quaerat ducimus quisquam necessitatibus dolor provident mollitia,
-            quam at est facilis dolore consequuntur in obcaecati a nisi eos ut? Illum dolor odio doloribus quibusdam
-            laboriosam voluptas quia ad, autem, in deleniti laborum sed placeat quis eligendi a soluta laudantium iusto
-            sapiente animi mollitia qui delectus id fuga! Qui, totam expedita.</p>
-    </main>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
+    @import url('https://use.typekit.net/fbl0sil.css');
 
-    <style>
-        * {
-            margin: 0;
-        }
+    :root {
+      --dark: #2c2c2c;
+      --trans: transparent;
+      /* --trans: rgba(0, 0, 0, 0.05); */
+    }
 
-        main {
-            width: 8.5in;
-            zoom: 0.75;
-            background-color: #e3e3e3;
-        }
-    </style>
+    * {
+      margin: 0;
+    }
+
+    h1 {
+      font-family: aktiv-grotesk-condensed, sans-serif;
+      font-weight: 900;
+      font-style: normal;
+      font-size: 55px;
+      color: var(--dark);
+    }
+
+    h2 {
+      font-family: aktiv-grotesk-condensed, sans-serif;
+      font-weight: 900;
+      font-style: normal;
+      font-size: 34px;
+      color: var(--dark)
+    }
+
+    h3 {
+      font-family: aktiv-grotesk-condensed, sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 21px;
+      line-height: 34px;
+      color: var(--dark);
+    }
+
+    p,
+    a {
+      font-family: 'Roboto', monospace;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 21px;
+      color: var(--dark);
+      display: block;
+    }
+
+    main {
+      height: 11in;
+      width: 8.5in;
+      margin: 0 0.25in;
+    }
+    
+    #resume-inner {
+      width: 8in;
+      background: repeating-linear-gradient(90deg,
+          var(--trans),
+          var(--trans) 25%,
+          transparent 25%,
+          transparent 50%);
+    }
+
+    .grid {
+      flex-direction: column;
+      display: flex;
+      flex-flow: row;
+      background-color: var(--trans);
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .col {
+      height: fit-content;
+    }
+
+    .col-1 {
+      flex: 0 0 2in
+    }
+
+    .col-2 {
+      flex: 0 0 4in
+    }
+
+    .col-3 {
+      flex: 0 0 6in
+    }
+
+    .col-4 {
+      flex: 0 0 8in;
+    }
+
+    section {
+      position: relative;
+      margin: 21px 0 0 0;
+      background-color: var(--trans)
+    }
+
+    .left-info {
+      position: absolute;
+      width: fit-content;
+      height: 100%;
+      padding-right: 21px;
+      left: 0;
+      transform: translateX( calc(-100% - 21px));
+      border-right: 1px solid black;
+    }
+
+    .dashed::before {
+      content: '─ ';
+    }
+
+    .wrap {
+      flex-wrap: wrap;
+    }
+  </style>
+
+  <main>
+    <div id='resume-inner' class='grid wrap'>
+
+      <div class='col col-1 grid column'>
+        
+        <section>
+          <h3>Intended Semester</h3>
+          <p>Summer 2020</p>
+        </section>
+        
+        <section>
+          <h3>Education:</h3>
+          <p>GPA: 3.16</p>
+          <p>Senior BSIT</p>
+          <p>Credits ─ 81/120</p>
+        </section>
+
+        <section>
+          <h3>Contact:</h3>
+          <p>513-667-2371</p>
+          <p>boylsojh@mail.uc.edu</p>
+        </section>
+
+        <section>
+          <h3>Address:</h3>
+          <p>7056 Sprucewood Ct.</p>
+          <p>Cincinnati, OH 45241</p>
+        </section>
+      </div>
+
+      <div class='col col-3 grid column'>
+
+        <section class='grid'>
+          <div class='col col-2'>
+            <h1>Joe Boylson</h1>
+          </div>
+          <div class='col col-1'>
+            <a href="https://joeboylson.us">joeboylson.us</a>
+            <a href="https://www.linkedin.com/in/joeboylson">linkedin.com/in/joeboylson</a>
+            <a href="https://github.com/joeboylson">github.com/joeboylson</a>
+          </div>
+        </section>
+
+        <section>
+          <h3>Objective:</h3>
+          <p>
+            I am a full-stack developer looking for a position (Summer 2020) in front-end development or web design that
+            will allow me to flex my creative muscles and solve problems.
+          </p>
+          <p>
+            I have a passion for creating websites that are beautiful, easy to use, and use the best development
+            practices for efficiency and modularity. 
+          </p>
+        </section>
+
+        <section>
+
+          <h3>Toolbox:</h3>
+          <div class="grid wrap">
+            <p class="col col-1 dashed">React</p>
+            <p class="col col-1 dashed">HTML, CSS, JavaScript</p>
+            <p class="col col-1 dashed">SCSS / LESS</p>
+
+            <p class="col col-1 dashed">Adobe Suite</p>
+            <p class="col col-1 dashed">Python</p>
+            <p class="col col-1 dashed">Docker</p>
+            <p class="col col-1 dashed">GraphQL</p>
+
+            <p class="col col-1 dashed">SQL</p>
+            <p class="col col-1 dashed">DevOps</p>
+          </div>
+        </section>
+
+        <section>
+          <section>
+            <h2>Professional Experience:</h2>
+          </section>
+          <section>
+            <section>              
+              <div class='left-info'>
+                <p>04.19 ─ present</p>
+              </div>
+              <h3>Kinetic Vision ─ Full Stack Developer</h3>
+              <p class='dashed'>Responsible for the development and upkeep of a small set of applications</p>
+              <p class='dashed'></p>
+              <p class='dashed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquam.</p>
+            </section>
+
+            <section>
+              <div class='left-info'>
+                <p>04.19 ─ present</p>
+              </div>  
+              <h3>IT Solutions Center ─ Full Stack Developer</h3>
+              <p class='dashed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquam.</p>
+              <p class='dashed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquam.</p>
+              <p class='dashed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquam.</p>
+            </section>
+          </section>
+
+          <section>
+            <h2>Projects:</h2>
+          </section>
+
+          <section>
+            
+            <div class='left-info'>
+              <p>04.19 ─ present</p>
+            </div>
+
+            <h3>Headspace</h3>
+            <p class='dashed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquam.</p>
+            <p class='dashed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquam.</p>
+            <p class='dashed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquam.</p>
+            <h3>Ohio Risk Assessment</h3>
+            <p class='dashed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquam.</p>
+            <p class='dashed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquam.</p>
+            <p class='dashed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquam.</p>
+            <h3>joeboylson.us</h3>
+            <p class='dashed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquam.</p>
+            <p class='dashed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquam.</p>
+            <p class='dashed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquam.</p>
+          </section>
+        </section>
+      </div>
+
+    </div>
+  </main>
 
 </body>
 

@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 const fs = require('fs');
 const path = require('path');
-const pdf = require('html-pdf');
+const HTML5ToPDF  = require('html5-to-pdf');
 
 
 // DOWNLOADABLE FILES
@@ -88,20 +88,25 @@ app.post('/contact', async (req, res) => {
 
 })
 
-app.get('/cv', (req, res) => {
-  const html = fs.readFileSync('./public/resume.html', 'utf8');
+app.get('/cv', async (req, res) => {
+
   const filename = path.join(__dirname, `public/export-${(new Date()).valueOf()}.pdf`)
 
-  pdf.create(html, {
-    format: 'Letter',
-    width: `8.5in`,
-    height: `11in`
-  }).toFile(filename, (pdf_err, pdf_res) => {
-    if (pdf_err) {
-      res.send('there was an error')
-    }
+  const html5ToPDF = new HTML5ToPDF({
+    inputPath: path.join(__dirname, "public/resume.html"),
+    outputPath: path.join(filename)
+  })
+
+  try {
+    await html5ToPDF.start()
+    await html5ToPDF.build()
+    await html5ToPDF.close()
+    console.log(`::: created ${filename}`)
     res.sendFile(filename)
-  });
+  }
+  catch (error) {
+    res.send(error)
+  }
 })
 
 app.get('/*', (req, res) => res.sendFile(`${__dirname}/client/build/index.html`));
