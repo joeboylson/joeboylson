@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from 'antd';
+import { Icon, Tooltip } from 'antd';
 
 import '../styles/footer.scss'
 
@@ -12,10 +12,27 @@ const Footer: React.FC = () => {
         <div className={'col col-2'}>
           <div id={'social-box'}>
             <h3>Let's Connect:</h3>
-            <Icon type={'github'} onClick={() => openNewTab('https://github.com/')}/>
-            <Icon type={'instagram'} onClick={() => openNewTab('https://www.instagram.com/jobo.jpg/')}/>
-            <Icon type={'linkedin'} onClick={() => openNewTab('https://www.linkedin.com/in/joe-boylson-34603b139/')}/>
-            <Icon type={'youtube'} onClick={() => openNewTab('https://www.youtube.com/channel/UChz40ooXT1CfjVAjkueETUw')}/>
+
+            <Tooltip placement="top" title={'GitHub'}>
+              <Icon type={'github'} onClick={() => openNewTab('https://github.com/')}/>
+            </Tooltip>
+
+            <Tooltip placement="top" title={'Instagram'}>
+              <Icon type={'instagram'} onClick={() => openNewTab('https://www.instagram.com/jobo.jpg/')}/>
+            </Tooltip>
+
+            <Tooltip placement="top" title={'LinkedIn'}>
+              <Icon type={'linkedin'} onClick={() => openNewTab('https://www.linkedin.com/in/joe-boylson-34603b139/')}/>
+            </Tooltip>
+
+            <Tooltip placement="top" title={'YouTube'}>
+              <Icon type={'youtube'} onClick={() => openNewTab('https://www.youtube.com/channel/UChz40ooXT1CfjVAjkueETUw')}/>
+            </Tooltip>
+
+            <Tooltip placement="top" title={'CV'}>
+              <Icon type={'file'} onClick={() => openNewTab(`${window.location.origin}/cv`)}/>
+            </Tooltip>
+
           </div>
         </div>
         <div className={'col col-1 nomarg-desktop'}>
