@@ -36,10 +36,6 @@
         {
           "text": "Matt's Portfolio Site",
           "href": "https://mattboylson.com"
-        },
-        {
-          "text": "Matt's LinkedIn Page",
-          "href": ""
         }
       ],
       "synopsis": "Developing this site with Matt marked a milestone in my career as a Web Developer because this was my first freelance project. Matt came to me with a lot of great ideas and I'm very grateful to him for allowing me to build his site. Because this was a relatively small codebase (and primarily user-facing), we were able to implement a lot of very interesting interactive elements and behaviors. We focused a lot on \"the grid\", responsive design, and re-usable and modular components.",
@@ -60,10 +56,10 @@
       "links": [
         {
           "text": "GitHub Project",
-          "href": ""
+          "href": "https://github.com/joeboylson/WebGameDevelopment"
         },
         {
-          "text": "Live Site",
+          "text": "Live Site (may take a moment to load)",
           "href": "https://web-game-development.herokuapp.com/"
         }
       ],
@@ -84,15 +80,11 @@
       "links": [
         {
           "text": "Download my resume",
-          "href": "https://joeboylson.us/cv"
+          "href": "https://joeboylson.herokuapp.com/cv"
         },
         {
           "text": "View HTML page",
           "href": "http://joeboylson.herokuapp.com/resume.html"
-        },
-        {
-          "text": "html5-to-pdf on npmjs.com",
-          "href": "https://www.npmjs.com/package/html5-to-pdf"
         }
       ],
       "synopsis": "Usually people use a tool to create their resume: not me. Instead, I chose to create my resume as a simple HTML file - for fun. I used html5-to-pdf to convert the HTML file into a PDF. It works great!",
