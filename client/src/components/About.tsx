@@ -1,13 +1,12 @@
 import React from 'react';
 import Animate from '../utils/Animate';
+import { useHistory } from 'react-router-dom';
+import '../styles/pages.scss';
 
-import '../styles/pages.scss'
+const About: React.FC = () => {
 
-export interface AboutProps {
-  setRoute: any
-}
-
-const About: React.FC<AboutProps> = (Props) => {
+  const history:any = useHistory();
+  
   return (
 
     <div id={'about'} className={'grid'}>
@@ -17,22 +16,14 @@ const About: React.FC<AboutProps> = (Props) => {
         effect={'fade-up-in'}
       >
         <h1>About Me</h1>
-        {/* <div id={'cv-icon'}>
-        <p>Download CV</p>
-        <Icon className={`blue`} type={'book'} 
-          onClick={() => openNewTab('https://github.com/')}
-        />
-        </div> */}
       </Animate>
-
-      {/* <canvas id={'about-canvas'}></canvas> */}
 
       <Animate effect={'fade-up-in'} delay={0.1} animateOnLoad className={'col col-1'}>
         <img src={'/images/about_photo.jpg'} alt=""/>
         
         <div 
           className={'col col-1 split-text action-box hoverable'}
-          onClick={() => Props.setRoute('contact')}
+          onClick={() => history.push('/contact')}
         >
           <h3>Get In Touch</h3>
         </div>

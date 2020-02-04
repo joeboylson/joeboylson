@@ -1,8 +1,8 @@
 import axios from 'axios'
-import { apiUrl } from '../components/Main'; 
-
 
 const doPost = (route, data, onSuccess, onError) => {
+
+  const apiUrl = process.env.NODE_ENV !== 'production' ? 'http://localhost:5000' : ''
 
   axios.post(`${apiUrl}${route}`, data)
   .then(function (response) {

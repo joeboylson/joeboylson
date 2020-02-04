@@ -1,8 +1,6 @@
 import React from 'react';
 import Animate from '../utils/Animate';
-
 import { doPost } from '../js/doPost';
-
 import '../styles/pages.scss';
 
 const Contact: React.FC = () => {

@@ -21,6 +21,7 @@
     "react-reveal": "^1.2.2",
     "sass-loader": "^8.0.0",
     "sendgrid": "^5.2.3",
+    "smoothscroll-polyfill": "^0.4.4",
     "yarn": "^1.19.1"
   }
 }

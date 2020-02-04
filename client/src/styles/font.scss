@@ -53,17 +53,17 @@ label {
   font-weight: 300;
 }
 
+strong {
+  font-family: 'Roboto', monospace;
+  font-size: 21px;
+}
+
 p,
 li {
   color: var(--dark)
 }
 
 a {
-  color: var(--pink);
-}
-
-.mono {
-  font-family: 'Roboto-Mono', monospace;
   color: var(--pink);
 }
 

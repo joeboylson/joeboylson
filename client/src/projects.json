@@ -5,161 +5,98 @@
 
     {
       "name": "joeboylson.us",
-      "description": "This website: A self-defining project that has evolved as I have.",
+      "description": "This website: a self-defining project that has evolved as I have.",
       "date": "03.18 ─ present",
-      "sections": [{
-          "header": "Let's Go Back to the Beginning",
-          "items": [
-            "Prior to 2018, I had been shooting photos for about 5 years and I had always wanted a portfolio website to display those photos ─ something that was more than just Instagram. I had no programming skills - besides the few hours I had spent tinkering with HTML and CSS. I searched around for a solution that would allow me to have a website without knowing how to code. I used Wix and Adobe Portfolio -  but neither really suited my needs and I wasn't satisfied.",
-            "I restarted multiple times, trying different layouts and designs - but still I was dissatisfied. Little did I know that this dissatisfaction and seemingly endless attemts to make something that felt 'right' was only the beginning."
-          ]
-        },
+      "title_image": "/images/joeboylson/fullscreen.png",
+      "context": "Personal Project",
+      "role": "Everything . . . I did everything.",
+      "technologies": "React.js, Create React App, Typescript, Express.js, Heroku",
+      "links": [
         {
-          "header": "My First Dive into Web Development",
-          "items": [
-            "In January of 2018, I started my first co-op (like an internship) through the University of Cincinnati: I had gotten a position as a web developer even though I knew nothing about web development. The first months were hard - but it was one of the best things that has happened to me. I learned at such a rapid pace - 8 hours a day for four months gets you experience real quick.",
-            "About 2 months into this co-op, I realized I had all the tools to host a website - by myself. I could build whatever I wanted. I found Heroku (which I still use today) which is a service that allows you to host a website easily - AND they have a free tier. And so I used Heroku. And through messing around, making mistakes, writing terrible code, and just seeing if I could make an idea a reality, I learned a lot."
-          ]
-        },
-        {
-          "header": "Current Day",
-          "items": [
-            "I have completed 2 additional co-ops after my first one; in all three I have had a web developer role. And on my own time, I spend a solid amount of time working on, and sometimes obsessing over, web development.",
-            "It has taken a few years, but I have finally built something that feel 'right' - or rather 'more right than everything else I have built'. There's still always room for improvement, room to add new features or make old features better.",
-            "As my passion for web development grows and changes, this website also changes.",
-            "I find it interesting that I set out to build a website for my photography - and now I have build one that contains primarily my Web Development work"
-          ]
-        },
-        {
-          "header": "Objective for the Site",
-          "items": [
-            "I want this website to be the one place that a person can go to if they want to see who I am and what I am about. I wanted it to reflect a certain part of me: the grid, the clean lines, and the smooth animations are all things that I wanted to show. I also wanted the navigation between pages to be easy and quick; the browser doesn't pause for even a second when you switch to a different page.",
-            "A professor once talked about the design of a site in a class: he talked about how the goal of design was for it to actually disappear and that interaction would simple by fluid and intuitive. As much as I want you to admire the design, I realize that if I can make the design disappear, I have done my job better.",
-            "I try to make each item on the page significant and deliberate. Everything is where it is for a reason. If you come to this site, I want you to find exactly what you are loking for."
-          ]
+          "text": "GitHub Project",
+          "href": "https://github.com/joeboylson/joeboylson"
         }
-      ]
+      ],
+      "synopsis": "Over the past 3 years, I've been learning more and more about web development; consequently this website has evolved and changed as I have and has allowed me to explore and implement the technologies that interest me that I might not be able to use at work. It has also given me the chance to try my hand at web design and UI/UX practices. If the pattern continues, I'll probably be re-writing this entire site within a year (so don't get too comfortable).",
+      "sections": []
+    },
+
+
+
+    {
+      "name": "mattboylson.com",
+      "description": "A portfolio collaboration with designer and relative Matt Boylson",
+      "date": "10.19 ─ 01.20",
+      "title_image": "/images/mattboylson/fullscreen.png",
+      "context": "Designer Portfolio Project",
+      "with": "Matt Boylson",
+      "role": "Developer, Cousin",
+      "technologies": "React.js, Create React App, Typescript, Express.js, Heroku",
+      "links": [
+        {
+          "text": "Matt's Portfolio Site",
+          "href": "https://mattboylson.com"
+        },
+        {
+          "text": "Matt's LinkedIn Page",
+          "href": ""
+        }
+      ],
+      "synopsis": "Developing this site with Matt marked a milestone in my career as a Web Developer because this was my first freelance project. Matt came to me with a lot of great ideas and I'm very grateful to him for allowing me to build his site. Because this was a relatively small codebase (and primarily user-facing), we were able to implement a lot of very interesting interactive elements and behaviors. We focused a lot on \"the grid\", responsive design, and re-usable and modular components.",
+      "sections": []
     },
 
 
 
     {
       "name": "Web Game Development",
-      "description": "A Few Web Games I Created in School",
+      "description": "A few web games I created in school that use basic JavaScript strategies",
       "date": "08.19 ─ 12.19",
-      "sections": [{
-          "header": "Introduction",
-          "items": [
-            "In this assignment, we were tasked to create just a simple web page about ourselves. This was a way that we could all get to know eachother and get our web development skills warmed up.",
-            "I chose to keep this page as simple as I could - but I also wanted it to look good.",
-            {
-              "type": "image",
-              "src": "/images/web_game_development/intro/intro.png"
-            },
-            {
-              "type": "link",
-              "title": "Open Introduction Page",
-              "text": "https://web-game-development.herokuapp.com/ASSIGNMENT1_INTRODUCTION/"
-            }
-          ]
+      "title_image": "/images/web_game_development/fullscreen.png",
+      "context": "Web Game Development Course (University of Cincinnati)",
+      "with": null,
+      "role": "Student, Designer, Developer",
+      "technologies": "Vanilla Javascript, RequestAnimationFrame, HTML Canvas, React, Express.js, Heroku",
+      "links": [
+        {
+          "text": "GitHub Project",
+          "href": ""
         },
         {
-          "header": "Rock, Paper, Scissors",
-          "items": [
-            "In this assigment, we were tasked to make a Rock, Paper, Scissors game. We were required to use a HTML Form and to create a user-friendly interface. Each subsequent game had to be tracked, such that the number of wins, losses, and ties formed a tally. We also had to give the user basic instructions on how to play the game display the result of each game.",
-            {
-              "type": "image",
-              "src": "/images/web_game_development/rps/rps.png"
-            },
-            {
-              "type": "link",
-              "title": "Open Rock, Paper, Scissors",
-              "text": "https://web-game-development.herokuapp.com/ASSIGNMENT2_ROCK_PAPER_SCISSORS/"
-            }
-          ]
-        },
-        {
-          "header": "Hangman",
-          "items": [
-            "NOTE: This project no longer works: the url from which we could request a random word is no longer in service.",
-            "During this project, the level of difficulty increased. There were now many more variables and outcomes that I had to think about. We were given a url from which we could request a word with a specified difficulty; then we had to start the game based around that word. This meant that any word we recieved would have to work",
-            "We also had to draw each part of the hangman with the HTML Canvas element. Unlike the previous game, this game depends on a class which holds the state of the game. The class-based system worked very well and I used this method for the remaining games.",
-            {
-              "type": "image",
-              "src": "/images/web_game_development/hangman/hangman-1.png"
-            },
-            {
-              "type": "image",
-              "src": "/images/web_game_development/hangman/hangman-2.png"
-            },
-            {
-              "type": "image",
-              "src": "/images/web_game_development/hangman/hangman-lose.png"
-            },
-            {
-              "type": "image",
-              "src": "/images/web_game_development/hangman/hangman-win.png"
-            },
-            {
-              "type": "link",
-              "title": "Open Hangman",
-              "text": "https://web-game-development.herokuapp.com/ASSIGNMENT3_HANGMAN/"
-            }
-          ]
-        },
-        {
-          "header": "Tic, Tac, Toe",
-          "items": [
-            "I felt that this assignment was as difficult as the previous assignment. In this game, there is the added complexity of having two seperate players - but by using classes, this was relatively easy to solve.",
-            "On the first screen, the two users have to option to choose a color and enter a name. I had to make sure that the users could not pick the same color or have the same name. From there I had to manage the moves of the players. I captured the coordinates of each click on the 3x3 board and filled in the corresponding value in a two-dimensional array. For example, if you clicked the center block, this would fill in the second value of the second array. Before I filled in the value, I had to make sure the box was no already filled; afterward, I had to check if the active player had won. If they had won, the game ended.",
-            "I had a lot of fun with this project, especially with the styling and aesthetics of the game. I'm very proud with how this one turned out.",
-            {
-              "type": "image",
-              "src": "/images/web_game_development/ttt/ttt-1.png"
-            },
-            {
-              "type": "image",
-              "src": "/images/web_game_development/ttt/ttt-2.png"
-            },
-            {
-              "type": "image",
-              "src": "/images/web_game_development/ttt/ttt-player-win.png"
-            },
-            {
-              "type": "link",
-              "title": "Open Tic, Tac, Toe",
-              "text": "https://web-game-development.herokuapp.com/ASSIGNMENT4_TIC_TAC_TOE/"
-            }
-          ]
-        },
-        {
-          "header": "Gravity (final project)",
-          "items": [
-            "As the final project, we were given almost a whole month to come up with the idea of the game and execute our vision.",
-            "I wanted to make a infinite-runner type of game where the player would simply avoid obstacles for as long as they could (Flappy Bird was my inspiration).",
-            "The first task was to create the basic environment of the game - i.e. obstacles moving past the player. The obstacles had to randomly generate within the bounds of the viewport and I wanted each obstacle to also have a slightly different speed. The global speed of the obstacles increase over time, as does the frequency at which these obstacles generate.",
-            "The next step was to add the player. I did not want the player to 'jump' to avoid obstacles, but rather I wanted the player to be able to affect their own gravity (thus the name of the game). When you start, the player 'falls' up, and when the spacebar is hit, the player stops and begins to fall down. In this way, you avoid obstacles.",
-            "The next big challenge was the collision detection. To solve this, I had to rework how my obstacles and player were drawn. Before I had used a 'rect(...)' method into which you could easily pass an x-coordinate, a y-coordinate, a width, and a height. I had to change this because the collision algorith I was using required a set of points. I could no longer use this easy 'rect(...) function, so I had to tell the page to start at point one, and draw to point two, then to point three, then to point four. And for each frame, I had to update these points to make the obstacle appear to move through space.", 
-            "This added a bit of complexity, but it was worth it to add collision detection. I used the Greiner-Hormann clipping algorithm which was available as a javascript package (very, very helpful. Now I had to ability to pass in two set of points and ask the algorith 'Do these points collide?'. The algorith could return the lines that were in collision. If there were no results, then there was no collision.",
-            "After this, I finished up by adding powerups in the game. One was a coin which simply added 500 points to the users' score; the second was an invisibility powerup which would basically turn off the collision effects for all objects. Because of this, I changed how the result of a collision worked. If it was an obstacle, the game would end, but if it was a powerup, if would change the player properties or the score.",
-            "This was a blast to create, especially since there were not many requirements. It had to be a game, it had to work, and it had to be relatively complex. Dealing with the coordinate systems of the HTML Canvas, multiple classes all linking and working together, the Javascript 'requestAnimationFrame(...) method, and collision detection was really interesting. I feel like I got a little bit of everything into this project.",
-            "(Try and beat my score of 21,323)",
-            {
-              "type": "image",
-              "src": "/images/web_game_development/gravity/gravity-1.png"
-            },
-            {
-              "type": "image",
-              "src": "/images/web_game_development/gravity/gravity-2.jpg"
-            },
-            {
-              "type": "link",
-              "title": "Open Gravity",
-              "text": "https://web-game-development.herokuapp.com/ASSIGNMENT_FINAL_PROJECT/"
-            }
-          ]
+          "text": "Live Site",
+          "href": "https://web-game-development.herokuapp.com/"
         }
-      ]
+      ],
+      "synopsis": "Creating these games was a lot of fun and we were able to use a lot of technologies that wouldn't regularly have a place in a standard web application. I aimed to use simple HTML, CSS, and JavaScript for these projects and not use any external libraries except where absolutely necessary (for instance, a library for a collision detection algorithm).",
+      "sections": []
+    },
+
+
+
+    {
+      "name": "A Developer's Resume",
+      "description": "With so many resume creation tools out there, I chose to use none of them",
+      "date": "01.20",
+      "title_image": "/images/resume/fullscreen.png",
+      "context": "A Fun Weekend Project",
+      "role": "Developer, Nerd",
+      "technologies": "HTML, CSS, html5-to-pdf (npm package)",
+      "links": [
+        {
+          "text": "Download my resume",
+          "href": "https://joeboylson.us/cv"
+        },
+        {
+          "text": "View HTML page",
+          "href": "http://joeboylson.herokuapp.com/resume.html"
+        },
+        {
+          "text": "html5-to-pdf on npmjs.com",
+          "href": "https://www.npmjs.com/package/html5-to-pdf"
+        }
+      ],
+      "synopsis": "Usually people use a tool to create their resume: not me. Instead, I chose to create my resume as a simple HTML file - for fun. I used html5-to-pdf to convert the HTML file into a PDF. It works great!",
+      "sections": []
     }
 
 

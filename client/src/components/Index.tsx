@@ -1,11 +1,10 @@
 import React from 'react';
 import Animate from '../utils/Animate';
+import { useHistory } from "react-router-dom";
 
-export interface IndexProps {
-  setRoute: any
-}
+const Index: React.FC = () => {
 
-const Index: React.FC<IndexProps> = (Props) => {
+  const history = useHistory()
 
   return (    
     <div id={'index'} className={'grid'}>
@@ -37,7 +36,7 @@ const Index: React.FC<IndexProps> = (Props) => {
       >
         <div className={'col col-1'}>
           <img src={'/images/profile_photo.jpg'} alt=""/>
-          <p className={'mono'}>From Joshua tree last December:</p>
+          <p>From Joshua tree last December:</p>
         </div>
       </Animate>
 
@@ -58,7 +57,7 @@ const Index: React.FC<IndexProps> = (Props) => {
 
       <Animate 
         className={'col col-1 col-2-tablet split-text action-box hoverable'}
-        onClick={() => Props.setRoute('projects')}
+        onClick={() => history.push('/projects')}
         effect={'fade-up-in'}
         delay={0.1}
       >
@@ -67,7 +66,7 @@ const Index: React.FC<IndexProps> = (Props) => {
 
       <Animate 
         className={'col col-1 split-text action-box hoverable'}
-        onClick={() => Props.setRoute('contact')}
+        onClick={() => history.push('/contact')}
         effect={'fade-up-in'}
         delay={0.2}
       >
@@ -76,7 +75,7 @@ const Index: React.FC<IndexProps> = (Props) => {
 
       <Animate 
         className={'col col-1 nomarg-desktop nomarg-tablet split-text action-box hoverable'}
-        onClick={() => Props.setRoute('about')}
+        onClick={() => history.push('/about')}
         effect={'fade-up-in'}
         delay={0.3}
       >

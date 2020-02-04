@@ -9,12 +9,10 @@ const loadImages = (urlArray, callback) => {
 
     newImage.onload = () => {
       if ( imageArray.every(image => image.complete ) ) {
-        console.log('::: all images are loaded')
         callback()
       }
     }
   }
-
 }
 
 export { loadImages }

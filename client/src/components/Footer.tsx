@@ -1,11 +1,12 @@
 import React from 'react';
 import { Icon, Tooltip } from 'antd';
-
 import '../styles/footer.scss'
-
 import { openNewTab } from '../utils/Controls';
 
 const Footer: React.FC = () => {
+
+  const apiUrl = process.env.NODE_ENV !== 'production' ? 'http://localhost:5000' : ''
+
   return (
     <div id={'footer-root'}>
       <div className={'grid'}>
@@ -30,16 +31,16 @@ const Footer: React.FC = () => {
             </Tooltip>
 
             <Tooltip placement="top" title={'CV'}>
-              <Icon type={'file'} onClick={() => openNewTab(`${window.location.origin}/cv`)}/>
+              <Icon type={'file'} onClick={() => openNewTab(`${apiUrl}/cv`)}/>
             </Tooltip>
 
           </div>
         </div>
         <div className={'col col-1 nomarg-desktop'}>
           <div id={'contact-details'}>
-            <p className={'mono'}>Joe Boylson</p>
-            <a href={'mailto:joeboylson@gmail.com'} className={'mono'}>joeboylson@gmail.com</a>
-            <p className={'mono'}>+1 513.667.2371</p>
+            <p>Joe Boylson</p>
+            <a href={'mailto:joeboylson@gmail.com'}>joeboylson@gmail.com</a>
+            <p>+1 513.667.2371</p>
           </div>
         </div>
       </div>

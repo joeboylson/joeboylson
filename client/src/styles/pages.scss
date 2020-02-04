@@ -3,9 +3,9 @@
 // ----- ----- ----- ----- -----
 
 $unit: calc(100vw/13);
-$col3:  calc( #{$unit} * 3);
-$col7:  calc( #{$unit} * 7);
-$col11: calc( #{$unit} * 11);
+$col3: calc(#{$unit} * 3);
+$col7: calc(#{$unit} * 7);
+$col11: calc(#{$unit} * 11);
 
 // ----- ----- ----- -----
 // INDEX ----- ----- -----
@@ -13,19 +13,26 @@ $col11: calc( #{$unit} * 11);
 
 #index {
 
-  p { margin-bottom: 21px; }
+  p {
+    margin-bottom: 21px;
+  }
 
   .skills {
-    h3 { margin-bottom: 21px; }
+    h3 {
+      margin-bottom: 21px;
+    }
   }
 
   .action-box {
     height: fit-content;
     background-color: var(--accent);
+
     * {
       color: white;
       padding: 55px;
-    };
+    }
+
+    ;
 
     &:hover {
       background-color: var(--accent-darker);
@@ -73,10 +80,13 @@ $col11: calc( #{$unit} * 11);
   .action-box {
     height: fit-content;
     background-color: var(--accent);
+
     * {
       color: white;
       padding: 55px;
-    };
+    }
+
+    ;
 
     &:hover {
       background-color: var(--accent-darker);
@@ -87,7 +97,8 @@ $col11: calc( #{$unit} * 11);
     margin-bottom: 89px;
   }
 
-  h3, p {
+  h3,
+  p {
     margin-bottom: 21px;
   }
 
@@ -96,92 +107,139 @@ $col11: calc( #{$unit} * 11);
 
 
 // ----- ----- ----- -----
-// PROJECT LIST ---- -----
+// PROJECTS
 // ----- ----- ----- -----
 
-.project-li {
+$expand-height: 233px;
+$expand-margin: 89px;
 
-  border-bottom: 1px solid var(--dark);
-  padding-bottom: 55px;
-  
-  h3, p {
-    min-height: 89px; 
-    margin-bottom: 21px;
-  }
+$collapse-height: calc(34px + 42px);
+$collapse-margin: 21px;
 
-  p.mono {
-    min-height: auto;
-  }
 
-  &:hover {
-    cursor: pointer;
-  }
+#project-list {
 
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: -21px;
-    left: 0;
-    z-index: -10;
-    width: 100%;
-    height: 21px;
-    background-color: var(--pink);
-    transform: scaleX(0);
+  .project-li {
+    background-color: #EEE;
     transition-duration: 0.25s;
-    transform-origin: left center;
-  }
+    min-height: 0;
+    // overflow: hidden;
+    position: relative;
 
-  &:hover::before {
-    transform: scaleX(1);
-  }
-}
+    animation: reverseCollapseAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 
-.project {
+    &.collapse {
 
-  margin-bottom: $unit;
+      &.col {
+        animation: collapseAnimation;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        animation-direction: initial;
+      }
 
-  .project-close-icon {
-    position: fixed;
-    bottom: 34px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: +1
-  }
+      p {
+        opacity: 0;
+      }
 
-  .section {
-    margin-bottom: calc(89px * 2);
-    h3, p { margin-bottom: 34px; }
-
-    p, h3 {
-      flex: 0 0 100%;
+      .title-image {
+        opacity: 0;
+      }
     }
 
-    &.subgrid {
-      .col:nth-child(2n) {
-        margin-right: 0;
+    .content {
+      margin: 21px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: calc( #{$expand-height} - 42px );
+
+      // .project-date {
+      //   display: inline-block;
+      //   width: auto;
+      //   text-align: right;
+      //   margin: 0
+      //   // float: right;
+      // } 
+
+      strong,
+      p {
+        display: block;
+        margin-bottom: 21px;
+        transition-duration: 0.5s;
+      }
+
+      strong {
+        width: 500px;
       }
     }
 
   }
 
-  .link-like-button {
-    display: block;
-    text-align: center;
-    width: 100%;
-  }
+  .project {
+    min-height: 70vh;
+    transition-duration: 0.5s;
 
+    .extra-space {
+      margin-top: 30vh;
+    }
+
+    .controls {
+      height: $unit;
+      background-color: var(--dark);
+      display: flex;
+      align-items: center;
+      margin-top: calc(89px - #{$collapse-margin});
+
+      .icon {
+        cursor: pointer;
+        height: 21px;
+        margin-left: 21px;
+      }
+
+      svg {
+        width: 21px;
+        height: 21px;
+      }
+    }
+
+    .title-image {
+      background-color: #EEE;
+      img {
+        padding: 34px;
+      }
+    }
+
+    .header-entry {
+      margin-bottom: 21px;
+    }
+
+  }
 
 }
 
-@media only screen and (max-width: 1000px) {
-  .project-li {
-    width: 100%;
-    margin-right: 0;
+@keyframes collapseAnimation {
+  from {
+    height: $expand-height;
+    margin-bottom: $expand-margin;
+  }
 
-    h3, p {
-      min-height: auto; 
-    }
+  to {
+    height: $collapse-height;
+    margin-bottom: $collapse-margin;
+  }
+}
 
+@keyframes reverseCollapseAnimation {
+  from {
+    height: $collapse-height;
+    margin-bottom: $collapse-margin;
+  }
+
+  to {
+    height: $expand-height;
+    margin-bottom: $expand-margin;
   }
 }
 
@@ -196,23 +254,29 @@ $col11: calc( #{$unit} * 11);
 
   h3 {
     margin-bottom: 21px;
-  } 
+  }
 
   .contact-response {
     padding-top: 89px;
     margin-bottom: 54px;
-    h3, p, strong {
+
+    h3,
+    p,
+    strong {
       color: var(--light);
     }
+
     .lds-roller {
       margin: auto;
     }
+
     .col {
       margin-left: $unit;
       margin-right: 0;
     }
-    
+
   }
+
   .action-button {
     background-color: var(--blue);
     transition-duration: 0.25s;
@@ -220,15 +284,18 @@ $col11: calc( #{$unit} * 11);
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
     p {
       color: var(--light);
       padding: 34px;
     }
+
     h3 {
       color: var(--light);
       margin: 0;
       padding-left: 34px;
     }
+
     &:hover {
       background-color: var(--blue-alt);
     }
@@ -245,11 +312,13 @@ $col11: calc( #{$unit} * 11);
   #error-view {
     background-color: var(--yellow);
   }
-  
+
   .form-control {
     margin-bottom: 21px;
-    
-    input, button, textarea {
+
+    input,
+    button,
+    textarea {
       width: 100%;
       border: none;
       box-shadow: none;
@@ -264,13 +333,13 @@ $col11: calc( #{$unit} * 11);
     }
 
     .invalid {
-      box-shadow: 0px 10px 0px 0px  var(--yellow);
+      box-shadow: 0px 10px 0px 0px var(--yellow);
     }
 
     .valid {
-      box-shadow: 0px 10px 0px 0px  var(--green);
+      box-shadow: 0px 10px 0px 0px var(--green);
     }
-  
+
     button {
       background-color: var(--green);
       color: white;
@@ -281,6 +350,7 @@ $col11: calc( #{$unit} * 11);
   .icon {
     font-size: 34px;
     margin-left: 0;
+
     i {
       border-radius: 0 !important;
     }
@@ -327,9 +397,9 @@ $col11: calc( #{$unit} * 11);
 @media only screen and (max-width: 1000px) {
 
   $tablet-unit: calc(100vw/9);
-  $col9:  calc( #{$tablet-unit} * 7);
+  $col9: calc(#{$tablet-unit} * 7);
 
-  #preset-list {  
+  #preset-list {
     .link-like-button {
       width: $col9;
     }
@@ -343,7 +413,11 @@ $col11: calc( #{$unit} * 11);
 // ----- ----- ----- -----
 
 .preset {
-  p, h3, img, .preview {
+
+  p,
+  h3,
+  img,
+  .preview {
     margin-bottom: 21px;
   }
 }

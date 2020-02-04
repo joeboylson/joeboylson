@@ -3,8 +3,6 @@ import Animate from '../utils/Animate';
 
 import '../styles/pages.scss'
 
-import { apiUrl } from './Main';
-
 // ----- ----- ----- -----
 // PRESET ---- ----- -----
 // ----- ----- ----- -----
@@ -32,12 +30,12 @@ const Preset: React.FC<PresetProps> = (Props) => {
 
       <Animate className={'col col-3'} effect={'fade-up-in'}>
         <a
-          href={`${apiUrl}/download?file=${Props.presetRoute}`}
+          href={`/download?file=${Props.presetRoute}`}
           className={'link-like-button'}
         >Download {Props.name}.xmp</a>
 
         <a
-          href={`${apiUrl}/download?file=${Props.dngRoute}`}
+          href={`/download?file=${Props.dngRoute}`}
           className={'link-like-button'}
         >Download {Props.name}.dng</a>
 

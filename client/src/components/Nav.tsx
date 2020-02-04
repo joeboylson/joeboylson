@@ -1,14 +1,14 @@
 import React from 'react';
 import { routes } from './Main'
+import { useHistory } from "react-router-dom";
 
-export interface NavProps {
-  setRoute: any
-}
+const Nav: React.FC = () => {
 
-const Nav: React.FC<NavProps> = (Props) => {
+  const history = useHistory()
 
   const [navIsOpen, setNavIsOpen] = React.useState(false)
 
+  // eslint-disable-next-line
   const filteredRoutes = Object.keys(routes).filter( (_route:string) => {
     if (!_route.includes('/')) return _route;
   })
@@ -35,7 +35,7 @@ const Nav: React.FC<NavProps> = (Props) => {
           return <h3
             key={index}
             className={`nav-link ${navIsOpen ? 'nav-is-open' : 'nav-is-closed'}`}
-            onClick={() => Props.setRoute(link.route)}
+            onClick={() => history.push(`/${link.route}`)}
           >
             {link.name}
           </h3>
@@ -43,7 +43,7 @@ const Nav: React.FC<NavProps> = (Props) => {
       </div>
 
       <div className={'nav-caption'}>
-        <p className={'mono'}>Portfolio 2020 &nbsp; // &nbsp; joeboylson.us</p>
+        <p>Portfolio 2020 &nbsp; // &nbsp; joeboylson.us</p>
       </div>
 
     </div>

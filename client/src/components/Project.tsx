@@ -1,11 +1,12 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 // components
 import Animate from '../utils/Animate';
 import Icon from '../utils/Icon'
 
 // style
-import '../styles/pages.scss'
+import '../styles/pages.scss';
 
 // project props
 export interface ProjectProps {
@@ -14,62 +15,88 @@ export interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = (Props) => {
+  const history:any = useHistory();
+
+  const project = Props.project;
 
   return (
-      <div className={'project grid'}>
+    <div className={'project grid'}>
 
+      <Animate 
+        className={'col col-3 controls'}
+        effect={'fade-up-in'}
+      >
         <Icon 
-          onClick={() => Props.setRoute('projects') } 
-          type={'close'}
-          className={'project-close-icon pink large'}
+          type="close" 
+          onClick={() => history.push('/projects')}  
         />
+      </Animate>
 
-        <Animate 
-          className={'col col-3'}
-          effect={'fade-up-in'}  
-        >
-          <h1>{Props.project.name}</h1>
-        </Animate>
-
-        { Props.project.sections.map((section:any, sectionIndex:any) => {
-          return <Animate
-            animateOnLoad
-            delay={sectionIndex/10}
-            className={'col col-2 section subgrid'} 
-            effect={'fade-up-in'} 
-            key={`section-${sectionIndex}`}>
-            <h3>{ section.header }</h3>
-
-            { section.items.map((item:any, itemIndex:number) => {
-
-              let itemKey = `item-${itemIndex}`;
-
-              if (item.type === 'link') {
-                return <a 
-                  key={itemKey} 
-                  href={item.text}
-                  className={'link-like-button'}  
-                >{item.title || item.text}</a>
-              }
-
-              if (item.type === 'image') {
-                return <div 
-                  key={itemIndex}
-                  className={'col col-1'}>
-                  <img src={item.src} alt=""/>
-                </div> 
-              }
-
-              return <p
-                key={itemKey}>{ item }</p>
-            })
-
-            }
-          </Animate>
-        })
-
-        }
+      <div className={'col col-2 title-image'}>
+        <img src={project.title_image} alt=""/>
       </div>
+
+      <div className={'col col-1 nomarg-desktop'}>
+
+        <div className="header-entry">
+          <h3>{project.name}</h3>
+        </div>
+
+        <div className="header-entry">
+          <strong>Context:</strong>
+          <p>{project.context || '[no context]'}</p>
+        </div>
+
+        { project.with &&
+          <div className="header-entry">
+            <strong>With:</strong>
+            <p>{project.with}</p>
+          </div>
+        }
+
+        <div className="header-entry">
+          <strong>Role:</strong>
+          <p>{project.role || '[no role]'}</p>
+        </div>
+
+        <div className="header-entry">
+          <strong>Technologies:</strong>
+          <p>{project.technologies || '[no technologies]'}</p>
+        </div>
+
+        { project.links &&
+          <div className="header-entry">
+            <strong>Links:</strong>
+            { project.links.map((link:any, index:number) => {
+              return <p key={`link-${index}`}>
+                <a href={link.href} target={'__blank'}>{link.text}</a>
+              </p> 
+            })}
+          </div>
+        }
+
+        { project.synopsis &&
+          <div className="header-entry">
+            <strong>Synopsis:</strong>
+            <p>{project.synopsis}</p>
+          </div>
+        }
+
+
+
+
+
+      </div>
+
+      { Props.project.sections.map((section:any, index:any) => {
+        return (
+          <div key={`section-${index}`} className={'col col-2'}> 
+            <strong>{section.header}</strong>
+          </div>
+        )
+      })}
+
+    </div>
   )}
 
-export default Project;
+export default Project; 

@@ -1,42 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import '../styles/pages.scss'
+import { loadImages } from '../js/loadImages';
+
 
 // components
 import Nav from './Nav';
 import Footer from './Footer';
-
-// styles
-import '../styles/pages.scss'
-
-// js
-import { loadImages } from '../js/loadImages';
-
-// pages
 import Index from './Index';
 import ProjectList from './ProjectList';
-import Project from './Project';
 import About from './About';
 import Contact from './Contact';
 import PresetList from './Presets';
-
-// project data list
-import { projects } from '../projects.json';
-
-const projectRoutes = projects.reduce((_projectRoutes:any, project:any, index:number) => (
-  // eslint-disable-next-line
-  _projectRoutes[`projects/${index}`] = (Props:any) => <Project project={project} setRoute={Props.setRoute}/>, _projectRoutes
-), {});
 
 const routes:any = {
   index: Index,
   projects: ProjectList,
   about: About,
   contact: Contact,
-  presets: PresetList,
-  ...projectRoutes
+  presets: PresetList
 }
-
-const apiUrl = process.env.NODE_ENV !== 'production' ? 'http://localhost:5000' : ''
 
 const imagesToPreload = [
   '/images/fpd_1/01.jpg',
@@ -50,46 +34,61 @@ const imagesToPreload = [
   '/images/profile_photo.jpg',
 ];
 
-// ----- ----- ----- -----
-// MAIN  ----- ----- -----
-// ----- ----- ----- -----
+loadImages(imagesToPreload, () => {})
+
 
 const Main: React.FC = () => {
-
-  const getDefaultRoute = () => {
-    return Object.keys(routes).includes( window.location.pathname.slice(1) ) ? window.location.pathname.slice(1) : 'index'
-  }
-  
-  const [route, setRoute] = React.useState( getDefaultRoute() )
-  const [imagesAreLoaded, setImagesAreLoaded] = React.useState(false)
-  const Component = routes[route]
-
-  // handling route forwards and backwards
-  window.history.pushState(null, '', `/${route}`)
-  window.onpopstate = () => { setRoute( getDefaultRoute() ) }
-
-  React.useEffect(() => {
-    if (!imagesAreLoaded) {
-      loadImages(imagesToPreload, () => setImagesAreLoaded(true))
-    }
-  }, [imagesAreLoaded])
 
   const scroll = () => {
     let root:any = document.getElementById('root')
     if (root) { root.scrollIntoView(true, 'smooth') }
   }
-
-  // reset scroll every page render
-  scroll()
   
   return (    
     <main>
       <div id="top-spacer"></div>
-      <Nav setRoute={setRoute}/> 
+      <Router>
+        <Nav/> 
+        <Switch>
 
-      { Component &&
-        <Component setRoute={setRoute}/>
-      }
+          <Route 
+            exact path={['/index', '/']}
+            render={() => {
+              scroll()
+              return <Index />
+            }}
+          />
+
+          <Route
+            exact path={['/projects', '/projects/:projectIndex']}
+            render={(props:any) => {
+              console.log(props)
+              return <ProjectList projectIndex={props.match.params.projectIndex}/>;
+            }}
+          />
+          
+          <Route path="/about">
+            <About />
+          </Route>
+
+          <Route 
+            exact path="/contact"
+            render={() => {
+              scroll()
+              return <Contact />
+            }}  
+          />
+
+          <Route 
+            exact path="/presets"
+            render={() => {
+              scroll()
+              return <PresetList />
+            }}  
+          />
+
+        </Switch>
+      </Router>
 
       { ReactDOM.createPortal(         
           <Footer />,
@@ -100,4 +99,4 @@ const Main: React.FC = () => {
 }
 
 export default Main;
-export { routes, apiUrl };
+export { routes }
