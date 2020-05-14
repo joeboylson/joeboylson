@@ -1,17 +1,12 @@
 import {LitElement, html} from 'lit-element';
 
-// components
-import './page-frame/page-frame'
-
-class AppFrame extends LitElement {
+class Page extends LitElement {
     static get properties() {
         return {};
     }
 
     constructor() {
         super();
-
-        console.log(paper)
     }
 
     render() {
@@ -22,12 +17,9 @@ class AppFrame extends LitElement {
                 }
             </style>
 
-            <p>POLYMER</p>
-            <page-frame></page-frame>
-            <page-frame></page-frame>
-            <page-frame></page-frame>
+            <p>this is a page frame</p>
         `;
     }
 }
 
-customElements.define('app-frame', AppFrame);
+customElements.define('page-frame', Page);
