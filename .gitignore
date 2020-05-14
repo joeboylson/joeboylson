@@ -1,13 +1,4 @@
 
-ASSIGNMENT3_HANGMAN/_old
-ASSIGNMENT3_HANGMAN/node_modules
-ASSIGNMENT3_HANGMAN/package-lock.json
-client/build
-client/node_modules
 node_modules
+package-lock.json
 ref
-config.json
-.DS_Store
-public/_resume.html
-
-client/src/projects.txt

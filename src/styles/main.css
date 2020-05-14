@@ -1,0 +1,108 @@
+@import "https://cdn.lineicons.com/2.0/LineIcons.css";
+@import "./font.css";
+
+:root {
+    --color: #333;
+    --avreg: 'AvenirNext LT Pro';
+    --akzbold: 'Akzidenz-Grotesk Pro Bold Ext';
+    --allno1: 'Alliance No.1';
+
+    --background: white;
+    --foreground: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--allno1);
+}
+
+.title {
+    position: absolute;
+    color: var(--background);
+    text-shadow: -1px -1px 0 var(--foreground),
+                                1px -1px 0 var(--foreground),
+                                -1px 1px 0 var(--foreground), 
+    1px 1px 0 var(--foreground);
+    transform: translateX(-10%);
+    line-height: 100px;
+    font-size: 89px;
+    z-index: +1;
+    
+}
+
+h1 {
+    font-family: var(--akzbold);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    width: 800px;
+    height: 800px;
+    margin: 21px auto 21px auto;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+
+/* app-frame */
+
+#grid-canvas {
+    position: absolute;
+    border: 1px solid #F7F7F7;
+    z-index: -1;
+}
+
+#app-frame {
+    width: 100%;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.64, 0.04, 0.35, 1);
+    min-height: 800px;
+    z-index: -1;
+}
+
+.scroll-binary {
+    position: absolute;
+    bottom: 01px;
+    right: 0px;
+    background-color: #333;
+    color: white;
+    width: 100px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+.scroll-binary p {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    width: 100px;
+    line-height: 100px;
+    padding-bottom: 25px;
+}
+
+.item {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    margin-bottom: 100px;
+}
+
+
+.text-item {
+    width: 50%;
+    height: 100px;
+    margin-bottom: 100px;
+}
+
+.text-item p {
+    line-height: 25px;
+}

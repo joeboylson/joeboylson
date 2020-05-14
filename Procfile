@@ -1,1 +1,1 @@
-web: npm run start_client
+web: npm run production

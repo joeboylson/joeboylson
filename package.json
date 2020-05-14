@@ -1,27 +1,27 @@
 {
-  "name": "web_game_development",
+  "name": "start-lit-element",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "start-lit-element",
+  "repository": "https://github.com/joeboylson/joeboylson.github.io",
+  "main": "app-frame.js",
   "scripts": {
-    "heroku-postbuild": "cd client && yarn install && npm run-script build",
-    "start_client": "node index.js",
-    "dev": "concurrently --kill-others-on-fail \"nodemon client.js\" \"cd client && yarn start\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "polymer serve --port 3000",
+    "production": "serve build/default",
+    "build": "polymer build --bundle",
+    "heroku-postbuild": "npm run build"
   },
   "author": "Joe Boylson",
-  "license": "ISC",
+  "license": "BSD-3-Clause",
   "dependencies": {
-    "@sendgrid/mail": "^6.4.0",
-    "axios": "^0.19.1",
-    "concurrently": "^5.1.0",
-    "express": "^4.17.1",
-    "html5-to-pdf": "^3.2.0",
-    "node-sass": "^4.13.0",
-    "react-reveal": "^1.2.2",
-    "sass-loader": "^8.0.0",
-    "sendgrid": "^5.2.3",
-    "smoothscroll-polyfill": "^0.4.4",
-    "yarn": "^1.19.1"
+    "@webcomponents/webcomponentsjs": "latest",
+    "axios": "^0.19.2",
+    "gsap": "^3.2.6",
+    "lit-element": "latest",
+    "node-sass": "^4.13.1",
+    "paper": "^0.12.4",
+    "polymer-cli": "^1.9.11",
+    "pubsub-js": "^1.8.0",
+    "serve": "^11.3.0"
   }
 }
