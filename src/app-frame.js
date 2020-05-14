@@ -7,6 +7,8 @@ class AppFrame extends LitElement {
 
     constructor() {
         super();
+
+        console.log(paper)
     }
 
     render() {
