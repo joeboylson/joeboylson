@@ -1,6 +1,6 @@
 {
   "shell": "src/app-frame.js",
-  "entrypoint": "src/index.html",
+  "entrypoint": "index.html",
   "fragments": [],
   "npm": true,
   "moduleResolution": "node",
