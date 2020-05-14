@@ -1,17 +1,20 @@
 import {LitElement, html} from 'lit-element';
 
-// components
-import './page-frame/page-frame'
-
 class AppFrame extends LitElement {
     static get properties() {
-        return {};
+        return {
+            x: {type: Number}
+        };
     }
 
     constructor() {
         super();
 
-        console.log(paper)
+        this.x = 0;
+    }
+
+    increment () {
+        this.x = this.x + 1;
     }
 
     render() {
@@ -22,11 +25,9 @@ class AppFrame extends LitElement {
                 }
             </style>
 
-            <p>POLYMER</p>
-            <page-frame></page-frame>
-            <page-frame></page-frame>
-            <page-frame></page-frame>
-        `;
+            <p>POLYMER: ${this.x}</p>
+            <button @click="${this.increment}">+</button>
+        `
     }
 }
 
