@@ -1,0 +1,21 @@
+@import './main.css';
+
+
+
+/* PAGE */
+
+#border-info {
+    position: fixed;
+    margin: 8px;
+    top: 0;
+    left: 0;
+    font-size: 13px;
+}
+
+.page {
+    margin: calc(21px + 5px + 5px);
+    height: calc(100vh - ((21px + 5px + 5px) * 2) - 2px);
+    width: calc(100vw - ((21px + 5px + 5px) * 2) - 2px);
+
+    border: 1px solid black;
+}

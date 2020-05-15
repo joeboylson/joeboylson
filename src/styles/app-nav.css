@@ -1,0 +1,77 @@
+@import './main.css';
+
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: #FAFAFA;
+}
+
+.nav-item {
+    position: fixed;
+    margin: 5px;
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.top {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.left {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.vertical {
+    writing-mode: vertical-rl !important;
+    text-orientation: mixed !important;
+}
+
+
+/* * { margin: 0; }
+
+
+p {
+    color: teal;
+}
+
+
+.hide {
+    opacity: 0
+}
+
+
+
+
+
+.page {
+    transition-duration: 1000ms;
+    height: 100vh;
+}
+
+.in {
+    opacity: 1;
+    
+}
+
+.out {
+    opacity: 0;
+    transform: translateX(-50%);
+} */
