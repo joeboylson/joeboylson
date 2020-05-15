@@ -7,6 +7,7 @@
   "sources": ["src/app-frame.js", "manifest/**", "manifest.json", "package.json"],
   "extraDependencies": [
     "robots.txt",
+    "src/styles/*",
     "node_modules/@webcomponents/webcomponentsjs/**",
     "node_modules/paper/dist/paper-full.js",
     "node_modules/pubsub-js/src/pubsub.js"
