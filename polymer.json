@@ -8,7 +8,8 @@
   "extraDependencies": [
     "robots.txt",
     "node_modules/@webcomponents/webcomponentsjs/**",
-    "node_modules/paper/dist/paper-full.js"
+    "node_modules/paper/dist/paper-full.js",
+    "node_modules/pubsub-js/src/pubsub.js"
   ],
   "builds": [{
     "bundle": true,
