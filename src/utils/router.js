@@ -67,6 +67,10 @@ const Router = {
         })
     },
 
+    getCurrentPage: () => {
+        return Router.findPage(Router.x, Router.y);
+    },
+
     routeTo: (x, y) => {
 
         let nextPage = Router.findPage(x, y);

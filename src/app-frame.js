@@ -3,6 +3,7 @@ import Router from './utils/router';
 
 // components
 import './app-nav/app-nav';
+import './mini-map/mini-map';
 
 class AppFrame extends LitElement {
     static get properties() {
@@ -33,6 +34,10 @@ class AppFrame extends LitElement {
 
         return html `
             <style> @import "src/styles/app-frame.css"; </style>
+
+            <div id='mini-map'>
+                <mini-map></mini-map>
+            </div>
 
             <div id='border-info'>
                 <p id='' class="mono">(${Router.x}, ${Router.y})</p>
