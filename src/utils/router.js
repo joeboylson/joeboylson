@@ -59,6 +59,8 @@ const Router = {
         }
     ],
 
+    directions: ['top', 'right', 'bottom', 'left'],
+
     findPage: (x, y) => {
         return Router.pages.find(page => {
             if (page.x === x && page.y === y) return page;
