@@ -4,8 +4,13 @@
     position: fixed;
     top: 0;
     left: 0;
+    opacity: 1;
+    transition-duration: 300ms;
+}
 
-    background-color: #FAFAFA;
+#nav.invisible {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .nav-item {
@@ -45,35 +50,3 @@
     writing-mode: vertical-rl !important;
     text-orientation: mixed !important;
 }
-
-
-/* * { margin: 0; }
-
-
-p {
-    color: teal;
-}
-
-
-.hide {
-    opacity: 0
-}
-
-
-
-
-
-.page {
-    transition-duration: 1000ms;
-    height: 100vh;
-}
-
-.in {
-    opacity: 1;
-    
-}
-
-.out {
-    opacity: 0;
-    transform: translateX(-50%);
-} */

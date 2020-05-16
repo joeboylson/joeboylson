@@ -5,7 +5,8 @@ class AppNav extends LitElement {
     static get properties() {
         return {
             nextPages: { type: Object },
-            directions: { type: Array }
+            directions: { type: Array },
+            invisible: { type: Boolean }
         };
     }
 
@@ -22,7 +23,7 @@ class AppNav extends LitElement {
                 @import "src/styles/app-nav.css"
             </style>
 
-            <div id="nav">
+            <div id="nav" class="${this.invisible ? 'invisible' : ''}">
 
                 ${this.nextPages ? html`
 

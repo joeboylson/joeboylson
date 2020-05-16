@@ -1,7 +1,5 @@
 @import './main.css';
 
-
-
 /* PAGE */
 
 #border-info {
@@ -25,6 +23,40 @@
     margin: 5px;
     width: 34px;
     height: 44px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#map {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2C2C2C;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+
+    transition-duration: 300ms;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#map h1 {
+    color: white;
+}
+
+#map.visible {
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+@keyframes Center {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 .page {
@@ -32,5 +64,108 @@
     height: calc(100vh - ((34px + 5px + 5px) * 2));
     width: calc(100vw - ((34px + 5px + 5px) * 2));
 
-    background-color: #FAFAFA;
+    opacity: 1;
+    transition-duration: 300ms;
+    overflow-y: scroll;
+}
+
+@keyframes Up {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes Down {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100px);
+    }
+}
+
+.page.out {
+    opacity: 0;
+}
+
+.page.up.in {
+    animation: Up;
+    animation-duration:300ms;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    animation-timing-function: var(--easein);
+}
+
+.page.up.out {
+    animation: Down;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: var(--easeout);
+}
+
+.page.down.in {
+    animation: Down;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    animation-timing-function: var(--easein);
+}
+
+.page.down.out {
+    animation: Up;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: var(--easeout);
+}
+
+
+@keyframes Left {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes Right {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateX(100px);
+    }
+}
+
+.page.left.in {
+    animation: Left;
+    animation-duration:300ms;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    animation-timing-function: var(--easein);
+}
+
+.page.left.out {
+    animation: Right;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: var(--easeout);
+}
+
+.page.right.in {
+    animation: Right;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    animation-timing-function: var(--easein);
+}
+
+.page.right.out {
+    animation: Left;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: var(--easeout);
 }

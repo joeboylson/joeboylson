@@ -9,14 +9,10 @@ class MiniMap extends LitElement {
     constructor() {
         super();
 
-        PubSub.subscribe('ROUTE_TO', (_, data) => this.renderCanvas());
+        PubSub.subscribe('ROUTE_TO', (_, data) => MiniMapRenderer.render());
     }
 
     firstUpdated() {
-        this.renderCanvas();
-    }
-
-    renderCanvas() {
         let miniMapCanvas = this.shadowRoot.getElementById('mini-map-canvas');
         MiniMapRenderer.render(miniMapCanvas);
     }

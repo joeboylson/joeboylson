@@ -1,9 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
 
+:root {
+    --easeout: cubic-bezier(0.22,0.61,0.36,1);
+    --easein: cubic-bezier(0.55,0.06,0.68,0.19);
+}
+
 * {
     margin: 0;
 }
 
+body {
+    overflow: hidden;
+}
+
 .mono {
     font-family: 'Barlow Condensed', sans-serif;
+}
+
+#test {
+    width: 100px;
 }
