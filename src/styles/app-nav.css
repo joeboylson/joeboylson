@@ -18,8 +18,14 @@
     margin: 5px;
     font-size: 21px;
     line-height: 34px;
-
     cursor: pointer !important;
+    transition-duration: 0.25s;
+    user-select: none;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+    color: var(--accent);
 }
 
 .top {

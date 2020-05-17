@@ -1,6 +1,10 @@
 @import './main.css';
 
-/* PAGE */
+
+
+/* ================================================== */
+/* BORDER INFO */
+/* ================================================== */
 
 #border-info {
     position: fixed;
@@ -10,11 +14,33 @@
     font-size: 13px;
 
     width: calc(34px);
-    height: calc(34px);
+    height: 13px;
 
     display: grid;
     place-items: center;
 }
+
+#background-image {
+    width: 3000px;
+    height: 3000px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: 3000px 3000px;
+    background-attachment: fixed;
+    background-position: center;
+    transition-duration: 600ms;
+    transition-timing-function: var(--easeout);
+    opacity: 0.05;
+}
+
+
+
+/* ================================================== */
+/* MINI MAP / MAP */
+/* ================================================== */
 
 #mini-map {
     position: fixed;
@@ -50,23 +76,49 @@
     pointer-events: all !important;
 }
 
-@keyframes Center {
-    from {
-        transform: translateY(-100px);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
+
+
+
+/* ================================================== */
+/* PAGE */
+/* ================================================== */
 
 .page {
-    margin: calc(34px + 5px + 5px);
+    margin: calc(55px + 5px + 5px);
     height: calc(100vh - ((34px + 5px + 5px) * 2));
     width: calc(100vw - ((34px + 5px + 5px) * 2));
 
     opacity: 1;
     transition-duration: 300ms;
     overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+/* ================================================== */
+/* KEYFRAMES */
+/* ================================================== */
+
+@keyframes Left {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateX(-30px);
+    }
+}
+
+@keyframes Right {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateX(30px);
+    }
 }
 
 @keyframes Up {
@@ -74,7 +126,7 @@
         transform: translateY(0);
     }
     to {
-        transform: translateY(-100px);
+        transform: translateY(-30px);
     }
 }
 
@@ -83,9 +135,15 @@
         transform: translateY(0);
     }
     to {
-        transform: translateY(100px);
+        transform: translateY(30px);
     }
 }
+
+
+
+/* ================================================== */
+/* PAGE TRANSITIONS */
+/* ================================================== */
 
 .page.out {
     opacity: 0;
@@ -119,25 +177,6 @@
     animation-duration: 300ms;
     animation-fill-mode: forwards;
     animation-timing-function: var(--easeout);
-}
-
-
-@keyframes Left {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateX(-100px);
-    }
-}
-
-@keyframes Right {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateX(100px);
-    }
 }
 
 .page.left.in {

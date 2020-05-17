@@ -1,5 +1,7 @@
 import { html } from 'lit-element';
 
+import '../pages/page-index'
+
 function getNextPages () {
     return {
         top: Router.findPage(this.x, this.y - 1),
@@ -15,43 +17,43 @@ const Router = {
     y: 0,
 
     pages: [{
-            name: 'Index',
-            component: html`<p>Index</p>`,
+            name: '<Index/>',
+            component: html`<page-index></page-index>`,
             x: 1,
             y: 0,
             getNextPages
         }, {
-            name: 'About / Personal',
+            name: '<AboutMe/>',
             component: html`<p>About / Personal</p>`,
             x: 0,
             y: 1,
             getNextPages
         }, {
-            name: 'About / Professional',
+            name: '<Experience/>',
             component: html`<p>About / Professional</p>`,
             x: 1,
             y: 1,
             getNextPages
         }, {
-            name: 'About / Site',
+            name: '<Site/>',
             component: html`<p>About / Site</p>`,
             x: 2,
             y: 1,
             getNextPages
         }, {
-            name: 'Projects',
+            name: '<Projects/>',
             component: html`<p>Projects</p>`,
             x: 1,
             y: 2,
             getNextPages
         }, {
-            name: 'Contact / Me',
+            name: '<Contact/>',
             component: html`<p>name: 'Contact / Me',</p>`,
             x: 1,
             y: 3,
             getNextPages
         }, {
-            name: 'Contact / Questionaire',
+            name: '<Questionaire/>',
             component: html`<p>name: 'Contact / Questionaire',</p>`,
             x: 2,
             y: 3,

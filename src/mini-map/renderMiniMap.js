@@ -1,20 +1,24 @@
 import Router from '../utils/router';
 
+const getCSSVariable = (variableName) => {
+    return getComputedStyle(document.documentElement).getPropertyValue(variableName)
+}
+
 let colorWays =  {
     light: {
-        lineColor: '#2C2C2C',
-        backgroundColor: 'white',
-        currentPageFill: 'red',
+        lineColor: getCSSVariable('--light-foreground'),
+        backgroundColor: getCSSVariable('--light-background'),
+        currentPageFill: getCSSVariable('--light-accent'),
     },
     dark: {
-        lineColor: 'white',
-        backgroundColor: '#2C2C2C',
-        currentPageFill: 'blue',
+        lineColor: getCSSVariable('--dark-foreground'),
+        backgroundColor: getCSSVariable('--dark-background'),
+        currentPageFill: getCSSVariable('--dark-accent'),
     }
 };
 
 const MiniMapRenderer = {
-    currentColorWay: colorWays.light,
+    currentColorWay: colorWays.dark,
     render: (canvas) => {
 
         if (canvas) {

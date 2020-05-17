@@ -6,7 +6,7 @@
   "main": "app-frame.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "polymer serve --port 3001",
+    "dev": "polymer serve --port 3000",
     "production": "serve build/default",
     "build": "polymer build --bundle",
     "heroku-postbuild": "npm run build"

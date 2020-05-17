@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro Med Ext';
+    src: url('./fonts/AkzidenzGroteskPro-MdEx.woff2') format('woff2'),
+        url('./fonts/AkzidenzGroteskPro-MdEx.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro Bold Ext';
+    src: url('./fonts/AkzidenzGroteskPro-BoldEx.woff2') format('woff2'),
+        url('./fonts/AkzidenzGroteskPro-BoldEx.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Druk Wide';
+    src: url('./fonts/Druk-WideSuper.woff2') format('woff2');
+        /* url('./fonts/AllianceNo1-Regular.woff') format('woff'); */
+    font-weight: normal;
+    font-style: normal;
+}
+
